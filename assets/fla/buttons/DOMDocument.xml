@@ -1,0 +1,44 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 537" majorVersion="12" buildNumber="537" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <media>
+          <DOMBitmapItem name="Button.png" itemID="55cb875b-00000216" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/BOTON-GRANDE-IDLE.png" sourceLastImported="1439401819" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Button.png" bitmapDataHRef="M 8 1439401767.dat" frameRight="2240" frameBottom="580"/>
+          <DOMBitmapItem name="Cards.png" itemID="55cb8760-00000217" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/CARDS.png" sourceLastImported="1439401824" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Cards.png" bitmapDataHRef="M 11 1439401797.dat" frameRight="1040" frameBottom="420"/>
+          <DOMBitmapItem name="Cartelas.png" itemID="55cb8768-00000218" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/CARTELAS.png" sourceLastImported="1439401832" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Cartelas.png" bitmapDataHRef="M 9 1439401797.dat" frameRight="1480" frameBottom="420"/>
+          <DOMBitmapItem name="Tarjetas.png" itemID="55cb876e-00000219" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/TARJETAS.png" sourceLastImported="1439401838" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Tarjetas.png" bitmapDataHRef="M 10 1439401797.dat" frameRight="1480" frameBottom="420"/>
+     </media>
+     <timelines>
+          <DOMTimeline name="Escena 1">
+               <layers>
+                    <DOMLayer name="Capa 1" color="#4FFF4F" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMBitmapInstance libraryItemName="Button.png">
+                                             <matrix>
+                                                  <Matrix tx="249.35" ty="204.45"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                        <DOMBitmapInstance libraryItemName="Cards.png">
+                                             <matrix>
+                                                  <Matrix tx="367.35" ty="176.5"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                        <DOMBitmapInstance libraryItemName="Cartelas.png">
+                                             <matrix>
+                                                  <Matrix tx="271.35" ty="176.5"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                        <DOMBitmapInstance libraryItemName="Tarjetas.png">
+                                             <matrix>
+                                                  <Matrix tx="177.35" ty="176.5"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <PrinterSettings/>
+     <publishHistory/>
+</DOMDocument>
