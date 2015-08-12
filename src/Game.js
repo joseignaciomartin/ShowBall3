@@ -1,10 +1,8 @@
 ﻿function create() {
-    //var prueba = new createCards();
 
-    createCards();
-    createButtons();
+	var gameView = new GameView();
 
-    //var prueba = new createCards();
+
 }    
 
 function update() {}
