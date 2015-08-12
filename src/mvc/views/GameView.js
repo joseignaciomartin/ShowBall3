@@ -12,8 +12,6 @@
 
 	}
 
-
-    //to global scope access:
     window.GameView = GameView;
 
 

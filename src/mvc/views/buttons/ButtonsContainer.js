@@ -11,9 +11,6 @@
 	    var Tarjetas = game.add.sprite(177, 177, 'Tarjetas');
 	}
 
-
-    //to global scope access:
     window.ButtonsContainer = ButtonsContainer;
-
 
 }(window));

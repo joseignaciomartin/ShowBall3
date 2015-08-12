@@ -66,8 +66,6 @@
         //mark(0);
     }
 
-    //to global scope access:
     window.CardView = CardView;
-
 
 }(window));

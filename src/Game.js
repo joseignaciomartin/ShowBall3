@@ -3,6 +3,6 @@
 	var gameView = new GameView();
 
 
-}    
+}
 
 function update() {}
