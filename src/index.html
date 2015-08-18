@@ -4,15 +4,49 @@
 		<title>ShowBall3</title>
 	</head>
 	<body>
-		<script src="phaser/phaser.min.js"></script>
-		<script src="mvc/views/cards/CardView.js"></script>
-		<script src="mvc/views/buttons/ButtonsContainer.js"></script>
+
+		<script src="../../Engine1.1/src/engine/communications/ServerCommunicationManager.js"></script>
+		<script src="../../Engine1.1/src/engine/communications/server/SocketServer.js"></script>
+
+		<script src="../../Engine1.1/src/engine/communications/gameType/bingo/BingoGameType.js"></script>
+		
+		<!--mvc folder-->
+		<script src="../../Engine1.1/src/engine/mvc/controllers/general/ApplicationController.js"></script>
+		<script src="../../Engine1.1/src/engine/mvc/controllers/general/GameTypeController.js"></script>
+		<script src="../../Engine1.1/src/engine/mvc/controllers/general/Controller.js"></script>
+
+		<script src="../../Engine1.1/src/engine/mvc/controllers/bingo/BingoController.js"></script>
+
+		<script src="../../Engine1.1/src/engine/mvc/data/ParametersData.js"></script>
+
+		<!-- ....................................................................................................................... -->
+
+		<!-- Game -->
 		<script src="Game.js"></script>
+		<script src="phaser/phaser.min.js"></script>
+
+		<!-- mvc-->
+		<script src="mvc/views/cards/CardView.js"></script>
+		<script src="mvc/views/cards/CardsContainer.js"></script>
+		<script src="mvc/views/buttons/ButtonsContainer.js"></script>
 		<script src="mvc/views/GameView.js"></script>
+
+		<!-- constants-->
+		<script src="constants/GameStates.js"></script>
+		<script src="constants/Notifications.js"></script>
+		<script src="constants/OwnCounters.js"></script>
+
+		<!-- assets-->
 		<script src="assets/Preload.js"></script>
+
+		<!-- config-->
+		<script src="config/BingoGameConfig.js"></script>  <!--  va para el juego luego  -->
+		<script src="config/BingoRoundConfig.js"></script>  <!--  va para el juego luego  -->
+
+
 		<script>
 
-			var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {preload:preload, create:create, update:update});
+			var game = new Phaser.Game(892, 669, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});
 
 		</script>
 

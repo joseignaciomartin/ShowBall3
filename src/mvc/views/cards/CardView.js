@@ -1,14 +1,13 @@
 ﻿(function(window){
 
-    var card;
-    var cards;
-
+    var view;
+    var cardNumber;
     var numContainer    = [];
     var marksContainer  = [];
     var currentNumbers  = [];
 
     function CardView(n){
-        createCards();
+        cardNumber = n; 
     }
 
     CardView.prototype.setNumbers = function(numbers){
@@ -31,21 +30,21 @@
         }
     }
 
+    CardView.prototype.createCards = function(container, x, y){
 
-    function createCards(){
+        view   = game.add.group();
+        view.x = x; 
+        view.y = y;
+        container.add(view);
 
-        card   = game.add.group();
-        card.x = 6; 
-        card.y = 199;
-
-        var bg = card.create(0, 0, 'bg');
+        var bg = view.create(0, 0, 'bg');
 
         var Xpositions = [15, 70, 126, 182, 237, 15, 70, 126, 182, 237, 15, 70, 126, 182, 237];
         var Ypositions = [44, 44, 44, 44, 44, 88, 88, 88, 88, 88, 132, 132, 132, 132, 132];
         
         //create bg match bg
         for(i = 0; i < 15; i++){
-            shoot = card.create(Xpositions[i], Ypositions[i], 'shoot');
+            shoot = view.create(Xpositions[i], Ypositions[i], 'shoot');
             shoot.visible = false;
             marksContainer.push(shoot);
         }
@@ -54,7 +53,7 @@
         for(i = 0; i < 15; i++){
             i < 9?  num = "0" + (i+1) : num = (i+1); 
             var numTxt = new Phaser.Text(game, Xpositions[i] + 12, Ypositions[i] + 8, num, {fontSize: '30px', fill: '#000' });
-            card.add(numTxt);
+            view.add(numTxt);
             numContainer.push(numTxt);
         }
 
