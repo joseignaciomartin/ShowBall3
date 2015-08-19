@@ -10,12 +10,18 @@
 
 
 	function create() {
+		var theGame = new Game();
+	}
 
-
+	function Game(){
 		var _applicationController;
 		var _gameConfig  = new BingoGameConfig();
+		Game.gameConfig  = _gameConfig;
 		var _roundConfig = new BingoRoundConfig();
+		Game.roundConfig = _roundConfig
 		//var _externalConfig = ExternalLoadConfig();
+		//Game.externalConfig = _externalConfig
+
 		var LanguageXmlEmbed;
 
 		var IS_TESTING = _gameConfig.isTesting;
@@ -64,11 +70,9 @@
 		*/
 
 		var _gameView = new GameView();
-
 	}
 
-
-
 	window.create = create;
+	window.Game = Game;
 
 }(window));

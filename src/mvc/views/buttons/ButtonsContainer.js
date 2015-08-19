@@ -4,29 +4,29 @@
 	var _this;
 
 	function ButtonsContainer(container){
+		_this = this;
+		setupSubscriptions();
+
 		createButtons(container);
 	}
 
 	function createButtons(container){
-		_this = this;
+		
 		buttonContainer= game.add.group();
 
-	    var Button   = game.add.sprite(249, 177, 'Button');
+	    var btn      = game.add.sprite(249, 177, 'Button');
 	    var Cards    = game.add.sprite(367, 177, 'Cards');
 	    var Cartelas = game.add.sprite(271, 177, 'Cartelas');
 	    var Tarjetas = game.add.sprite(177, 177, 'Tarjetas');
  	
- 		buttonContainer.add(Button);
+ 		buttonContainer.add(btn);
  		buttonContainer.add(Cards);
  		buttonContainer.add(Cartelas);
  		buttonContainer.add(Tarjetas);
 
- 		buttonContainer.y = 600;
+ 		buttonContainer.x = 100;
+ 		buttonContainer.y = 645;
 		container.add(buttonContainer);
-
-		setupSubscriptions();
-
-		ApplicationController.getApplicationController().sendNotification(Notifications.RESET_NOTIFICATION, {print:"yea"});
 	}
 
 	function setupSubscriptions(){
@@ -40,7 +40,7 @@
 		ApplicationController.getApplicationController().addSubscriber(notifications, _this);	
 	}
 
-	CardsContainer.prototype.notificationReceived = function(type, data){
+	ButtonsContainer.prototype.notificationReceived = function(type, data){
 		
 		switch(type){
 			case Notifications.STATE_CHANGED_NOTIFICATION:
@@ -56,7 +56,6 @@
 				changeLanguage();
 			break;*/
 			case Notifications.RESET_NOTIFICATION:
-				console.log("RESET_NOTIFICATION botonera");
 				//configureButtonState(int(data));
 			break;
 		}

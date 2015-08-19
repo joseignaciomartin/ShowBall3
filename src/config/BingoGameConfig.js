@@ -2,6 +2,7 @@ function BingoGameConfig(){
 
 	this.gameType   = "BINGO";
 	this.gameName   = "Show Ball 3";
+	this._gameName  = "Show Ball Light",
 	this.forceDummy = false;
 	this.isTesting  = true; 
 	this.toWeb      = false; 

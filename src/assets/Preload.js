@@ -1,5 +1,12 @@
 ﻿function preload() {
 
+	//BACKGROUND
+
+    game.load.image('bg_SB3',      '../assets/img/backGround/bg_SB3.jpg');
+    game.load.image('bg_SBL',      '../assets/img/backGround/bg_SBL.jpg');
+    game.load.image('ref',         '../assets/img/backGround/ref.jpg');
+    game.load.image('phantonball', '../assets/img/backGround/phantonball.png');
+
     //CARTONES
 
     game.load.image('bg',    '../assets/img/cards/cartela3.png');

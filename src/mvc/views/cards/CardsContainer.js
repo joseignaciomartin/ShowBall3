@@ -15,8 +15,8 @@
 		_cards = [];
 
  		_cardsContainer   = game.add.group(); //= new Group(game,"cardsContainer", true) // 
- 		_cardsContainer.x = -50; 
-        _cardsContainer.y = 50;
+ 		_cardsContainer.x = -100; 
+        _cardsContainer.y = 105;
         container.add(_cardsContainer);
 
 		var Xpositions = [203, 595, 203, 595];
@@ -32,10 +32,7 @@
 				_cards[i-1].setEnabled(false);
 			}*/
 		}
-
 		setupSubscriptions();
-
-		ApplicationController.getApplicationController().sendNotification(Notifications.RESET_NOTIFICATION, {print:"yea"});
 	}
 
 
@@ -60,7 +57,6 @@
 	CardsContainer.prototype.notificationReceived = function(type, data){ //(type:String, data:Object=null):void{
 		switch(type){
 			case Notifications.RESET_NOTIFICATION:
-				console.log("RESET_NOTIFICATION " + data.print);
 				//reset();
 			break;
 			case Notifications.INITIAL_RESPONSE_NOTIFICATION: 
