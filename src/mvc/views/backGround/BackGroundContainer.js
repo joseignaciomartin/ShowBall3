@@ -1,27 +1,23 @@
 (function(window){
 
-	var backGroundContainer;
+	var _backGroundContainer;
 
-	function BackGroundContainer(container){
-		createBackGround(container);
+	function BackGroundContainer(){
+		createBackGround();
 	}
 
-	function createBackGround(container){
+	function createBackGround(){
 
-		backGroundContainer = game.add.group();
-		backGroundContainer.x = -400;
-		backGroundContainer.y =  23;
-
-
-		console.log(Game.gameConfig.gameName);
+		_backGroundContainer  = game.add.group();
 
 		var bg;
-		Game.gameConfig.gameName == "Show Ball 3"? bg = game.add.sprite(249, 177, 'bg_SB3') : bg = game.add.sprite(249, 177, 'bg_SBL');
-
-		backGroundContainer.add(bg);
-		container.add(backGroundContainer);
+		Game.gameConfig.gameName == "Show Ball 3"? bg = game.add.sprite(-151, 0, 'bg_SB3') : bg = game.add.sprite(-151, 0, 'bg_SBL');
+		_backGroundContainer.add(bg);
 	}
 
+	BackGroundContainer.prototype.getView = function(){
+		return _backGroundContainer;
+	}
 
     window.BackGroundContainer = BackGroundContainer;
 

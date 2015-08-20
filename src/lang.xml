@@ -1,0 +1,441 @@
+<xml>
+	<translate id = "CONNECTING">
+		<es>CONECTANDO...</es>
+		<en>CONNECTING...</en>
+		<pt>CONECTANDO...</pt>
+	</translate>
+	
+	<!-- MENSAJES -->
+	
+	<translate id = "DRAWING">
+		<es>SORTEANDO  BOLAS</es>
+		<en>DRAWING  BALLS</en>
+		<pt>SORTEANDO  BOLAS</pt>
+	</translate>
+	<translate id = "GOOD_LUCK">
+		<es>BUENA  SUERTE !</es>
+		<en>GOOD  LUCK !</en>
+		<pt>BOA  SORTE !</pt>
+	</translate>
+	<translate id = "PRESS_PLAY">
+		<es>APRETE  JUGAR</es>
+		<en>PRESS  PLAY</en>
+		<pt>APERTE  JOGAR</pt>
+	</translate>
+	<translate id = "BET1">
+		<es>APUESTA</es>
+		<en>BET</en>
+		<pt>APOSTA</pt>
+	</translate>
+	<translate id = "WON">
+		<es>GANO</es>
+		<en>WIN</en>
+		<pt>GANHO</pt>
+	</translate>
+	<translate id = "EXTRA">
+		<es>EXTRA</es>
+		<en>EXTRA</en>
+		<pt>EXTRA</pt>
+	</translate>
+	<translate id = "PAID">
+		<es>PAGO</es>
+		<en>PAID</en>
+		<pt>PAGO</pt>
+	</translate>
+	<translate id = "TOTAL_BET">
+		<es>APUESTA TOTAL</es>
+		<en>TOTAL BET</en>
+		<pt>APOSTA TOTAL</pt>
+	</translate>
+	<translate id = "VALUE">
+		<es>VALOR</es>
+		<en>VALUE</en>
+		<pt>VALOR</pt>
+	</translate>
+	<translate id = "CREDITS">
+		<es>CRÉDITOS</es>
+		<en>CREDITS</en>
+		<pt>CRÉDITOS</pt>
+	</translate>
+	<translate id = "INSERT_CREDITS">
+		<es>INSERTE CRÉDITOS!</es>
+		<en>INSERT CREDITS!</en>
+		<pt>INSIRA CRÉDITOS!</pt>
+	</translate>
+	<translate id = "GOOD_LUCK">
+		<es>BUENA SUERTE!</es>
+		<en>GOOD LUCK!</en>
+		<pt>BOA SORTE!</pt>
+	</translate>
+		<translate id = "BALL_COUNT">
+		<es>BOLA</es>
+		<en>BALL</en>
+		<pt>BOLA</pt>
+	</translate>
+	<translate id = "JACKPOT">
+		<es>ACUMULADO</es>
+		<en>JACKPOT</en>
+		<pt>ACUMULADO</pt>
+	</translate>
+	<translate id = "JACKPOT_LOADING_TEXT">
+		<es>Cargando Animación Acumulado</es>
+		<en>Loading Jackpot Animation</en>
+		<pt>Carregando Acumulado Animação</pt>
+	</translate>
+	<translate id = "BET_TEXT">
+		<es>A PARTIR DE LA 3ª APUESTA</es>
+		<en>STARTING WITH 3RD BET</en>
+		<pt>A PARTIR DA APOSTA 3</pt>
+	</translate>
+	<translate id = "CASH">
+		<es>SALDO: {%N%}</es>
+		<en>CASH: {%N%}</en>
+		<pt>SALDO: {%N%}</pt>
+	</translate>
+	<translate id = "WIN">
+		<es>PAGO: {%N%}</es>
+		<en>PAID: {%N%}</en>
+		<pt>PAGO: {%N%}</pt>
+	</translate>
+	<translate id = "BET">
+		<es>APUESTA: {%N%}</es>
+		<en>BET: {%N%}</en>
+		<pt>APOSTA: {%N%}</pt>
+	</translate>
+	<translate id = "COIN">
+		<es>MONEDA</es>
+		<en>COIN</en>
+		<pt>MOEDA</pt>
+	</translate>
+	<translate id = "AUTOPANEL_STOP">
+		<es>APAGAR</es>
+		<en>TURN OFF</en>
+		<pt>DESLIGAR</pt>
+	</translate>
+		<translate id = "STOP_ON_FILAR">
+		<es>Para en FILAR</es>
+		<en>Stop at PEEK</en>
+		<pt>Para em FILAR</pt>
+	</translate>
+	<translate id = "REMAINING_FREE_PLAYS">
+		<es>TE QUEDAN {FREEPLAY_COUNTER} JUGADAS GRATIS!</es>
+		<en>YOU HAVE {FREEPLAY_COUNTER} REMAINING FREE PLAYS!</en>
+		<pt>VOCE TEM {FREEPLAY_COUNTER} RESTANTES JOGOS LIVRES!</pt>
+	</translate>
+	<translate id = "BUY_ALL_EXTRA">
+		<es>Comprar todas las Extras</es>
+		<en>Buy all Extras</en>
+		<pt>Comprar todas as Extras</pt>
+	</translate>
+	<translate id = "STOP_ON_EXTRA">
+		<es>Frenar en Extra</es>
+		<en>Stop on Extra</en>
+		<pt>Parar na Extra</pt>
+	</translate>
+	<translate id = "DONT_BUY_EXTRA">
+		<es>No comprar Extras</es>
+		<en>Don't buy Extras</en>
+		<pt>Nao comprar Extras</pt>
+	</translate>
+	<translate id = "auto_buy_1">
+		<es>Comprar una Extra</es>
+		<en>Buy one Extra</en>
+		<pt>Comprar uma Extra</pt>
+	</translate>
+	<translate id = "auto_buy_2">
+		<es>Comprar dos Extras</es>
+		<en>Buy two Extras</en>
+		<pt>Comprar dois Extras</pt>
+	</translate>
+	<translate id = "auto_buy_3">
+		<es>Comprar tres Extras</es>
+		<en>Buy three Extras</en>
+		<pt>Comprar tres Extras</pt>
+	</translate>
+	<translate id = "auto_buy_4">
+		<es>Comprar cuatro Extras</es>
+		<en>Buy four Extras</en>
+		<pt>Comprar quatro Extras</pt>
+	</translate>
+	<translate id = "auto_buy_5">
+		<es>Comprar cinco Extras</es>
+		<en>Buy five Extras</en>
+		<pt>Comprar cinco Extras</pt>
+	</translate>
+	<translate id = "auto_buy_6">
+		<es>Comprar seis Extras</es>
+		<en>Buy six Extras</en>
+		<pt>Comprar seis Extras</pt>
+	</translate>
+	<translate id = "auto_buy_7">
+		<es>Comprar siete Extras</es>
+		<en>Buy seven Extras</en>
+		<pt>Comprar sete Extras</pt>
+	</translate>
+	<translate id = "auto_buy_8">
+		<es>Comprar ocho Extras</es>
+		<en>Buy eight Extras</en>
+		<pt>Comprar oito Extras</pt>
+	</translate>
+	<translate id = "auto_buy_9">
+		<es>Comprar nueve Extras</es>
+		<en>Buy nine Extras</en>
+		<pt>Comprar nove Extras</pt>
+	</translate>
+	<translate id = "auto_buy_10">
+		<es>Comprar diez Extras</es>
+		<en>Buy ten Extras</en>
+		<pt>Comprar dez Extras</pt>
+	</translate>
+	<translate id = "auto_buy_11">
+		<es>Comprar once Extras</es>
+		<en>Buy eleven Extras</en>
+		<pt>Comprar once Extras</pt>
+	</translate>
+	<translate id = "QUALITY_TITLE">
+		<es>CALIDAD</es>
+		<en>QUALITY</en>
+		<pt>QUALIDADE</pt>
+	</translate>
+	<translate id = "QUALITY_MAX">
+		<es>MÁXIMA</es>
+		<en>MAXIMUM</en>
+		<pt>MÁXIMA</pt>
+	</translate>
+	<translate id = "QUALITY_MID">
+		<es>MEDIA</es>
+		<en>MEDIUM</en>
+		<pt>MÉDIA</pt>
+	</translate>
+	<translate id = "QUALITY_LOW">
+		<es>MÍNIMA</es>
+		<en>MINIMUM</en>
+		<pt>MÍNIMA</pt>
+	</translate>
+	<translate id = "TITLES_HELP_NICE_TRIP">
+		<es>BUEN VIAJE!</es>
+		<en>HAVE A NICE TRIP!</en>
+		<pt>BOA VIAGEM!</pt>
+	</translate>
+	<translate id = "TITLES_HELP_CLICK_TRIP">
+		<es>Haz clic para elegir el lugar</es>
+		<en>click to choose the place</en>
+		<pt>Clique para escolher o lugar</pt>
+	</translate>
+	<translate id = "MAP_INFO_TEXT_EXTRA">
+		<es>Durante la compra de extra no se puede cambiar de ciudad</es>
+		<en>While purchasing extra can not change cities</en>
+		<pt>Ao comprar extra não pode mudar de cidade</pt>
+	</translate>
+	<translate id = "MAP_INFO_TEXT_LOADING">
+		<es>* Algunas ciudades pueden estar aun cargando</es>
+		<en>* Some cities may be even loading</en>
+		<pt>* Algumas cidades podem ser até mesmo de carregar</pt>
+	</translate>
+	<translate id = "BUTTON_CLOSE_HELP">
+		<es>Cerrar</es>
+		<en>Close</en>
+		<pt>Perto</pt>
+	</translate>	
+	
+	<translate id = "TITLES_HELP_HELP">
+		<es>AYUDA</es>
+		<en>HELP</en>
+		<pt>AJUDA</pt>
+	</translate>
+	<translate id = "KEYBOARD_FUNCTIONS">
+		<es>FUNCIÓNES DE TECLADO</es>
+		<en>KEYBOARD FUNCTIONS</en>
+		<pt>FUNÇÕES DE TECLADO</pt>
+	</translate>
+	<translate id = "CLICK_REGIONS">
+		<es>REGIONES DE CLICK</es>
+		<en>CLICK REGIONS</en>
+		<pt>REGIÕES DE CLIQUE</pt>
+	</translate>
+	<translate id = "HELP_1_TEXT">
+		<es>
+			<![CDATA[
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Presione el botón <FONT  COLOR='#FFFFFF'>NÚMEROS</FONT> para cambiar los números de las tarjetas.  
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Presione las flechas de <FONT  COLOR='#FFFFFF'>APUESTA</FONT> para cambiar la apuesta por tarjeta.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> El cuadro <FONT  COLOR='#FFFFFF'>APUESTA</FONT> en cada tarjeta muestra la apuesta individual por 
+  tarjeta y el cuadro <FONT  COLOR='#FFFFFF'>APUESTA TOTAL</FONT> muestra la apuesta total.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Presione el botón <FONT  COLOR='#FFFFFF'>JUGAR</FONT> para un juego en velocidad normal o <FONT  COLOR='#FFFFFF'>TURBO</FONT> para velocidad máxima.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Serán sorteadas 33 bolas iniciales y pueden ofrecerse o no bolas extras 
+  para ser compradas opcionalmente al final de cada jugada.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Usted puede comprar hasta 10 bolas extras después de las 33 bolas regulares.  
+  Esta opción se habilita cuando la suma de los premios posibles de ganar con 
+  la próxima bola es mayor o igual a 40 x apuesta por tarjeta.  El costo de cada 
+  extra será exhibido en el cuadro de mensajes. Presione <FONT  COLOR='#FFFFFF'>EXTRA</FONT> para comprar la próxima 
+  bola extra o <FONT  COLOR='#FFFFFF'>CANCELAR</FONT> para finalizar la jugada y acreditar sus premios hasta el momento.
+			]]>
+		</es>
+		<en>
+			<![CDATA[
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Press <FONT  COLOR='#FFFFFF'>NUMBERS</FONT> button to change the numbers on the cards.  
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Press the <FONT  COLOR='#FFFFFF'>BET</FONT> arrows to change the bet per card.  
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> The BET field on each card shows the individual bet per card and 
+  the <FONT  COLOR='#FFFFFF'>TOTAL BET</FONT> field shows the total bet.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Press <FONT  COLOR='#FFFFFF'>PLAY</FONT> button to start the game in regular speed or <FONT  COLOR='#FFFFFF'>TURBO</FONT> for 
+  maximum speed.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Initially 33 balls will be drawn and there might be or not extra balls 
+  to be optionally bought at the end of each round.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> When at the end of the normal round (first 33 balls) the total of possible prizes to be paid  
+  with one extra ball is equal or higher than 40 x bet per card, 10 extra balls will be offered  
+  at a variable cost.  The cost of each extra will be shown on the message panel. Press <FONT  COLOR='#FFFFFF'>EXTRA</FONT> to 
+  buy the next extra ball or press <FONT  COLOR='#FFFFFF'>CANCEL</FONT> to finish the play and credit what you have already won.
+			]]>
+		</en>
+		<pt>
+			<![CDATA[    
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Pressione botão <FONT  COLOR='#FFFFFF'>NÚMEROS</FONT> para trocar os números das cartelas.  
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Pressione as setas de <FONT  COLOR='#FFFFFF'>APOSTA</FONT> para mudar a aposta por cartela.  
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> O campo <FONT  COLOR='#FFFFFF'>APOSTA</FONT> de cada cartela exibe a aposta individual por cartela e o 
+  campo <FONT  COLOR='#FFFFFF'>APOSTA TOTAL</FONT> indica a aposta total.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Pressione <FONT  COLOR='#FFFFFF'>JOGAR</FONT> para iniciar o jogo em velocidade normal ou <FONT  COLOR='#FFFFFF'>TURBO</FONT> para 
+  velocidade máxima.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Inicialmente serão sorteadas 33 bolas e poderá haver ou não bolas extras 
+  para compra opcional ao final de cada jogada.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Quando ao final da jogada normal (33 primeiras bolas) o total de prêmios possíveis de serem pagos 
+  com mais uma bola for maior ou igual a 40 x aposta na cartela, serão oferecidas 10 bolas extras  
+  com custo variável.  O custo de cada extra será exibido no quadro de mensagens.  Pressione <FONT  COLOR='#FFFFFF'>EXTRA</FONT> 
+  para comprar a próxima bola extra ou <FONT  COLOR='#FFFFFF'>CANCELAR</FONT> para finalizar a jogada e creditar o que já ganhou. 
+			]]>
+		</pt>
+	</translate>
+	<translate id = "HELP_2_TEXT">
+		<es>
+			<![CDATA[
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> El <FONT  COLOR='#FFFFFF'>ACUMULADO</FONT> será pago apartir de apuesta 3 por tarjeta al completar 
+  toda la tarjeta <FONT  COLOR='#FFFFFF'>(BINGO)</FONT> con las primeras 30 bolas.  Cuando se paga
+  el <FONT  COLOR='#FFFFFF'>ACUMULADO</FONT>, el premio correspondiente al Bingo también se le pagará.  
+  Los valores de Jackpot son distintos para cada valor de crédito,
+  jugando en un valor de crédito sube <FONT  COLOR='#FFFFFF'>SOLO</FONT> el valor de su respectivo <FONT  COLOR='#FFFFFF'>ACUMULADO</FONT>.  
+  Solo se pagará <FONT  COLOR='#FFFFFF'>UN ACUMULADO</FONT> por ronda.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> El premio máximo por tarjeta es de 1500 créditos x apuesta por tarjeta.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Los premios que son totalmente encubiertos por premios mayores <FONT  COLOR='#FFFFFF'>NO</FONT> serán pagados.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Pulse <FONT  COLOR='#FFFFFF'>AUTO</FONT> para jugar automatico y configurar el modo deseado.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Cualquier problema técnico anula la ronda y sus premios.  
+  En caso de corte de comunicación durante una jugada los créditos finales
+  serán los créditos finales hasta el momento de la interrupción.
+ 			]]>
+		</es>
+		<en>
+			<![CDATA[ 
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> The <FONT  COLOR='#FFFFFF'>JACKPOT</FONT> will be paid if playing on bet 3 or more per card 
+  and a <FONT  COLOR='#FFFFFF'>BINGO</FONT> (full card) is won with the first 30 balls.  When a <FONT  COLOR='#FFFFFF'>JACKPOT</FONT> is
+  paid the corresponding Bingo prize will also be paid.  Jackpot values are 
+  distinct for each credit value, playing on one credit value will
+  raise <FONT  COLOR='#FFFFFF'>ONLY</FONT> its respective <FONT  COLOR='#FFFFFF'>JACKPOT</FONT>.  Only <FONT  COLOR='#FFFFFF'>ONE JACKPOT</FONT> is paid per round.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> The maximum prize per card is 1500 credits x bet per card.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> The prizes that are completely covered by higher prizes will <FONT  COLOR='#FFFFFF'>NOT</FONT> be paid.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Press <FONT  COLOR='#FFFFFF'>AUTO</FONT> for automatic play and set the desired mode.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Any technical problem voids the round and its prizes.  On the event of a 
+  communication loss during exhibition of a game the final credits will be 
+  the final credits up to the moment of the interruption.
+			]]>
+		</en>
+		<pt>
+			<![CDATA[ 
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> O <FONT  COLOR='#FFFFFF'>ACUMULADO</FONT> é pago se estiver jogando com aposta 3 ou maior por 
+  cartela e ganhar um <FONT  COLOR='#FFFFFF'>BINGO</FONT> com as primeiras 30 bolas.  Quando o <FONT  COLOR='#FFFFFF'>ACUMULADO</FONT>
+  é pago, o prêmio de Bingo correspondente também será pago.  
+  Os valores de <FONT  COLOR='#FFFFFF'>ACUMULADO</FONT> são distintos para cada valor de crédito, o valor de
+<FONT  COLOR='#FFFFFF'>ACUMULADO</FONT> sobe <FONT  COLOR='#FFFFFF'>APENAS</FONT> para o valor de crédito em que se está jogando.  
+  Somente <FONT  COLOR='#FFFFFF'>UM ACUMULADO</FONT> é pago por jogada.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> O prêmio máximo por cartela é 1500 créditos x aposta por cartela.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Os prêmios que forem completamente cobertos por prêmios maiores <FONT  COLOR='#FFFFFF'>NÃO SERÃO</FONT> pagos.
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Pressione <FONT  COLOR='#FFFFFF'>AUTO</FONT> para jogo automático e configure o modo desejado. 
+<FONT  COLOR='#FFFFFF' SIZE ='16'><B>.</B></FONT> Qualquer problema técnico anula a jogada e seus prêmios.  
+  Caso haja perda de comunicação no meio da exibição de uma jogada 
+  os créditos finais serão os créditos finais até o momento da interrupção. 
+			]]>
+		</pt>
+	</translate>
+	<translate id = "REGIONS_BET">
+		<es>Apuesta</es>
+		<en>Bet</en>
+		<pt>Aposta</pt>
+	</translate>	
+	<translate id = "REGIONS_CARDS">
+		<es>Tarjetas</es>
+		<en>Cards</en>
+		<pt>Cartelas</pt>
+	</translate>
+		<translate id = "REGIONS_NUMBERS">
+		<es>Números</es>
+		<en>Numbers</en>
+		<pt>Números</pt>
+	</translate>
+	<translate id = "REGIONS_JUGAR">
+		<es>Jugar / Cancelar</es>
+		<en>Play / Cancel</en>
+		<pt>Jogar / Cancelar</pt>
+	</translate>
+	<translate id = "REGIONS_TURBO">
+		<es>Turbo / Extra</es>
+		<en>Turbo / Extra</en>
+		<pt>Turbo / Extra</pt>
+	</translate>
+		<translate id = "REGIONS_HELP">
+		<es>Turbo / Extra</es>
+		<en>Turbo / Extra</en>
+		<pt>Turbo / Extra</pt>
+	</translate>
+
+	<translate id = "PAD_HELP">
+	<es>
+<![CDATA[
+<FONT  COLOR='#FFFFFF'>ENTER</FONT> = Jugar/ cancelar
+<FONT  COLOR='#FFFFFF'>0/ Espacio</FONT> = Turbo/ bola extra
+<FONT  COLOR='#FFFFFF'>1</FONT> = Abre/ cierra tarjetas
+<FONT  COLOR='#FFFFFF'>2</FONT> = Cambia los números de las tarjetas
+<FONT  COLOR='#FFFFFF'>4</FONT> = Disminuye apuesta
+<FONT  COLOR='#FFFFFF'>5</FONT> = Menú de AUTO/ desactiva AUTO
+<FONT  COLOR='#FFFFFF'>6</FONT> = Aumenta apuesta
+<FONT  COLOR='#FFFFFF'>7</FONT> = Ayuda/ volver al juego
+<FONT  COLOR='#FFFFFF'>+</FONT> = Velocidad
+]]>
+	</es>
+	<en>
+<![CDATA[
+<FONT  COLOR='#FFFFFF'>ENTER</FONT> = Play/ cancel
+<FONT  COLOR='#FFFFFF'>0/ Space</FONT> = Turbo/ extra ball
+<FONT  COLOR='#FFFFFF'>1</FONT> = Open/ close cards
+<FONT  COLOR='#FFFFFF'>2</FONT> = Change card numbers
+<FONT  COLOR='#FFFFFF'>4</FONT> = Decrease bet
+<FONT  COLOR='#FFFFFF'>5</FONT> = AUTO menu/ deactivate AUTO
+<FONT  COLOR='#FFFFFF'>6</FONT> = Increase bet
+<FONT  COLOR='#FFFFFF'>7</FONT> = Help/ back to game
+<FONT  COLOR='#FFFFFF'>+</FONT> = Speed
+]]>
+	</en>
+	<pt>
+<![CDATA[
+<FONT  COLOR='#FFFFFF'>ENTER</FONT> = Jogar/ cancelar
+<FONT  COLOR='#FFFFFF'>0/ Espaço</FONT> = Turbo/ bola extra
+<FONT  COLOR='#FFFFFF'>1</FONT> = Abre/ fecha cartelas
+<FONT  COLOR='#FFFFFF'>2</FONT> = Troca os números das cartelas
+<FONT  COLOR='#FFFFFF'>4</FONT> = Diminue aposta
+<FONT  COLOR='#FFFFFF'>5</FONT> = Menu de AUTO/ desliga AUTO
+<FONT  COLOR='#FFFFFF'>6</FONT> = Aumenta aposta
+<FONT  COLOR='#FFFFFF'>7</FONT> = Ajuda/ voltar ao jogo
+<FONT  COLOR='#FFFFFF'>+</FONT> = Velocidade
+]]>
+	</pt>
+	</translate>
+
+	<translate id = "HELP_BOTTOM_TEXT">
+		<es><![CDATA[Las bolas extras aumentan drásticamente su chance de ganar
+¡No deje de comprar al menos la primera!]]></es>
+		<en><![CDATA[Extra balls drastically increase your chance to win
+¡Don't hesitate to buy at least the first one! ]]></en>
+		<pt><![CDATA[Las bolas extras aumentan drásticamente su chance de ganar
+¡No deje de comprar al menos la primera!]]></pt>
+	</translate>
+	<translate id = "HELP">
+		<es>Ayuda</es>
+		<en>Help</en>
+		<pt>Ajuda</pt>
+	</translate>
+</xml>

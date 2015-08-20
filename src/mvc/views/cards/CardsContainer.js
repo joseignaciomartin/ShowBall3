@@ -10,17 +10,14 @@
 
 	var _cardsContainer;
 
-	function CardsContainer(container){
+	function CardsContainer(){
 		_this  = this;
 		_cards = [];
 
- 		_cardsContainer   = game.add.group(); //= new Group(game,"cardsContainer", true) // 
- 		_cardsContainer.x = -100; 
-        _cardsContainer.y = 105;
-        container.add(_cardsContainer);
+ 		_cardsContainer   = game.add.group();
 
-		var Xpositions = [203, 595, 203, 595];
-        var Ypositions = [358, 358, 530, 530];
+		var Xpositions = [103, 495, 103, 495];
+        var Ypositions = [263, 263, 435, 435];
 
 		for(var i = 0; i < 4; i++) { 
 			
@@ -90,6 +87,10 @@
 				//countersChange(data);
 			break;
 		}	
+	}
+
+	CardsContainer.prototype.getView = function(){
+		return _cardsContainer;
 	}
 
 	window.CardsContainer = CardsContainer;

@@ -1,19 +1,11 @@
-﻿
-
-
-(function(window){
-
-
-
-
-
-
+﻿(function(window){
 
 	function create() {
 		var theGame = new Game();
 	}
 
 	function Game(){
+		
 		var _applicationController;
 		var _gameConfig  = new BingoGameConfig();
 		Game.gameConfig  = _gameConfig;
@@ -22,21 +14,27 @@
 		//var _externalConfig = ExternalLoadConfig();
 		//Game.externalConfig = _externalConfig
 
-		var LanguageXmlEmbed;
+
+		var languageXml = game.cache.getText('languageXml');
+		/*
+		NO BORRAR VA PARA EL ENGINE.
+
+		var parser = new DOMParser();
+		languageXml = parser.parseFromString(languageXml, "text/xml");
+		for(var i = 0; i < languageXml.getElementsByTagName("translate").length; i++){
+			console.log(languageXml.getElementsByTagName("translate")[i].id);
+		}
+		*/
+
 
 		var IS_TESTING = _gameConfig.isTesting;
 		//console.log(IS_TESTING);
 
 		if(IS_TESTING){
-			
-			_applicationController = new ApplicationController(this, _gameConfig.gameName, LanguageXmlEmbed, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, _gameConfig.parametersIfTesting, 100000);
-		
+			_applicationController = new ApplicationController(this, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, _gameConfig.parametersIfTesting, 100000);
 		}else{
-			
-			_applicationController = new ApplicationController(this, _gameConfig.gameName, LanguageXmlEmbed, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, null, 5);
-		
+			_applicationController = new ApplicationController(this, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, null, 5);
 		}
-
 
 
 		/*
@@ -72,7 +70,8 @@
 		var _gameView = new GameView();
 	}
 
+
 	window.create = create;
-	window.Game = Game;
+	window.Game   = Game;
 
 }(window));

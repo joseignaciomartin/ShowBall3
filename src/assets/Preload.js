@@ -1,5 +1,9 @@
 ﻿function preload() {
 
+    //XML LANGUAJE
+
+    game.load.text('languageXml', 'lang.xml');
+
 	//BACKGROUND
 
     game.load.image('bg_SB3',      '../assets/img/backGround/bg_SB3.jpg');

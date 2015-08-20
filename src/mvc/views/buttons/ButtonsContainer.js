@@ -1,32 +1,28 @@
 ﻿(function(window){
 
-	var buttonContainer;
+	var _buttonContainer;
 	var _this;
 
-	function ButtonsContainer(container){
+	function ButtonsContainer(){
 		_this = this;
 		setupSubscriptions();
 
-		createButtons(container);
+		createButtons();
 	}
 
-	function createButtons(container){
+	function createButtons(){
 		
-		buttonContainer= game.add.group();
+		_buttonContainer   = game.add.group();
 
-	    var btn      = game.add.sprite(249, 177, 'Button');
-	    var Cards    = game.add.sprite(367, 177, 'Cards');
-	    var Cartelas = game.add.sprite(271, 177, 'Cartelas');
-	    var Tarjetas = game.add.sprite(177, 177, 'Tarjetas');
+	    var btn      = game.add.sprite(349, 622, 'Button');
+	    var Cards    = game.add.sprite(467, 622, 'Cards');
+	    var Cartelas = game.add.sprite(371, 622, 'Cartelas');
+	    var Tarjetas = game.add.sprite(277, 622, 'Tarjetas');
  	
- 		buttonContainer.add(btn);
- 		buttonContainer.add(Cards);
- 		buttonContainer.add(Cartelas);
- 		buttonContainer.add(Tarjetas);
-
- 		buttonContainer.x = 100;
- 		buttonContainer.y = 645;
-		container.add(buttonContainer);
+ 		_buttonContainer.add(btn);
+ 		_buttonContainer.add(Cards);
+ 		_buttonContainer.add(Cartelas);
+ 		_buttonContainer.add(Tarjetas);
 	}
 
 	function setupSubscriptions(){
@@ -59,6 +55,10 @@
 				//configureButtonState(int(data));
 			break;
 		}
+	}
+
+	ButtonsContainer.prototype.getView = function(){
+		return _buttonContainer;
 	}
 
     window.ButtonsContainer = ButtonsContainer;
