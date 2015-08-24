@@ -40,29 +40,36 @@
 		/*
 		var _logController:LogController = new LogController();
 		_applicationController.registerController(_logController);
-		
-		var serverModel:ServerCommunicationsModel = new ServerCommunicationsModel();
-		var connectingView:ConnectingView         = new ConnectingView();
 		_gameView                                 = new GameView();
-		
 		var gameController:GameController         = new GameController(_gameView, serverModel);
 		_applicationController.registerController(gameController);
-		
 		var cardController:CardController = new CardController()
 		_applicationController.registerController(cardController);
-		_applicationController.registerController(new ConnectionController(connectingView, serverModel));
+		*/
+
+
+		var serverModel    = new ServerCommunicationsModel();  //si comento esto anda, ver todo el flujo a ver que falta, porque deben de ser mil cosas enganchadas, hasta la comunicacion del host!
+		//var connectingView = new ConnectingView();
+		//_applicationController.registerController(new ConnectionController(  null, null /*connectingView, serverModel*/)); //todo
+		//_applicationController.registerApplicationView(connectingView);
 		
+
+
+		/*
 		configureCounters();
-		
 		var keyboardController:KeyboardController = new KeyboardController(stage);
 		_applicationController.registerController(keyboardController);
-		_applicationController.init();
-		_applicationController.registerApplicationView(_gameView);
-		_applicationController.registerApplicationView(connectingView);
+		*/
+
+
+		//_applicationController.init();
+
+
 		
+		/*
+		_applicationController.registerApplicationView(_gameView);
 		var soundController:GameSoundController = new GameSoundController();
 		_applicationController.registerController(soundController);
-		
 		//show first screen -------------------------------------------------
 		_applicationController.showApplicationView(ConnectingView);
 		*/
