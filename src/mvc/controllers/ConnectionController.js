@@ -8,7 +8,7 @@
 
 		Controller.prototype.model = model;   //que pasa con el Type que espera el controller, es mas cada controller espera eso, hay algo mal no?
 
-		this.initConnection = function():void{
+		this.initConnection = function(){
 			_model.initializeServer(onInitializationComplete);
 		}
 	}

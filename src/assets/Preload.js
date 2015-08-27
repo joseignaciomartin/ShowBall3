@@ -1,8 +1,14 @@
 ﻿function preload() {
 
+
     //XML LANGUAJE
 
     game.load.text('languageXml', 'lang.xml');
+
+    //CONNECTING
+    
+    game.load.image('conn_SB3',    '../assets/img/connecting/connecting_SB3.jpg');
+    game.load.image('conn_SBL',    '../assets/img/connecting/connecting_SBL.jpg');
 
 	//BACKGROUND
 

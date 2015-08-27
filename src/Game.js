@@ -1,5 +1,7 @@
 ﻿(function(window){
 
+	var _gameRootContainer; //el contenedor mas general del juego, el que se manda al Engine para que administre.
+
 	function create() {
 		var theGame = new Game();
 	}
@@ -26,29 +28,40 @@
 		}
 		*/
 
+		_gameRootContainer = game.add.group(); //agrega el contenedor principal del juego al stage
+
 
 		var IS_TESTING = _gameConfig.isTesting;
-		//console.log(IS_TESTING);
-
 		if(IS_TESTING){
-			_applicationController = new ApplicationController(this, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, _gameConfig.parametersIfTesting, 100000);
+			_applicationController = new ApplicationController(_gameRootContainer, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, _gameConfig.parametersIfTesting, 100000);
 		}else{
-			_applicationController = new ApplicationController(this, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, null, 5);
+			_applicationController = new ApplicationController(_gameRootContainer, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, null, 5);
 		}
 
 
 		/*
 		var _logController:LogController = new LogController();
-		_applicationController.registerController(_logController);
-		_gameView                                 = new GameView();
-		var gameController:GameController         = new GameController(_gameView, serverModel);
-		_applicationController.registerController(gameController);
+		_applicationController.registerController(_logController);*/
+
+
+		
+		var _gameView = new GameView();
+		//var gameController:GameController = new GameController(_gameView, serverModel);
+		
+		//TO TEST 
+		_applicationController.registerApplicationView(_gameView);
+
+		
+
+
+		/*_applicationController.registerController(gameController);
 		var cardController:CardController = new CardController()
 		_applicationController.registerController(cardController);
 		*/
 
 
-		var serverModel    = new ServerCommunicationsModel();  //si comento esto anda, ver todo el flujo a ver que falta, porque deben de ser mil cosas enganchadas, hasta la comunicacion del host!
+		var serverModel    = new ServerCommunicationsModel();  
+		
 		//var connectingView = new ConnectingView();
 		//_applicationController.registerController(new ConnectionController(  null, null /*connectingView, serverModel*/)); //todo
 		//_applicationController.registerApplicationView(connectingView);
@@ -67,7 +80,7 @@
 
 		
 		/*
-		_applicationController.registerApplicationView(_gameView);
+		
 		var soundController:GameSoundController = new GameSoundController();
 		_applicationController.registerController(soundController);
 		//show first screen -------------------------------------------------

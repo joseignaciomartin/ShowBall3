@@ -9,7 +9,8 @@
 	function ServerCommunicationsModel(){
 
 		console.log( "serverCommunicationModel  ");
-		_server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game._gameConfig.forceDummy);
+		console.log( Game._gameConfig);
+		_server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game.gameConfig.forceDummy);
 		
 		/* TODO:
 		_server.addEventListener("CONNECTION_OK", onConnectionOk);
