@@ -47,15 +47,17 @@
 		
 		var _gameView   = new GameView();
 		var serverModel = new ServerCommunicationsModel(); 
-		//var gameController:GameController = new GameController(_gameView, serverModel);
-		
-		//TO TEST 
 		_applicationController.registerApplicationView(_gameView);
+		
+		var gameController = new GameController(_gameView, serverModel);
+	//	_applicationController.registerController(gameController);  TODO -  falta aun el getController() del applicationController
+
+		
 
 		
 
 
-		/*_applicationController.registerController(gameController);
+		/*
 		var cardController:CardController = new CardController()
 		_applicationController.registerController(cardController);
 		*/

@@ -1,29 +1,25 @@
 (function(window){
 
-
 	var _gameContainer;
 
-	//ApplicationView.prototype.type = "GameView";
-
-
 	function GameView(){
-		this.type      = "GameView";
+		
 		_gameContainer = game.add.group(); 
 
-		//TODO
-		/*
-			va en el onShow() de la View
-		*/
+		this.type      = "GameView";
 
-		//createViewElements(); //esto es provisorio hasta que se llame onShow()
+		this.getView = function(){
+			return _gameContainer;
+		}
 
-
-		/*
-		como "hereda de application view, deberia reconocer el onHide y onShow de su padre..."
+		
+		//como "hereda de application view, deberia reconocer el onHide y onShow de su padre..."
 		this.onShow = function(event){
 			//_gameController = ApplicationController.getApplicationController().getController(GameController) as GameController; //TODO
 			createViewElements();
-		}*/
+		}
+
+		//no aprece el alert de que no hay onHide() !
 	}
 
 
