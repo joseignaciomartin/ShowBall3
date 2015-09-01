@@ -45,7 +45,8 @@
 
 
 		
-		var _gameView = new GameView();
+		var _gameView   = new GameView();
+		var serverModel = new ServerCommunicationsModel(); 
 		//var gameController:GameController = new GameController(_gameView, serverModel);
 		
 		//TO TEST 
@@ -60,11 +61,11 @@
 		*/
 
 
-		var serverModel    = new ServerCommunicationsModel();  
+		 
 		
-		//var connectingView = new ConnectingView();
-		//_applicationController.registerController(new ConnectionController(  null, null /*connectingView, serverModel*/)); //todo
-		//_applicationController.registerApplicationView(connectingView);
+		var connectingView = new ConnectingView();
+		_applicationController.registerController(new ConnectionController(  /*null, null */connectingView, serverModel)); //todo
+		_applicationController.registerApplicationView(connectingView);
 		
 
 
@@ -75,7 +76,7 @@
 		*/
 
 
-		//_applicationController.init();
+		_applicationController.init();
 
 
 		
@@ -84,10 +85,11 @@
 		var soundController:GameSoundController = new GameSoundController();
 		_applicationController.registerController(soundController);
 		//show first screen -------------------------------------------------
-		_applicationController.showApplicationView(ConnectingView);
+		
 		*/
+		_applicationController.showApplicationView(connectingView.type);
 
-		var _gameView = new GameView();
+		//var _gameView = new GameView();
 	}
 
 

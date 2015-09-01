@@ -3,11 +3,11 @@
 
 	var _gameContainer;
 
-	//GameView.prototype.type = "GameView";
+	//ApplicationView.prototype.type = "GameView";
 
 
 	function GameView(){
-		
+		this.type      = "GameView";
 		_gameContainer = game.add.group(); 
 
 		//TODO
@@ -25,7 +25,6 @@
 			createViewElements();
 		}*/
 	}
-
 
 
 	//private functions
@@ -102,7 +101,7 @@
 
 	
 	GameView.prototype = ApplicationView.prototype;
-    window.GameView = GameView;
+    window.GameView    = GameView;
 
 }(window));
 

@@ -8,12 +8,14 @@
 
 	function ServerCommunicationsModel(){
 
-		console.log( "serverCommunicationModel  ");
-		console.log( Game._gameConfig);
-		_server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game.gameConfig.forceDummy);
+
 		
+		_server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game.gameConfig.forceDummy);
+		console.log("ServerCommunicationsModel server: " + _server);
+
+		window.addEventListener("CONNECTION_OK", onConnectionOk);
 		/* TODO:
-		_server.addEventListener("CONNECTION_OK", onConnectionOk);
+		
 		_server.addEventListener(ServerResponseEvent.SERVER_RESPONSE_EVENT, onServerResponse);*/
 	}
 
@@ -21,8 +23,8 @@
 
 	ServerCommunicationsModel.prototype.initializeServer = function(initComplete){   //(initComplete:Function):void{
 		_initCompleteDelegate = initComplete;
-		var hostName = ApplicationController.getApplicationController().parameters.hostName; //ws://localhost:2012/
-		_server.connect(hostName);
+		//var hostName = ApplicationController.getApplicationController().parameters.hostName; //ws://localhost:2012/
+		_server.connect(Game.gameConfig.parametersIfTesting.hostName);
 	}
 
 	ServerCommunicationsModel.prototype.getServer = function(){ 
@@ -48,7 +50,7 @@
 	}
 
 	function onConnectionOk(event){
-		_server.gameType.login(ApplicationController.getApplicationController().gameName, ApplicationController.getApplicationController().gameSessionId);
+		_server.gameType.login(Game.gameConfig.gameName, ApplicationController.prototype.parameters.session);
 	}
 
 

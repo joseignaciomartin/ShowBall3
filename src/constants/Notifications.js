@@ -1,6 +1,7 @@
 (function(window){
 
 	function Notifications(){}
+	Notifications.CONNECTING_VIEW_READY_NOTIFICATION    = "CONNECTING_VIEW_READY_NOTIFICATION"; 
 
 	Notifications.INITIAL_RESPONSE_NOTIFICATION         = "INITIAL_RESPONSE_NOTIFICATION";   
 	Notifications.STATE_CHANGED_NOTIFICATION            = "STATE_CHANGED_NOTIFICATION";                                                            
