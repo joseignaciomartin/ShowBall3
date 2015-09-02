@@ -10,10 +10,16 @@
         cardNumber = n; 
     }
 
+    /*
+    Porque esta entrando siempre a seteat el mismo carton!???
+    probe cambiar a this.  en lugar de usar prototype, sospecho algo de eso, pero no encuentro!
+    */
     CardView.prototype.setNumbers = function(numbers){
         currentNumbers = numbers;
         for(i = 0; i < 15; i++){
             numbers[i] < 10?  num = "0" + numbers[i] : num = numbers[i]; 
+            //console.log(num);
+            //num = 12;
             numContainer[i].text = num;
         }  
     }

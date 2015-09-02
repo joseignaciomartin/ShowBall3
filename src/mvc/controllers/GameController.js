@@ -4,7 +4,9 @@
 
 	function GameController( view, model, dependencies){  //(view:IView, model:Model, dependencies:Vector.<Class>=null){
 
-		_this = this;
+		_this     = this;
+		this.type = "GameController";
+
 		Controller.prototype.model = model;   //que pasa con el Type que espera el controller, es mas cada controller espera eso, hay algo mal no?
 		setupSubscriptions();
 
@@ -110,8 +112,12 @@
 		_countersController.setCounterValue(CountersController.BET_COUNTER, response.bet);
 		*/
 
-		_cardController = (ApplicationController.getApplicationController().getController(CardController) as CardController);
+
+
+		_cardController = ApplicationController.getApplicationController().getController("CardController");
 		_cardController.setCardsData(response.cards);
+
+
 
 		/*
 		_standardBarController.takeOutButton(StandardBarController.MUSIC_BUTTON);
@@ -151,7 +157,7 @@
 	//to global scope access:
 	window.GameController = GameController;
 
-	//Extends GameTypeController
+	//Extends Controller
 	GameController.prototype = Controller.prototype;
 
 }(window));

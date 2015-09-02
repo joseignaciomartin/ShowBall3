@@ -3,10 +3,9 @@
 	var _this;
 
 	function ConnectionController( view, model, dependencies){  //(view:IView, model:Model, dependencies:Vector.<Class>=null){
-		//super(view, model, dependencies);
-		/*Controller.prototype.view         = view;
-		Controller.prototype.dependencies = dependencies;*/
-		_this = this;
+		
+		_this     = this;
+		this.type = "ConnectionController";
 
 		Controller.prototype.model = model;   //que pasa con el Type que espera el controller, es mas cada controller espera eso, hay algo mal no?
 

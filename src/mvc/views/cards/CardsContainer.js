@@ -57,12 +57,14 @@
 				//reset();
 			break;
 			case Notifications.INITIAL_RESPONSE_NOTIFICATION: 
-				//initCardsState(data as InitResponse);
+				//alert("INITIAL_RESPONSE_NOTIFICATION  - cardCOntainer");
+				//initCardsState(data); // as InitResponse
 			break;
-			case TranslatorController.TRANSLATION_COMPLETED_NOTIFICATION:
+			/*case TranslatorController.TRANSLATION_COMPLETED_NOTIFICATION:
 				//updateLanguage();
-			break;
+			break;*/
 			case Notifications.CARDS_CONFIG_CHANGED_NOTIFICATION:
+				alert("CARDS_CONFIG_CHANGED_NOTIFICATION  - cardCOntainer");
 				//enabledCards(data as Vector.<Boolean>);
 			break;
 			case Notifications.MARK_BALL_NOTIFICATION:
@@ -81,7 +83,8 @@
 				//markWin(data);
 			break;
 			case Notifications.CARDS_NUMBERS_CHANGED_NOTIFICATION:
-				//setCardNumbers(data as Vector.<BingoCardsData>);
+				alert("CARDS_NUMBERS_CHANGED_NOTIFICATION  - cardCOntainer");
+				CardsContainer.prototype.setCardNumbers(data); //as Vector.<BingoCardsData>
 			break;
 			case EngineNotificationsEnum.COUNTER_CHANGED_NOTIFICATION:
 				//countersChange(data);
@@ -91,6 +94,13 @@
 
 	CardsContainer.prototype.getView = function(){
 		return _cardsContainer;
+	}
+
+
+	CardsContainer.prototype.setCardNumbers = function(cards){ 
+		for(var i = 0; i < cards.length; i++){ 
+			_cards[i].setNumbers(cards[i].numbers); 
+		}
 	}
 
 	window.CardsContainer = CardsContainer;

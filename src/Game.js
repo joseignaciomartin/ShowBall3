@@ -50,17 +50,17 @@
 		_applicationController.registerApplicationView(_gameView);
 		
 		var gameController = new GameController(_gameView, serverModel);
-	//	_applicationController.registerController(gameController);  TODO -  falta aun el getController() del applicationController
+		_applicationController.registerController(gameController); // TODO -  falta aun el getController() del applicationController
 
 		
 
 		
 
 
-		/*
-		var cardController:CardController = new CardController()
+		
+		var cardController = new CardController()
 		_applicationController.registerController(cardController);
-		*/
+		
 
 
 		 
