@@ -1,20 +1,16 @@
 (function(window){
 
-	var _this;
-	var _applicationController;
-	var _counterController;
-	var _model; //Esto va en el controller del Engine
-
-
 	function CardController(){  //(view:IView, model:Model, dependencies:Vector.<Class>=null){
 		
-		_this     = this;
+		var _this = this;
+		var _applicationController;
+		var _counterController;
+		var _model; //Esto va en el controller del Engine
+
 		this.type = "CardController";
 
 		_applicationController =  ApplicationController.getApplicationController();
 		//_countersController    = _applicationController.getController(CountersController) as CountersController;
-
-
 
 		this.tryToMarkNumber = function(ball, onComplete, response, filar){  //(ball:int, onComplete:Function, response:BaseResponse, filar:Boolean): Object{ 
 			return _model.tryToMarkNumber(ball, null, response, filar); //_model as CardsModel
@@ -147,11 +143,6 @@
 
 		}
 	}
-
-
-
-
-
 
 
 	//to global scope access:

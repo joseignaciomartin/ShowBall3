@@ -1,7 +1,5 @@
 ﻿(function(window){
 
-	var _gameRootContainer; //el contenedor mas general del juego, el que se manda al Engine para que administre.
-
 	function create() {
 		var theGame = new Game();
 	}
@@ -28,7 +26,7 @@
 		}
 		*/
 
-		_gameRootContainer = game.add.group(); //agrega el contenedor principal del juego al stage
+		var _gameRootContainer = game.add.group(); //agrega el contenedor principal del juego al stage
 
 
 		var IS_TESTING = _gameConfig.isTesting;
@@ -54,10 +52,6 @@
 
 		
 
-		
-
-
-		
 		var cardController = new CardController()
 		_applicationController.registerController(cardController);
 		

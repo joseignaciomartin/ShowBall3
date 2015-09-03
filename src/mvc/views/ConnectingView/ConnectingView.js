@@ -1,11 +1,7 @@
 (function(window){
 
-	var _connectingViewContainer;
-	
-	
-	
 	function ConnectingView(){
-		_connectingViewContainer  = game.add.group();
+		var _connectingViewContainer  = game.add.group();
 
 		this.type = "ConnectingView";
 

@@ -1,35 +1,30 @@
 (function(window){
 
-	var _this;
-	var _applicationController;
-
-	var _cards;
-	var _marksOnCard;
-	var _amountOfPrizes;
-	var _playedPrizes = [];
-	
-
-
 	function CardsModel(cards){  //(view:IView, model:Model, dependencies:Vector.<Class>=null){
-		
-		_this  = this;
 
+		var _this  = this;
+		var _cards = cards;
 
-		_cards = cards;
+		var _applicationController;
+		var _marksOnCard  = [];
+		var _playedPrizes = [];
+		var _amountOfPrizes;
+
+		init();
 		
-		_marksOnCard = [];
-		_marksOnCard.push(0,0,0,0);
-		_applicationController = ApplicationController.getApplicationController();
-		//played prizes control:
-		_amountOfPrizes  = (Game.gameConfig).prizes.length;
-		for(var i = 0; i < 4; i++){
-			var _playedPrizesCard = [];
-			_playedPrizes.push(_playedPrizesCard);
-			for(var j = 0; j < _amountOfPrizes; j++){ 
-				_playedPrizesCard.push(false);
+		function init(){
+			_marksOnCard.push(0,0,0,0);
+			_applicationController = ApplicationController.getApplicationController();
+
+			_amountOfPrizes  = (Game.gameConfig).prizes.length;
+			for(var i = 0; i < 4; i++){
+				var _playedPrizesCard = [];
+				_playedPrizes.push(_playedPrizesCard);
+				for(var j = 0; j < _amountOfPrizes; j++){ 
+					_playedPrizesCard.push(false);
+				}
 			}
 		}
-
 
 		this.upDateCards = function(newCardsData){   //(newCardsData:Vector.<BingoCardsData>):void{ 
 			_cards = newCardsData; 
