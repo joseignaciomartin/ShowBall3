@@ -31,7 +31,7 @@
 
 			setupBackgroundContainer();
 			//setupBallAndMixerContainer();
-			//setupDataPanel();
+			setupDataPanel();
 			setupButtonsContainer();
 			//setupJackpotContainer();
 			//setupPayCards();
@@ -53,11 +53,12 @@
 		}
 		
 		function setupDataPanel(){
-			//TODO
+			var dataPanelView = new DataPanelView();
+			_gameContainer.add(dataPanelView.getView());
 		}
 		
 		function setupButtonsContainer(){
-	        var buttonsContainer = new ButtonsContainer(_gameContainer);
+	        var buttonsContainer = new ButtonsContainer();
 	        _gameContainer.add(buttonsContainer.getView());
 		}
 		
@@ -70,7 +71,7 @@
 		}
 
 		function setupCardsContainer(){
-			var cardsContainer = new CardsContainer(_gameContainer);
+			var cardsContainer = new CardsContainer();
 			_gameContainer.add(cardsContainer.getView());
 			/* to test
 			var cardView = new CardView();

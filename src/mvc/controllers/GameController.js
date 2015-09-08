@@ -7,6 +7,12 @@
 		var _this = this;
 		this.type = "GameController";
 
+		var _applicationController = ApplicationController.getApplicationController();
+		//var _gameSoundController   = _applicationController.getController("GameSoundController");
+		//var _translatorController  = _applicationController.getController("TranslatorController");
+		var _countersController    = _applicationController.getController("CountersController");
+		//var _keyboardController    = _applicationController.getController("KeyboardController");
+
 		//Controller.prototype.model = model;   //que pasa con el Type que espera el controller, es mas cada controller espera eso, hay algo mal no?
 		setupSubscriptions();
 
@@ -92,28 +98,27 @@
 			
 			//_countersController.setCounterValue(OwnCounters.CARDS_ENABLED_COUNTER, cardsEnable);
 			
-			ApplicationController.getApplicationController().showApplicationView("GameView");
+			_applicationController.showApplicationView("GameView");
 			
 			/*
 			setGameState(new WaitState(setGameState, this));
+			speedChangedFromBar();*/
 			
-			speedChangedFromBar();
-			
-			if(ShowBall3._gameConfig.gameName == "Show Ball Light"){
-				(gameState as WaitState).changeCoin(10);
+			if(Game.gameConfig.gameName == "Show Ball Light"){
+				//(gameState as WaitState).changeCoin(10);
 			}else{
-				_countersController.setCounterValue(CountersController.COIN_COUNTER, response.coin); 
+				_countersController.setCounterValue(CountersController.COIN_COUNTER,    response.coin); 
 				_countersController.setCounterValue(CountersController.CREDITS_COUNTER, response.credits);
 				_countersController.setCounterValue(CountersController.JACKPOT_COUNTER, response.jackpot);
 			}
 			_countersController.setCounterValue(CountersController.WIN_COUNTER, response.win);
 			_countersController.setCounterValue(CountersController.TOTAL_BET_COUNTER, response.bet * cardsEnable);
 			_countersController.setCounterValue(CountersController.BET_COUNTER, response.bet);
-			*/
+			
 
 
 
-			_cardController = ApplicationController.getApplicationController().getController("CardController");
+			_cardController = _applicationController.getController("CardController");
 			_cardController.setCardsData(response.cards);
 
 
@@ -132,7 +137,7 @@
 		//private functions
 
 		function onInitializationComplete(response){  //(response:InitResponse):void{
-			ApplicationController.getApplicationController().sendNotification(Notifications.INITIAL_RESPONSE_NOTIFICATION, response);
+			_applicationController.sendNotification(Notifications.INITIAL_RESPONSE_NOTIFICATION, response);
 		}
 
 		function setupSubscriptions(){

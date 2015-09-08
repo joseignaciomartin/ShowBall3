@@ -1,11 +1,11 @@
 ﻿(function(window){
 
 	function create() {
-		var theGame = new Game();
+		var phaserGame = new Game();
 	}
 
 	function Game(){
-		
+
 		var _applicationController;
 		var _gameConfig  = new BingoGameConfig();
 		Game.gameConfig  = _gameConfig;
@@ -31,7 +31,7 @@
 
 		var IS_TESTING = _gameConfig.isTesting;
 		if(IS_TESTING){
-			_applicationController = new ApplicationController(_gameRootContainer, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, _gameConfig.parametersIfTesting, 100000);
+			_applicationController = new ApplicationController(_gameRootContainer, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, _gameConfig.parametersIfTesting, 3);
 		}else{
 			_applicationController = new ApplicationController(_gameRootContainer, _gameConfig.gameName, languageXml, _gameConfig.supportedLanguages, _gameConfig, _roundConfig, null, 5);
 		}

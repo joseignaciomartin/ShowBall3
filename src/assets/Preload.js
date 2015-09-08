@@ -28,4 +28,14 @@
     game.load.image('Cards',     '../assets/img/buttons/Cards.png');
     game.load.image('Cartelas',  '../assets/img/buttons/Cartelas.png');
     game.load.image('Tarjetas',  '../assets/img/buttons/Tarjetas.png');
+
+    //DATAPANEL
+    //ES
+    game.load.image('bola extra',       '../assets/img/dataPanel/ES img/bolaextra_creditos.png');
+    game.load.image('bola gratis',      '../assets/img/dataPanel/ES img/fball.png');
+    game.load.image('no creditos n',    '../assets/img/dataPanel/ES img/lowcredtxt1.png');
+    game.load.image('no creditos r',    '../assets/img/dataPanel/ES img/lowcredtxt2.png');
+    game.load.image('presione jugar a', '../assets/img/dataPanel/ES img/playtxt1.png');
+    game.load.image('presione jugar b', '../assets/img/dataPanel/ES img/playtxt2.png');
+    game.load.image('sorteando bolas',  '../assets/img/dataPanel/ES img/sorttxt.png');
 }
