@@ -1,14 +1,15 @@
 (function(window){
 
 	function ServerCommunicationsModel(){
-
-		var _server;
+		var _this = this;
 		var _initCompleteDelegate;
 
+		this.server;
+		
 		init();
 
 		function init(){
-			_server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game.gameConfig.forceDummy);
+			_this.server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game.gameConfig.forceDummy);
 			window.addEventListener("CONNECTION_OK", onConnectionOk);
 			window.addEventListener("SERVER_RESPONSE_EVENT", onServerResponse);
 		}	
@@ -18,11 +19,11 @@
 		this.initializeServer = function(initComplete){   //(initComplete:Function):void{
 			_initCompleteDelegate = initComplete;
 			//var hostName = ApplicationController.getApplicationController().parameters.hostName; //ws://localhost:2012/
-			_server.connect(Game.gameConfig.parametersIfTesting.hostName);
+			_this.server.connect(Game.gameConfig.parametersIfTesting.hostName);
 		}
 
 		this.getServer = function(){ 
-			return _server.gameType; 
+			return _this.server.gameType; 
 		}
 
 		//private functions
@@ -32,7 +33,7 @@
 			if(response && response.type){
 				switch(response.type){
 					case "LoginResponse":
-						_server.gameType.initialization(); //BingoGameType
+						_this.server.gameType.initialization(); //BingoGameType
 					break;
 					case "InitResponse":
 						if( _initCompleteDelegate != null){
@@ -48,7 +49,7 @@
 		}
 
 		function onConnectionOk(event){
-			_server.gameType.login(Game.gameConfig.gameName, ApplicationController.getApplicationController().parameters.session);
+			_this.server.gameType.login(Game.gameConfig.gameName, ApplicationController.getApplicationController().parameters.session);
 		}
 	}
 

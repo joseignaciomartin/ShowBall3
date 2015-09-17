@@ -6,6 +6,7 @@
 
 		var _this = this;
 		this.type = "GameController";
+		this.gameState;
 
 		var _applicationController = ApplicationController.getApplicationController();
 		//var _gameSoundController   = _applicationController.getController("GameSoundController");
@@ -13,36 +14,45 @@
 		var _countersController    = _applicationController.getController("CountersController");
 		//var _keyboardController    = _applicationController.getController("KeyboardController");
 
-		//Controller.prototype.model = model;   //que pasa con el Type que espera el controller, es mas cada controller espera eso, hay algo mal no?
+		this.model = model;
 		setupSubscriptions();
 
+
+		function setGameState(value){
+			console.log("new state: " + GameStates.getNameState(value.getType()));
+			_this.gameState = value;
+			//configureKeyboardByState(gameState.getType());
+			_applicationController.sendNotification(Notifications.STATE_CHANGED_NOTIFICATION, _this.gameState.getType());
+		}
+
 		this.serverResponse = function(response){
-			/*
+			
 			switch(response.type){
-				case BingoResponseTypes.CHANGE_CONFIG_CARDS:
-					_gameState.changeConfigCardsResponse(response as ChangeConfigCardsResponse);
+				case "ChangeConfigCards":
+					_this.gameState.changeConfigCardsResponse(response);
 				break;
-				case BingoResponseTypes.PLAY:
-					_gameState.playResponse(response as PlayResponse);
+				case "PlayResponse":
+					_this.gameState.playResponse(response);
 				break;
-				case BingoResponseTypes.CHANGE_CARD_NUMBERS:
-					_gameState.changeNumberResponse((response as ChangeCardNumbersResponse));
-					_cardController.setCardsData((response as ChangeCardNumbersResponse).cards);
-					(ApplicationController.getApplicationController().getCurrentApplicationView() as GameView).reset();
+				case "ChangeCardNumbersResponse":
+					_this.gameState.changeNumberResponse(response);
+					_cardController.setCardsData(response.cards);
+					//todo
+					//ApplicationController.getApplicationController().getCurrentApplicationView().reset();
 				break;
-				case BingoResponseTypes.GET_EXTRA_BALL:
-					_gameState.getExtraBallResponse(response as GetExtraBallResponse);
+				case "CancelExtraBallResponse":
+					_this.gameState.getExtraBallResponse(response);
 				break;
-				case BingoResponseTypes.CANCEL_EXTRA_BALL:
-					_gameState.cancelExtraBallResponse(response as CancelExtraBallResponse);
+				case "CancelExtraBallResponse":
+					_this.gameState.cancelExtraBallResponse(response);
 				break;
-				case BingoResponseTypes.CHANGE_BET_RESPONSE:
-					_gameState.changeBetResponse(response as ChangeBetResponse);
+				case "ChangeBetResponse":
+					_this.gameState.changeBetResponse(response);
 				break;
-				case BingoResponseTypes.CHANGE_COIN_RESPONSE:
-					_gameState.changeCoinResponse(response as ChangeCoinResponse);
+				case "ChangeCoinResponse":
+					_this.gameState.changeCoinResponse(response);
 				break;	
-			}*/
+			}
 		}
 
 		this.notificationReceived = function(type, data){
@@ -61,18 +71,18 @@
 					autoPlayStartNotificacion();
 				break;
 				case EngineNotificationsEnum.AUTOPLAY_MODIFIED_NOTIFICATION:
-					if(_gameState.getType() == GameStates.AUTO){ (_gameState as AutoIdleState).updateConfigurationData();}
+					if(gameState.getType() == GameStates.AUTO){ (gameState as AutoIdleState).updateConfigurationData();}
 				break;
 				case EngineNotificationsEnum.AUTOPLAY_STOP_NOTIFICATION:
-					if(_gameState.getType() == GameStates.AUTO){ 
-						(_gameState as AutoIdleState).stopAuto(); 
+					if(gameState.getType() == GameStates.AUTO){ 
+						(gameState as AutoIdleState).stopAuto(); 
 					}
 				break;
 				case EngineNotificationsEnum.BAR_HELP_CLICK_NOTIFICATION:
-					_gameState.showHelp();
+					gameState.showHelp();
 				break;
 				case Notifications.HIDDEN_MENU:
-					_gameState.backToPrevState();
+					gameState.backToPrevState();
 				break;
 				case Notifications.AUTOMATIC_PEEK_NOTIFICATION:
 					handlerPeekEvents(false);
@@ -84,10 +94,8 @@
 		}
 
 		function setInitialResponse(response){
-
-			alert("LLEGAMOS A GAMECONTROLLER - setInitialResponse!  ETAPA 1 CUMPLIDA");
 			
-			_this_iniResponse = response;
+			_this._iniResponse = response;
 
 			var cardsEnable = 0;
 			for(var i = 0; i< response.cards.length; i++){
@@ -100,9 +108,9 @@
 			
 			_applicationController.showApplicationView("GameView");
 			
-			/*
-			setGameState(new WaitState(setGameState, this));
-			speedChangedFromBar();*/
+			
+			setGameState(new WaitState(setGameState, _this));
+			//speedChangedFromBar();
 			
 			if(Game.gameConfig.gameName == "Show Ball Light"){
 				//(gameState as WaitState).changeCoin(10);
@@ -116,16 +124,11 @@
 			_countersController.setCounterValue(CountersController.BET_COUNTER, response.bet);
 			
 
-
-
 			_cardController = _applicationController.getController("CardController");
 			_cardController.setCardsData(response.cards);
 
-
-
 			/*
 			_standardBarController.takeOutButton(StandardBarController.MUSIC_BUTTON);
-
 			_countersController.setCounterValue(OwnCounters.FIN_INIT, 1);
 			
 			if(_applicationController.parameters.is_log)

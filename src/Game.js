@@ -50,32 +50,23 @@
 		var gameController = new GameController(_gameView, serverModel);
 		_applicationController.registerController(gameController); // TODO -  falta aun el getController() del applicationController
 
-		
-
 		var cardController = new CardController()
 		_applicationController.registerController(cardController);
-		
-
-
-		 
 		
 		var connectingView = new ConnectingView();
 		_applicationController.registerController(new ConnectionController(  /*null, null */connectingView, serverModel)); //todo
 		_applicationController.registerApplicationView(connectingView);
 		
-
+		configureCounters();
 
 		/*
-		configureCounters();
+		
 		var keyboardController:KeyboardController = new KeyboardController(stage);
 		_applicationController.registerController(keyboardController);
 		*/
 
-
 		_applicationController.init();
 
-
-		
 		/*
 		
 		var soundController:GameSoundController = new GameSoundController();
@@ -86,6 +77,30 @@
 		_applicationController.showApplicationView(connectingView.type);
 
 		//var _gameView = new GameView();
+
+		function configureCounters(){
+			var controller = _applicationController.getController("CountersController");
+			
+			controller.registerCounter(OwnCounters.ALMOST_BINGO_STATE);
+				
+			controller.registerCounter(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
+			controller.registerCounter(OwnCounters.TOSHOW_DRAWNBALLS_COUNTER);
+			controller.registerCounter(OwnCounters.EXTRA_COST_COUNTER);
+			controller.registerCounter(OwnCounters.SHOWING_HELP);
+			
+			controller.registerCounter(OwnCounters.CARDS_ENABLED_COUNTER);
+			controller.registerCounter(OwnCounters.CARD_0_WIN);
+			controller.registerCounter(OwnCounters.CARD_1_WIN);
+			controller.registerCounter(OwnCounters.CARD_2_WIN);
+			controller.registerCounter(OwnCounters.CARD_3_WIN);
+
+			controller.registerCounter(OwnCounters.EXTRA_INDEX, 1);
+			controller.registerCounter(OwnCounters.WIN_BONUS_COUNTER, 0);
+			controller.registerCounter(OwnCounters.BONUS_DATA, -1);
+			controller.registerCounter(OwnCounters.BONUS_TYPE, -1);
+			controller.registerCounter(OwnCounters.EXTRAS_READY, 0);	
+			controller.registerCounter(OwnCounters.JACKPOT_TOPAY_COUNTER, 0);
+		}
 	}
 
 

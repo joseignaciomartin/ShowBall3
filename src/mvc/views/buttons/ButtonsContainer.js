@@ -3,24 +3,126 @@
 	function ButtonsContainer(){
 		var _this = this;
 		var _buttonContainer;
+		var _buttonsVec = [];
 
 		setupSubscriptions();
-		createButtons();
+		
 
+		var _cardsBtn;//:   ButtonView;
+		var _numbersBtn;//: ButtonView;
+		var _betBtn;//:   	 ButtonView;
+		var _autoBtn;//:  	 ButtonView;
+		var _playBtn;//:    ButtonView;
+		var _turboBtn;//:   ButtonView;
+
+		var _applicationController =  ApplicationController.getApplicationController();
+		//var _gameSoundController   = _applicationController.getController(GameSoundController) as GameSoundController;
+		var _gameController        = _applicationController.getController("GameController");
+		//var _translatorController  = _applicationController.getController(TranslatorController) as TranslatorController;
+		var _countersController    = _applicationController.getController("CountersController");
+		//var _standardBarController = _applicationController.getController(StandardBarController) as StandardBarController;
+
+		//var _currentLanguage       = _translatorController.currentLanguage;
+
+		
 
 		function createButtons(){
-			
-			_buttonContainer   = game.add.group();
+			 
+			_buttonContainer = game.add.group();
+			var xPlus = 460;
 
-		    var btn      = game.add.sprite(349, 622, 'Button');
-		    var Cards    = game.add.sprite(467, 622, 'Cards');
-		    var Cartelas = game.add.sprite(371, 622, 'Cartelas');
-		    var Tarjetas = game.add.sprite(277, 622, 'Tarjetas');
-	 	
-	 		_buttonContainer.add(btn);
-	 		_buttonContainer.add(Cards);
-	 		_buttonContainer.add(Cartelas);
-	 		_buttonContainer.add(Tarjetas);
+			_cardsBtn   	  = new ButtonView(-384.45 + xPlus, 622,"cardsBtn",   _this.onButtonClicked);   _buttonsVec.push(_cardsBtn);
+			_numbersBtn   	  = new ButtonView(-204.6 + xPlus,  622,"numbersBtn", _this.onButtonClicked);   _buttonsVec.push(_numbersBtn);
+			_betBtn   	      = new ButtonView(-114.35 + xPlus, 622,"betBtn",     _this.onButtonClicked);   _buttonsVec.push(_betBtn);
+			_autoBtn          = new ButtonView(31.3 + xPlus,    622,"autoBtn",    _this.onButtonClicked);   _buttonsVec.push(_autoBtn);                  
+			_playBtn          = new ButtonView(122 + xPlus,     622,"playBtn",    _this.onButtonClicked);   _buttonsVec.push(_playBtn);                     
+			_turboBtn         = new ButtonView(224.3 + xPlus,   622,"turboBtn",   _this.onButtonClicked);   _buttonsVec.push(_turboBtn);
+			
+			_buttonContainer.add(_cardsBtn.getView());
+			_buttonContainer.add(_numbersBtn.getView());
+			_buttonContainer.add(_betBtn.getView());
+			_buttonContainer.add(_autoBtn.getView());
+			_buttonContainer.add(_playBtn.getView());
+			_buttonContainer.add(_turboBtn.getView());
+
+
+			/*
+	 		var xPlus = 460;
+			var cardsBtn = game.make.button(-384.45 + xPlus, 622, 'cardsBtn', disable, this, 1, 0, 0);
+			_buttonContainer.add(cardsBtn);
+
+			var numbersBtn = game.make.button(-204.6 + xPlus, 622, 'numbersBtn', disable, this, 1, 0, 0);
+			_buttonContainer.add(numbersBtn);
+
+			var betBtn = game.make.button(-114.35 + xPlus, 622, 'betBtn', disable, this, 1, 0, 0);
+			_buttonContainer.add(betBtn);
+
+			var autoBtn = game.make.button(31.3 + xPlus, 622, 'autoBtn', disable, this, 1, 0, 0);
+			_buttonContainer.add(autoBtn);
+
+			var playBtn = game.make.button(122 + xPlus, 622, 'playBtn', disable, this, 1, 0, 0);
+			_buttonContainer.add(playBtn);
+
+    		var turboBtn   = game.make.button(224.3 + xPlus, 622, 'turboBtn', disable, this, 1, 0, 0);
+			_buttonContainer.add(turboBtn);
+
+
+			function disable() {
+    			turboBtn.frame = 3;
+    			//turboBtn.inputEnabled  = false;
+			}
+
+			function over() {
+			    console.log('button over');
+			}
+
+			function out() {
+			    console.log('button out');
+			}
+			*/
+
+
+		}
+
+		this.onButtonClicked = function(_name){
+			switch(_name){
+				case "playBtn":// play  - cancel
+					_gameController.gameState.playBtn();
+				break;
+				case "turboBtn": // turbo - extra - peek
+					/*
+					_gameController.gameState.turboBtn();
+					if(_gameController.gameState.getType() == GameStates.PEEK || _gameController.gameState.getType() == GameStates.AUTO) _turboBtn.setEnabled();
+					*/
+				break;
+				case "cardsBtn":
+					/*
+					_gameController.gameState.enableNextCard();
+					*/
+				break;
+				case "numbersBtn":
+					console.log(_gameController);
+					console.log(_gameController.gameState);
+					_gameController.gameState.changeNumbers();
+				break;
+				case "betBtn":
+					/*
+					_gameController.gameState.betUp();
+					*/
+				break;
+				case "autoBtn":
+					/*
+					if(!_standardBarController.isAutoOn){
+						_gameSoundController.playSound("sound_fx_buttonAuto");
+						_standardBarController.activateAutoPanel();
+					}else{
+						_gameSoundController.playSound('standardClickSnd');
+						_standardBarController.autoOff();
+					}
+					_autoBtn.setEnabled();
+					*/
+				break;
+			}
 		}
 
 		function setupSubscriptions(){
@@ -59,6 +161,7 @@
 			return _buttonContainer;
 		}
 
+		createButtons();
 	}
 
 

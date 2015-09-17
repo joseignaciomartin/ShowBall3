@@ -24,10 +24,18 @@
 
     //BOTONERA
 
-    game.load.image('Button',    '../assets/img/buttons/Button.png');
+    /*game.load.image('Button',    '../assets/img/buttons/Button.png');
     game.load.image('Cards',     '../assets/img/buttons/Cards.png');
     game.load.image('Cartelas',  '../assets/img/buttons/Cartelas.png');
-    game.load.image('Tarjetas',  '../assets/img/buttons/Tarjetas.png');
+    game.load.image('Tarjetas',  '../assets/img/buttons/Tarjetas.png');*/
+
+    game.load.spritesheet('turboBtn',  '../assets/img/buttons/turbo.png', 110.7, 30.1);
+    game.load.spritesheet('numbersBtn','../assets/img/buttons/numbers.png',  82, 29);
+    game.load.spritesheet('autoBtn',   '../assets/img/buttons/auto.png',     82, 29);
+    game.load.spritesheet('betBtn',    '../assets/img/buttons/bet.png',      82, 29);
+    game.load.spritesheet('playBtn',   '../assets/img/buttons/jugar.png',    82, 29);
+    game.load.spritesheet('cardsBtn',  '../assets/img/buttons/cards.png', 110.7, 28.7);
+
 
     //DATAPANEL
     //ES
