@@ -11,8 +11,9 @@ function BingoGameConfig(){
 	  language:"pt",
 	  session:"88888",
 	  routes:"",
-	  _hostName:"173.192.149.236",
+	  //hostName:"173.192.149.236",//
 	  hostName:"ws://localhost:2012/",
+	  //hostName:"ws://192.168.1.12:2012/", //maquina pablo
 	  swfUrl:"",
 	  is_log:0,
 	  is_free:0,

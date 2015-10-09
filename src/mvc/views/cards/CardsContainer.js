@@ -49,7 +49,7 @@
 					//enabledCards(data as Vector.<Boolean>);
 				break;
 				case Notifications.MARK_BALL_NOTIFICATION:
-					//mark(data);
+					mark(data);
 				break;
 				case Notifications.MARK_ALMOST_NOTIFICATION:
 					//markAlmost(data);
@@ -101,6 +101,13 @@
 				Notifications.MARK_WINS_NOTIFICATION,
 				Notifications.CARDS_NUMBERS_CHANGED_NOTIFICATION);
 			ApplicationController.getApplicationController().addSubscriber(notifications, _this);	
+		}
+
+		function mark(data){
+			if(_cards[data.card].enabled){
+				_cards[data.card].mark(data.position, data.type);
+			}
+			data.onComplete();
 		}
 
 	}

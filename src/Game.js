@@ -81,25 +81,25 @@
 		function configureCounters(){
 			var controller = _applicationController.getController("CountersController");
 			
-			controller.registerCounter(OwnCounters.ALMOST_BINGO_STATE);
-				
+			//numeric
 			controller.registerCounter(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
 			controller.registerCounter(OwnCounters.TOSHOW_DRAWNBALLS_COUNTER);
 			controller.registerCounter(OwnCounters.EXTRA_COST_COUNTER);
-			controller.registerCounter(OwnCounters.SHOWING_HELP);
-			
+			controller.registerCounter(OwnCounters.GAME_SPEED_COUNTER);
 			controller.registerCounter(OwnCounters.CARDS_ENABLED_COUNTER);
-			controller.registerCounter(OwnCounters.CARD_0_WIN);
-			controller.registerCounter(OwnCounters.CARD_1_WIN);
-			controller.registerCounter(OwnCounters.CARD_2_WIN);
-			controller.registerCounter(OwnCounters.CARD_3_WIN);
-
-			controller.registerCounter(OwnCounters.EXTRA_INDEX, 1);
-			controller.registerCounter(OwnCounters.WIN_BONUS_COUNTER, 0);
-			controller.registerCounter(OwnCounters.BONUS_DATA, -1);
-			controller.registerCounter(OwnCounters.BONUS_TYPE, -1);
-			controller.registerCounter(OwnCounters.EXTRAS_READY, 0);	
-			controller.registerCounter(OwnCounters.JACKPOT_TOPAY_COUNTER, 0);
+			controller.registerCounter(OwnCounters.TOTAL_ALMOST_COUNTER);
+			controller.registerCounter(OwnCounters.WIN_CARD_COUNTER_ + "0", 0);
+			controller.registerCounter(OwnCounters.WIN_CARD_COUNTER_ + "1", 0);
+			controller.registerCounter(OwnCounters.WIN_CARD_COUNTER_ + "2", 0);
+			controller.registerCounter(OwnCounters.WIN_CARD_COUNTER_ + "3", 0);
+			
+			//boolean
+			controller.registerCounter(OwnCounters.FIN_INIT, 0);
+			controller.registerCounter(OwnCounters.SHOWING_HELP, 0);
+			controller.registerCounter(OwnCounters.ALMOST_BINGO ,0);
+			controller.registerCounter(OwnCounters.JACKPOT_PAYED, 0);
+			controller.registerCounter(OwnCounters.HAS_EXTRA);
+			controller.registerCounter(OwnCounters.RESET_FINISHED, 1);
 		}
 	}
 

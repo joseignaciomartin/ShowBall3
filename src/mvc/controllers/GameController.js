@@ -93,6 +93,10 @@
 			}
 		}
 
+		this.newBallDrawn = function(){ 
+			_countersController.addValueToCounter(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER, 1); 
+		}
+
 		function setInitialResponse(response){
 			
 			_this._iniResponse = response;

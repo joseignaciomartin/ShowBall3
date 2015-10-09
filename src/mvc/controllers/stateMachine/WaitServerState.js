@@ -1,22 +1,22 @@
 (function(window){
 
 
-	function WaitServerState(gameState, gameController, prevGameType){
+	this.WaitServerState = function(gameState, gameController, prevGameType){
 		var _this = this;
-	
+
+		this._playedInTurbo = false;
+
 		if(_prevGameType == null) prevGameType = -1;
 		
 		var _gameStateChangeCallback = gameState;
 		var _gameController          = gameController;
 		var _applicationController   = ApplicationController.getApplicationController();
 		var _countersController      = _applicationController.getController("CountersController");
-		//var _cardsController         = _applicationController.getController("CardController");
+		var _cardsController         = _applicationController.getController("CardController");
 		
 		//_extraController             = new ExtraController(gameState); //buscar orto modo
 		var _prevGameType            = prevGameType;
 		var _model                   = gameController.model;
-		
-
 
 		this.getType = function(){ 
 			return GameStates.WAIT_SERVER; 
@@ -32,13 +32,13 @@
 			_cardsController.upDateCards(response.cardsData);	
 			_countersController.setCounterValue(CountersController.CREDITS_COUNTER, response.credits);
 			
-			var state = new PlayingState(_gameStateChangeCallback, _gameController, _this);
+			var state = new PlayingState(_gameStateChangeCallback, _gameController);
 			_gameStateChangeCallback(state);
-			
-			if(_playedInTurbo){
-				state._playController.play(_playedInTurbo, response);
+
+			if(_this._playedInTurbo){
+				state._playController.play(_this._playedInTurbo, response);
 			}else{
-				state._playController.play(_playedInTurbo, response);
+				state._playController.play(_this._playedInTurbo, response);
 			}
 		}
 		
@@ -111,11 +111,25 @@
 			return _prevGameType; 
 		}
 
+		this.hideHelp       = function(){}
+		this.enableNextCard = function(){}
+		this.enableCard     = function(cardIndex, enabled){}
+		this.changeNumbers  = function(){}
+		this.turboBtn       = function(){}
+		this.playBtn        = function(){}
+		this.betUp          = function(){}
+		this.betDown        = function(){}
+		this.coinUp         = function(){}
+		this.coinDown       = function(){}
+		this.changeStage    = function(){}
+		this.multipleUse    = function(_function){}
+		this.showHelp       = function(){}
+		this.beginExtras    = function(){}
+		this.playEnded      = function(){}
+
 	}
 
 
 
 	window.WaitServerState = WaitServerState;
-
-
 }(window));

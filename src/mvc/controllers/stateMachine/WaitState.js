@@ -1,7 +1,7 @@
 
 (function(window){
 
-	function WaitState(gameState, gameController){  //(gameState:Function, gameController:GameController){
+	this.WaitState = function(gameState, gameController){  //(gameState:Function, gameController:GameController){
 		var _this = this;
 		var _gameStateChangeCallback = gameState;
 		var _gameController          = gameController;
@@ -21,7 +21,7 @@
 			_model.server.gameType.changeCardsConfiguration(_gameController._cardController.getOpenCards());
 		}
 		
-		this.enableCard = function(cardIndex, enabled){  //(cardIndex:int, enabled:Boolean):void{
+		this.enableCard = function(cardIndex, enabled){  //(cardIndex:int, enabled:Boolean){
 			_this.reset();
 			_gameStateChangeCallback(new WaitServerState(_gameStateChangeCallback, _gameController, _this));
 		}
@@ -168,10 +168,15 @@
 		   _gameController.view.menuView.showMenu();
 		}
 
+		
+		this.changeToPeekState = function(onComplete){}
+		this.hideHelp          = function(){}
+		this.backToPrevState   = function(){}//ver ejemplo en WaitServerState
+		this.beginExtras       = function(){}
+		this.playEnded         = function(){}
+		this.multipleUse       = function(_function){}
+
 	}
-
-
-
 
 
 	window.WaitState = WaitState;
