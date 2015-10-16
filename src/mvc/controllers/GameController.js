@@ -108,7 +108,7 @@
 			}
 
 			
-			//_countersController.setCounterValue(OwnCounters.CARDS_ENABLED_COUNTER, cardsEnable);
+			_countersController.setCounterValue(OwnCounters.CARDS_ENABLED_COUNTER, cardsEnable);
 			
 			_applicationController.showApplicationView("GameView");
 			

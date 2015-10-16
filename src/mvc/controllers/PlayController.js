@@ -41,19 +41,12 @@
 					timeOutIds = null;
 				}
 			}
-
+		}
 
 		function showNextBall(){
 			
 			if(_internalBallIndex < _response.drawnBalls.length){
-				
-				_ball = _response.drawnBalls[_internalBallIndex];
-			    _gameController.newBallDrawn();
-				_internalBallIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
 
-				_peek = _countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1;
-				(_peek) ? filarSetUp() : drawBigBall();
-				
 				function filarSetUp(){
 					_onComplete = drawBigBall;  
 					_applicationController.sendNotification(Notifications.PEEK_SETUP_NOTIFICATION,    {ball:_ball, onComplete:_onComplete, response:_response, filar:_peek, almostBingo:_peek});
@@ -120,18 +113,23 @@
 				
 				function markWinsDuringPlay(){
 					//TEST
+					//setTimeout(showNextBall,100);
 					showNextBall();
 
 					/*
 					_onComplete = showNextBall;
 					_cardsController.markWinsDuringPlay(_onComplete, _response, _ball);*/
 				}
-
 				
+				_ball = _response.drawnBalls[_internalBallIndex];
+			    _gameController.newBallDrawn();
+				_internalBallIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
+
+				_peek = _countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1;
+				(_peek) ? filarSetUp() : drawBigBall();
+
 			}else{
 				
-				markWins();
-
 				function markWins(){
 					//Hay que pasar por arriba con el win del servidor, si o si, por el tema del jackpot
 					_countersController.setCounterValue(CountersController.WIN_COUNTER, _response.win);
@@ -190,13 +188,12 @@
 					}
 				}
 
+				markWins();
 			}
 		}
 
 
-
-
-		}
+		
 
 	}
 

@@ -10,7 +10,12 @@
 
 		function init(){
 			_this.server = ApplicationController.getApplicationController().getServer(null, null/*new DummyServerWorker()*/, Game.gameConfig.forceDummy);
-			window.addEventListener("CONNECTION_OK", onConnectionOk);
+
+			//nuevo
+			setupSubscriptions();
+
+			//anterior
+			//window.addEventListener("CONNECTION_OK", onConnectionOk);
 			window.addEventListener("SERVER_RESPONSE_EVENT", onServerResponse);
 		}	
 
@@ -28,9 +33,13 @@
 
 		//private functions
 
-		function onServerResponse(event){  //(event:ServerResponseEvent):void{
-			var response = event.detail;
+		//anterior
+		//function onServerResponse(event){
+		function onServerResponse(data){  
+			var response = data;
+			//if(response && response.type){
 			if(response && response.type){
+				//switch(response.type){
 				switch(response.type){
 					case "LoginResponse":
 						_this.server.gameType.initialization(); //BingoGameType
@@ -41,16 +50,45 @@
 						}
 					break;
 					default:
-						//TODO
 						(ApplicationController.getApplicationController().getController("GameController")).serverResponse(response);
 					break;
 				}
 			}
 		}
 
-		function onConnectionOk(event){
+
+		this.notificationReceived = function(type, data){
+			switch(type){
+				case EngineNotificationsEnum.CONNECTION_OK:
+					onConnectionOk();
+				break;
+				case EngineNotificationsEnum.SERVER_RESPONSE_EVENT:
+					onServerResponse(data);
+				break;
+			}
+		}
+
+		function setupSubscriptions(){
+			var notifications = []; 
+			notifications.push(
+				EngineNotificationsEnum.CONNECTION_OK,
+				EngineNotificationsEnum.SERVER_RESPONSE_EVENT);
+			ApplicationController.getApplicationController().addSubscriber(notifications, _this);	
+		}
+
+
+		function onConnectionOk(){
 			_this.server.gameType.login(Game.gameConfig.gameName, ApplicationController.getApplicationController().parameters.session);
 		}
+
+		/*anterior
+		function onConnectionOk(event){
+			_this.server.gameType.login(Game.gameConfig.gameName, ApplicationController.getApplicationController().parameters.session);
+		}*/
+
+
+
+
 	}
 
 

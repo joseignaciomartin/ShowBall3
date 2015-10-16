@@ -202,7 +202,7 @@
 					*/
 					currentMessageLabel = DataPanelView.STATE_PRESSPLAY;
 					
-					TweenMax.to(pressPlay_y, .2, {delay:.2, onComplete:changeToBlack});
+					
 					function changeToBlack(){
 						pressPlay_y.visible = false;
 		 				pressPlay_b.visible = true;
@@ -214,7 +214,8 @@
 		 				pressPlay_b.visible = false;
 		 				TweenMax.to(pressPlay_y, .2, {delay:.2, onComplete:changeToBlack});
 					}
-
+					
+					TweenMax.to(pressPlay_y, .2, {delay:.2, onComplete:changeToBlack});
 
 				break; 
 				case DataPanelView.STATE_DRAWINGBALLS:

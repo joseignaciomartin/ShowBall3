@@ -10,12 +10,22 @@
 		this.type = "CardController";
 
 		_applicationController =  ApplicationController.getApplicationController();
-		//_countersController    = _applicationController.getController(CountersController) as CountersController;
+		_countersController    = _applicationController.getController("CountersController");
 
 		this.tryToMarkNumber = function(ball, onComplete, response, filar){  //(ball:int, onComplete:Function, response:BaseResponse, filar:Boolean): Object{ 
 			return _model.tryToMarkNumber(ball, null, response, filar); //_model as CardsModel
 		}
 		
+		this.setGameTotalAlmost = function(willPay){  //(willPay:Vector.<WillPay>):void{
+			if(willPay.length > 0){
+				var totalAlmostCounter = 0;
+				for(var i = 0;i < willPay.length; i++){
+					totalAlmostCounter += willPay[i].boxTotalWin;
+				}
+				_countersController.setCounterValue(OwnCounters.TOTAL_ALMOST_COUNTER, totalAlmostCounter);
+			}
+		}
+
 		this.loadAlmostPayData = function(){  //:Vector.<Almost>
 			return _model.loadAlmostPayData(); 
 		}

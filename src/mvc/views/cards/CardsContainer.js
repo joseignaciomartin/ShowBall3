@@ -35,11 +35,11 @@
 		this.notificationReceived = function(type, data){ //(type:String, data:Object=null):void{
 			switch(type){
 				case Notifications.RESET_NOTIFICATION:
-					//reset();
+					reset();
 				break;
 				case Notifications.INITIAL_RESPONSE_NOTIFICATION: 
 					//alert("INITIAL_RESPONSE_NOTIFICATION  - cardCOntainer");
-					//initCardsState(data); // as InitResponse
+					initCardsState(data); // as InitResponse
 				break;
 				/*case TranslatorController.TRANSLATION_COMPLETED_NOTIFICATION:
 					//updateLanguage();
@@ -52,7 +52,7 @@
 					mark(data);
 				break;
 				case Notifications.MARK_ALMOST_NOTIFICATION:
-					//markAlmost(data);
+					markAlmost(data);
 				break;
 				case Notifications.CHANGE_ALMOST_NOTIFICATION:
 					//changeAlmostState(data);
@@ -73,14 +73,118 @@
 			}	
 		}
 
-		this.getView = function(){
-			return _cardsContainer;
+		function initCardsState(response){  //(response:InitResponse):void{
+			for(var i = 0; i < _cards.length; i++){
+				_cards[i].setEnabled(response.cards[i].enabled);
+				_cards[i].setCardBet(response.bet);
+			}
 		}
 
+		function countersChange(data){
+			switch(data){
+				case CountersController.BET_COUNTER:
+					//setCardBet(_countersController.getCounterValue(CountersController.BET_COUNTER));
+				break;
+				case OwnCounters.WIN_CARD_COUNTER_ + "0":
+					//_cards[0].setWinCard(_countersController.getCounterValue(OwnCounters.WIN_CARD_COUNTER_ + "0"));
+				break;
+				case OwnCounters.WIN_CARD_COUNTER_ + "1":
+					//_cards[1].setWinCard(_countersController.getCounterValue(OwnCounters.WIN_CARD_COUNTER_ + "1"));
+				break;
+				case OwnCounters.WIN_CARD_COUNTER_ + "2":
+					//_cards[2].setWinCard(_countersController.getCounterValue(OwnCounters.WIN_CARD_COUNTER_ + "2"));
+				break;
+				case OwnCounters.WIN_CARD_COUNTER_ + "3":
+					//_cards[3].setWinCard(_countersController.getCounterValue(OwnCounters.WIN_CARD_COUNTER_ + "3"));
+				break;
+			}
+		}
+		
+		function setCardBet(_value){ 
+			if(_cardBet != _value){
+				_cardBet = _value;
+				if(_countersController.getCounterValue(OwnCounters.FIN_INIT) == 1)
+					_gameSoundController.playSound(SoundNames.SND_BET, true);
+				for(var i = 0; i < 4; i++){ 
+					_cards[i].setCardBet(_value);
+				}
+			}
+		}
+		
 		this.setCardNumbers = function(cards){ 
 			for(var i = 0; i < _cards.length; i++){ 
 				_cards[i].setNumbers(cards[i].numbers); 
 			}
+		}
+		
+		this.setCardsData = function(cards){  //(cards:Vector.<BingoCardsData>):void{
+			for(var i = 0; i < cards.length; i++){
+				_cards[i].setNumbers(cards[i].numbers);
+				_cards[i].setEnabled(cards[i].enabled);
+			}
+		}
+		
+		function enabledCards(_value){ //(_value:Vector.<Boolean>):void{
+			_gameSoundController.playSound(SoundNames.SND_CARD, true);
+			for(var i = 0; i<_cards.length; i++){
+				_cards[i].setEnabled(_value[i]);
+			}
+		}
+
+		function updateLanguage(){
+			for(var i = 0; i < cards.length; i++){ 
+				_cards[i].updateLanguage();
+			}
+		}
+		
+		function mark(data){
+			if(_cards[data.card].enabled){
+				_cards[data.card].mark(data.position, data.type);
+			}
+			data.onComplete();
+		}
+
+		function markWin(data){  //(data:Object):void{
+			_cards[data.card].markWin(data.onComplete, data.response, data.prizeIndex, data.showType);
+		}
+
+		function animationToDontShow(card, prize){  //(card:int, prize:int):void{
+			_cards[card].animationToDontShow(prize);
+		}
+		
+		//card n: value 0 -> 3
+		function markAlmost(data){ //(data:Object):void{
+			var almostVector = data.willPay//var almostVector: Vector.<WillPay>
+			for(var i = 0;i < almostVector.length;i++){ 
+
+				console.log(almostVector[i].card);
+				_cards[almostVector[i].card].markAlmost(almostVector[i].boxIndex, almostVector[i].boxTotalWin, data.type);
+			}
+			if(data.onComplete) data.onComplete();
+		}
+
+		function changeAlmostState(data){  //(data:Object):void{
+			for(var c = 0; c < cards.length; c++){
+				_cards[c].changeAlmostState(data.type);
+			}
+			if(data.onComplete)
+				data.onComplete();
+		}
+
+		this.pauseAlmost = function(value){  //(value:Boolean):void{
+			for(var c = 0; c < cards.length; c++){
+				_cards[c].pauseAlmost(value);
+			}
+		}
+		
+		function reset(){ 
+			for(var i = 0; i < 4; i++){ 
+				_cards[i].reset(); 
+			}
+		}
+
+		this.getView = function(){
+			return _cardsContainer;
 		}
 
 
@@ -103,12 +207,7 @@
 			ApplicationController.getApplicationController().addSubscriber(notifications, _this);	
 		}
 
-		function mark(data){
-			if(_cards[data.card].enabled){
-				_cards[data.card].mark(data.position, data.type);
-			}
-			data.onComplete();
-		}
+
 
 	}
 

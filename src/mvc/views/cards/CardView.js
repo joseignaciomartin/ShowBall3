@@ -1,35 +1,133 @@
 ﻿(function(window){
 
     function CardView(n){
-
+        var _this = this;
         var view;
-        var cardNumber = n;
+        var _cardNumber = n;
+        var _cardBet;
+        var _boxes          = [];
         var numContainer    = [];
         var marksContainer  = [];
         var currentNumbers  = [];
+        var numOfBoxes = Game.gameConfig.cardsSize.x * Game.gameConfig.cardsSize.y;
+        this.enabled;
 
+        var  _applicationController = ApplicationController.getApplicationController();
+       // var  _gameSoundController   = _applicationController.getController("GameSoundController");
+       // var  _translatorController  = _applicationController.getController("TranslatorController");
+        var  _countersController    = _applicationController.getController("CountersController");
 
         //public functions
         
+        //En el ShowBall3 es muchisimo mas largo, revisar si da problemas
         this.setNumbers = function(numbers){
             currentNumbers = numbers;
-            for(i = 0; i < 15; i++){
+            /*for(i = 0; i < 15; i++){
                 numbers[i] < 10?  num = "0" + numbers[i] : num = numbers[i]; 
                 numContainer[i].text = num;
-            }  
+            }*/ 
+
+            for(var i = 0; i < numOfBoxes; i++){
+               _boxes[i].setNumber(numbers[i]); 
+            }
         }
 
-        this.mark = function(index){
-            marksContainer[index].visible = true;
-            numContainer[index].style.fill = '#FFF';
+
+        this.setCardBet = function(i){
+            _cardBet = i;
+            
+            if(i == 15) i = 11;
+            if(i == 20) i = 12;
+            //TODO: cambiar fondo de cartones
+
+           // var lang = _translatorController.getCurrentLanguage();
+           // _card.back.gotoAndStop(lang);
+           // _card.back['inner' + lang].gotoAndStop(i);
+        }
+        
+        this.setWinCard = function(value){ 
+            _card.win.text = value.toString(); 
+        }
+        
+        this.setEnabled = function(e, onComplete){ //(e:Boolean, onComplete:Function = null):void{
+            //_card.disable.visible = !e;
+            _this.enabled = e;
+            if (onComplete) onComplete();
+        }
+
+        this.mark = function(i, type){
+            
+            _boxes[i].mark(type);
+             
+            //marksContainer[index].visible = true;
+            //numContainer[index].style.fill = '#FFF';
+        }
+
+        this.markAlmost = function(i, willPayValue, type){  //(i:int, willPayValue:int, type:String):void{
+            _boxes[i].markAlmost(willPayValue, type);
         }
 
         this.reset = function(){
-            for(i = 0; i < 15; i++){
-                marksContainer[index].visible = false;
-                numContainer[index].style.fill = '#000';
+            for(i = 0; i < numOfBoxes; i++){
+                //marksContainer[i].visible  = false;
+                //numContainer[i].style.fill = '#000';
+                _boxes[i].reset();
             }
         }
+
+        this.createCards = function(container, x, y){
+
+            cardViewContainer   = game.add.group();
+            cardViewContainer.x = x; 
+            cardViewContainer.y = y;
+            container.add(cardViewContainer);
+
+            var bg = cardViewContainer.create(0, 0, 'bg');
+
+
+/*
+            var Xpositions = [15, 70, 126, 182, 237, 15, 70, 126, 182, 237,  15,  70, 126, 182, 237];
+            var Ypositions = [44, 44,  44,  44,  44, 88, 88,  88,  88,  88, 132, 132, 132, 132, 132];*/
+
+            var Xpositions = [8, 35, 62, 89, 118, 8, 35, 62, 89, 118, 8, 35, 62, 89, 118];
+            var Ypositions = [22, 22,  22,  22,  22, 44, 44,  44,  44,  44, 66, 66, 66, 66, 66];
+            
+
+            for(i = 0; i < numOfBoxes; i++){
+              
+               //boxes
+               _boxes.push(new CardBoxView(i)); 
+               _boxes[i].createBoxes(cardViewContainer, Xpositions[i], Ypositions[i]);
+
+
+            }
+
+            //TODO se borran no?, osea esta todo denro de boxes, en una clase
+           // marksContainer
+           // numContainer
+
+
+
+        }
+    }
+
+
+
+
+    window.CardView = CardView;
+
+}(window));
+
+
+
+
+
+            /*PRUEBAS*/
+            //*************************************************** estaba en: this.createCards = function(container, x, y){
+
+
+
+/*
 
         this.createCards = function(container, x, y){
 
@@ -42,7 +140,7 @@
 
             var Xpositions = [15, 70, 126, 182, 237, 15, 70, 126, 182, 237, 15, 70, 126, 182, 237];
             var Ypositions = [44, 44, 44, 44, 44, 88, 88, 88, 88, 88, 132, 132, 132, 132, 132];
-            
+
             //create bg match bg
             for(i = 0; i < 15; i++){
                 shoot = view.create(Xpositions[i], Ypositions[i], 'shoot');
@@ -60,9 +158,10 @@
 
 
 
-            /*PRUEBAS*/
-            //***************************************************
+        }
+    }
 
+*/
 
             // 10;20;39;57;73;11;26;44;60;75;16;30;53;68;76
             // 1;21;40;56;84;6;22;45;58;86;15;32;46;63;90
@@ -102,12 +201,3 @@
             //setNumbers(numbers);
 
             //mark(0);
-        }
-    }
-
-
-
-
-    window.CardView = CardView;
-
-}(window));

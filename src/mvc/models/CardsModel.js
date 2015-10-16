@@ -30,16 +30,32 @@
 			_cards = newCardsData; 
 		}
 		
+		
 		this.enableNextCard = function(){
+			
 			var openCards = 0;
-			/*for each(var card in _cards){
-				openCards += int(card.enabled);
-			}*/
 			for(var j = 0; j < _cards.length; j++){
 				openCards += parseInt(_cards[j].enabled);
 			}
+			openCards++;
+			if(openCards > _cards.length) { 
+				openCards = 1; 
+			}
+			
+			_applicationController.sendNotification(OwnCounters.CARDS_ENABLED_COUNTER, openCards);
+				
+			for(var i = 0; i < _cards.length; i++){
+				_cards[i].enabled = (i < openCards);
+			}
+			
+		}
 
-
+		/*
+		this.enableNextCard = function(){
+			var openCards = 0;
+			for(var j = 0; j < _cards.length; j++){
+				openCards += parseInt(_cards[j].enabled);
+			}
 			openCards++;
 			if(openCards > _cards.length) { 
 				openCards = 1; 
@@ -48,10 +64,9 @@
 			for(var i = 0; i < _cards.length; i++){
 				_cards[i].enabled = (i < openCards);
 			}
-			
 			(_applicationController.getController("CountersController")).setCounterValue(OwnCounters.CARDS_ENABLED_COUNTER, openCards);
 			_applicationController.sendNotification(Notifications.CARDS_CONFIG_CHANGED_NOTIFICATION, getOpenCards());
-		}
+		}*/
 		
 		this.enableCard = function(cardIndex, enabled){ //(cardIndex:int, enabled:Boolean):void{
 			var openCards = 0;
