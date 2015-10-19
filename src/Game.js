@@ -101,10 +101,16 @@
 			controller.registerCounter(OwnCounters.HAS_EXTRA);
 			controller.registerCounter(OwnCounters.RESET_FINISHED, 1);
 		}
+
+
 	}
 
-
+	/*function update(){
+		console.log("PHASER UPDATE");
+	}*/
+		
 	window.create = create;
 	window.Game   = Game;
+	//window.update = update;
 
 }(window));

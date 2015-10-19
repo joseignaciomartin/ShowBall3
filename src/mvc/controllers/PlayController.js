@@ -2,8 +2,6 @@
 
 	function PlayController(){
 
-
-
 		var _applicationController =  ApplicationController.getApplicationController();
 		var _cardsController       = _applicationController.getController("CardController");
 		var _gameController        = _applicationController.getController("GameController");
@@ -113,8 +111,8 @@
 				
 				function markWinsDuringPlay(){
 					//TEST
-					//setTimeout(showNextBall,100);
-					showNextBall();
+					setTimeout(showNextBall,200);
+					//showNextBall();
 
 					/*
 					_onComplete = showNextBall;

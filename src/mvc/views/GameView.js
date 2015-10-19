@@ -4,7 +4,7 @@
 	function GameView(){
 		
 		var _gameContainer = game.add.group(); 
-
+		var cardsContainer; 
 		this.type      = "GameView";
 
 
@@ -71,7 +71,7 @@
 		}
 
 		function setupCardsContainer(){
-			var cardsContainer = new CardsContainer();
+			cardsContainer = new CardsContainer();
 			_gameContainer.add(cardsContainer.getView());
 			/* to test
 			var cardView = new CardView();
@@ -83,12 +83,14 @@
 		function setUpClickRegions(){
 			//TODO
 		}
+
 	}
 
 
-
+	
 	GameView.prototype = ApplicationView.prototype;
     window.GameView    = GameView;
+    
 
 }(window));
 

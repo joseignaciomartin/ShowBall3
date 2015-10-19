@@ -12,7 +12,18 @@
 		var _almostBlinkingCount; //:int;
 
 		var numTxt; //phaser text 
-		var shoot;  //phaser bg - van mas TODO
+		var box;
+		const WHITE     = 0;
+		const BLACK     = 1;
+		const RED       = 2;
+		const ALMOST1   = 3;
+		const ALMOST2   = 4;
+
+		//var shoot;  //phaser bg - van mas TODO
+		/*var redBox;    //phaser Sprite
+		var blackBox;    //phaser Sprite
+		var alomostBox1;    //phaser Sprite
+		var alomostBox2;    //phaser Sprite*/
 
 
 		this.almostMarked = function(){
@@ -42,19 +53,21 @@
 			switch(type){
 				case "PLAY":
 					//_boxMovie.gotoAndStop('BLACK');
-					shoot.visible = true;
+					//shoot.visible = true;
+					box.frame = BLACK;
             		numTxt.style.fill = '#FFF';
 
 					_this.updateTextNumber();
 					resetAlmost();
-					
+
 				break;
 				case "EXTRA":
 					
 					function goBlack(){
 						if(c < 5 ) {
 							TweenMax.to(_boxMovie, .1, {onComplete:goWhite});
-							_boxMovie.gotoAndStop('BLACK');
+							//_boxMovie.gotoAndStop('BLACK');
+							box.frame = BLACK;
 							_this.updateTextNumber();
 						}
 					}
@@ -63,7 +76,8 @@
 						c++;
 						if(c < 5 ) {
 							TweenMax.to(_boxMovie,.1, {onComplete:goBlack});
-							_boxMovie.gotoAndStop('WHITE');
+							//_boxMovie.gotoAndStop('WHITE');
+							box.frame = WHITE;
 							_this.updateTextNumber();
 						}
 					}
@@ -91,7 +105,8 @@
 					}
 
 					_loopingBox = true;
-					_boxMovie.gotoAndStop('BLACK');
+					//_boxMovie.gotoAndStop('BLACK');
+					box.frame = BLACK;
 					_this.updateTextNumber();
 					
 					goBig();
@@ -108,11 +123,13 @@
 				case "DURINGPLAY":
 					
 					//_boxMovie.gotoAndStop("ALMOST");
+					box.frame = ALMOST1;
 					_this.updateTextNumber();
 				break;
 				case "NORMAL":
 					
 					//_boxMovie.almostValue.text = willPay.toString();
+					box.frame = RED;
 					_almostBlinking            = true;
 					_almostBlinkingCount       = 0;
 				break;
@@ -163,7 +180,8 @@
 		
 		this.reset = function(){
 			resetAlmost();
-			shoot.visible  = false;
+			//shoot.visible  = false;
+			box.frame = WHITE;
 			numTxt.style.fill = '#000';
 	        //marksContainer[i].visible  = false;
 	        //numContainer[i].style.fill = '#000';
@@ -203,9 +221,37 @@
             container.add(view);
 
             //create bg match bg
-            shoot = view.create(x, y, 'shoot');
-            shoot.visible = false;
-            //marksContainer.push(shoot);
+            //shoot = view.create(x, y, 'shoot');
+            //shoot.visible = false;
+
+   
+            /*whiteBox = game.add.sprite(x, y, 'whiteBox');
+            whiteBox.visible = true;
+			view.add(whiteBox);
+
+            redBox = game.add.sprite(x, y, 'redBox');
+            redBox.visible = false;
+			view.add(redBox);
+
+			blackBox = game.add.sprite(x, y, 'blackBox');
+			blackBox.visible = false;
+			view.add(blackBox);
+
+			alomostBox1 = game.add.sprite(x, y, 'alomostBox1');
+			alomostBox1.visible = false;
+			view.add(alomostBox1);
+
+			alomostBox2 = game.add.sprite(x, y, 'alomostBox2');
+			alomostBox2.visible = false;
+			view.add(alomostBox2);*/
+
+			box = game.add.sprite(x, y, 'box');
+			view.add(box);
+ 			box.frame = WHITE;
+
+
+
+
 
             //create numbers
             _number < 9?  num = "0" + (_number + 1) : num = (_number+1); 

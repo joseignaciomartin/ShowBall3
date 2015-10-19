@@ -1,0 +1,312 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="lineContainer" itemID="539e445e-00000772" lastModified="1403747876" lastUniqueIdentifier="20">
+  <timeline>
+    <DOMTimeline name="lineContainer" guides='&lt;guidelines&gt;&lt;guideline direction="v"&gt;-135&lt;/guideline&gt;&lt;guideline direction="h"&gt;-36&lt;/guideline&gt;&lt;guideline direction="h"&gt;42&lt;/guideline&gt;&lt;guideline direction="v"&gt;114&lt;/guideline&gt;&lt;/guidelines&gt;'>
+      <layers>
+        <DOMLayer name="p 0" color="#4FFF4F" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize0" centerPoint3DX="-10" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-9.75" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p1" color="#9933CC" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize1" centerPoint3DX="-10.25" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 2" color="#FF800A" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize2" centerPoint3DX="-10.5" centerPoint3DY="2.75">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 3" color="#FF4FFF" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize3" centerPoint3DX="-10.5" centerPoint3DY="2.75">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 4" color="#4FFFFF" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize4" centerPoint3DX="-10.5" centerPoint3DY="2.75">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 5" color="#808080" locked="true" current="true" isSelected="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize5" centerPoint3DX="-10.25" centerPoint3DY="2.75">
+                  <matrix>
+                    <Matrix tx="-10" ty="4.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 6" color="#4F80FF" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize6" centerPoint3DX="-10.25" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 7" color="#FF4F4F" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize7" centerPoint3DX="-10.5" centerPoint3DY="2.75">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 8" color="#4FFF4F" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize8" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 9" color="#9933CC" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize9" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 10" color="#FF800A" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize10" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 11" color="#FF4FFF" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize11" centerPoint3DX="-10.25" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 12" color="#4FFFFF" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize12" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 13" color="#808080" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize13" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 14" color="#4F80FF" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize14" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 15" color="#FF4F4F" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize15" centerPoint3DX="-10.45" centerPoint3DY="2.85">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 16" color="#4FFF4F" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize16" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 17" color="#9933CC" locked="true" autoNamed="false" visible="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize17" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="p 18" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="prize" name="prize18" centerPoint3DX="-10.5" centerPoint3DY="3">
+                  <matrix>
+                    <Matrix tx="-10.25" ty="4.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="-0.25" y="-1.35"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

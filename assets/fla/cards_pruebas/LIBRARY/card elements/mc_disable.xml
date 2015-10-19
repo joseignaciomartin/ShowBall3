@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="card elements/mc_disable" itemID="53811bdd-00000468" lastModified="1401417897">
+  <timeline>
+    <DOMTimeline name="mc_disable">
+      <layers>
+        <DOMLayer name="Capa 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="card elements/img/cardback.png">
+                  <matrix>
+                    <Matrix a="1.0030517578125" tx="-164" ty="-74"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="163.5" y="74"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

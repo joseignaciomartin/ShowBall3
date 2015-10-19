@@ -1,0 +1,381 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="800" height="600" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" rulerVisible="true" viewAngle3D="74.2651684569298" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true">
+     <folders>
+          <DOMFolderItem name="boxes" itemID="538121e8-000004c1" isExpanded="true"/>
+          <DOMFolderItem name="boxes/de muestra" itemID="538136ec-00000213"/>
+          <DOMFolderItem name="boxes/img" itemID="5381372d-00000230" isExpanded="true"/>
+          <DOMFolderItem name="card elements" itemID="5387e9a1-000002e3" isExpanded="true"/>
+          <DOMFolderItem name="card elements/img" itemID="53811b64-00000459" isExpanded="true"/>
+          <DOMFolderItem name="card elements/img/en" itemID="53811b68-0000045a"/>
+          <DOMFolderItem name="card elements/img/es" itemID="53811b6b-0000045b"/>
+          <DOMFolderItem name="card elements/img/pt" itemID="53811b70-0000045c" isExpanded="true"/>
+          <DOMFolderItem name="card elements/lang" itemID="5387e93c-000002df"/>
+          <DOMFolderItem name="click zones" itemID="538121fa-000004c5"/>
+          <DOMFolderItem name="fonts" itemID="5383d57e-00000351"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="fonts/Fuente 1" itemID="538138d9-000002de" font="Arial-Black" size="0" id="1" sourceLastImported="1400977625" embedRanges="1|2|3|4"/>
+          <DOMFontItem name="fonts/Fuente 2" itemID="5383fe36-00000482" font="Arial-BoldMT" size="0" id="2" sourceLastImported="1401159222" embedRanges="9999"/>
+          <DOMFontItem name="fonts/Fuente 3" itemID="5383fee8-00000484" font="Swiss721BT-Black" size="0" id="3" sourceLastImported="1401159400" embedRanges="9999"/>
+     </fonts>
+     <media>
+          <DOMBitmapItem name="boxes/img/alomostTrace.png" itemID="5381375c-00000239" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/img/alomostTrace.png" sourceLastImported="1400976860" externalFileSize="3587" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/img/alomostTrace.png" bitmapDataHRef="M 44 1400977173.dat" frameRight="1220" frameBottom="760"/>
+          <DOMBitmapItem name="boxes/img/alomostTrace2.png" itemID="5381375c-0000023a" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/img/alomostTrace2.png" sourceLastImported="1400976943" externalFileSize="3678" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/img/alomostTrace2.png" bitmapDataHRef="M 45 1400977173.dat" frameRight="1220" frameBottom="760"/>
+          <DOMBitmapItem name="boxes/de muestra/blackBox1.png" itemID="53812a09-00000238" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/blackBox1.png" sourceLastImported="1400973421" externalFileSize="3195" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/de muestra/blackBox1.png" bitmapDataHRef="M 39 1400973390.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="boxes/de muestra/blackBox90.png" itemID="53812a09-00000239" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/blackBox90.png" sourceLastImported="1400973426" externalFileSize="701" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/de muestra/blackBox90.png" bitmapDataHRef="M 38 1400973382.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="boxes/img/blackBoxBackGround.png" itemID="5381375c-0000023b" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/img/blackBoxBackGround.png" sourceLastImported="1400976564" externalFileSize="3110" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/img/blackBoxBackGround.png" bitmapDataHRef="M 46 1400977173.dat" frameRight="1220" frameBottom="760"/>
+          <DOMBitmapItem name="card elements/img/cardback.png" itemID="53811873-0000030e" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/cardback.png" sourceLastImported="1228312090" originalCompressionType="lossless" quality="50" href="card elements/img/cardback.png" bitmapDataHRef="M 1 1400968860.dat" frameRight="6540" frameBottom="2960"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp1.png" itemID="53811873-0000030f" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp1.png" sourceLastImported="1400248738" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp1.png" bitmapDataHRef="M 2 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp1.png" itemID="53811873-00000310" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp1.png" sourceLastImported="1400248783" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp1.png" bitmapDataHRef="M 14 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp1.png" itemID="562535fe-00000233" sourceExternalFilepath="./LIBRARY/card elements/img/pt/cdisp1.png" sourceLastImported="1445279143" externalFileSize="6957" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp1.png" bitmapDataHRef="M 55 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp10.png" itemID="53811873-00000312" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp10.png" sourceLastImported="1400248738" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp10.png" bitmapDataHRef="M 11 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp10.png" itemID="53811874-00000313" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp10.png" sourceLastImported="1400248783" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp10.png" bitmapDataHRef="M 23 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp10.png" itemID="5387e8cb-000002ce" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp10.png" sourceLastImported="1401146862" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp10.png" bitmapDataHRef="M 52 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp15.png" itemID="53811874-00000315" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp15.png" sourceLastImported="1400248739" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp15.png" bitmapDataHRef="M 12 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp15.png" itemID="53811874-00000316" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp15.png" sourceLastImported="1400248784" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp15.png" bitmapDataHRef="M 24 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp15.png" itemID="5387e8cb-000002cf" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp15.png" sourceLastImported="1401146862" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp15.png" bitmapDataHRef="M 53 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp2.png" itemID="53811874-00000318" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp2.png" sourceLastImported="1400248739" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp2.png" bitmapDataHRef="M 3 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp2.png" itemID="53811874-00000319" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp2.png" sourceLastImported="1400248784" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp2.png" bitmapDataHRef="M 15 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp2.png" itemID="5387e8cb-000002d0" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp2.png" sourceLastImported="1401146863" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp2.png" bitmapDataHRef="M 56 1401415648.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp20.png" itemID="53811874-0000031b" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp20.png" sourceLastImported="1400248740" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp20.png" bitmapDataHRef="M 13 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp20.png" itemID="53811874-0000031c" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp20.png" sourceLastImported="1400248785" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp20.png" bitmapDataHRef="M 25 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp20.png" itemID="5387e8cb-000002d1" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp20.png" sourceLastImported="1401146863" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp20.png" bitmapDataHRef="M 54 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp3.png" itemID="53811874-0000031e" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp3.png" sourceLastImported="1400248740" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp3.png" bitmapDataHRef="M 4 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp3.png" itemID="53811874-0000031f" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp3.png" sourceLastImported="1400248785" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp3.png" bitmapDataHRef="M 16 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp3.png" itemID="5387e8cb-000002d2" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp3.png" sourceLastImported="1401146864" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp3.png" bitmapDataHRef="M 57 1401415648.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp4.png" itemID="53811874-00000321" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp4.png" sourceLastImported="1400248741" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp4.png" bitmapDataHRef="M 5 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp4.png" itemID="53811874-00000322" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp4.png" sourceLastImported="1400248786" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp4.png" bitmapDataHRef="M 17 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp4.png" itemID="5387e8cb-000002d3" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp4.png" sourceLastImported="1401146864" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp4.png" bitmapDataHRef="M 58 1401415648.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp5.png" itemID="53811874-00000324" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp5.png" sourceLastImported="1400248741" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp5.png" bitmapDataHRef="M 6 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp5.png" itemID="53811874-00000325" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp5.png" sourceLastImported="1400248786" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp5.png" bitmapDataHRef="M 18 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp5.png" itemID="5387e8cb-000002d4" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp5.png" sourceLastImported="1401146866" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp5.png" bitmapDataHRef="M 59 1401415648.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp6.png" itemID="53811874-00000327" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp6.png" sourceLastImported="1400248742" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp6.png" bitmapDataHRef="M 7 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp6.png" itemID="53811874-00000328" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp6.png" sourceLastImported="1400248787" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp6.png" bitmapDataHRef="M 19 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp6.png" itemID="5387e8cb-000002d5" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp6.png" sourceLastImported="1401146865" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp6.png" bitmapDataHRef="M 60 1401415648.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp7.png" itemID="53811874-0000032a" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp7.png" sourceLastImported="1400248742" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp7.png" bitmapDataHRef="M 8 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp7.png" itemID="53811874-0000032b" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp7.png" sourceLastImported="1400248787" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp7.png" bitmapDataHRef="M 20 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp7.png" itemID="5387e8cb-000002d6" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp7.png" sourceLastImported="1401146866" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp7.png" bitmapDataHRef="M 49 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp8.png" itemID="53811874-0000032d" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp8.png" sourceLastImported="1400248743" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp8.png" bitmapDataHRef="M 9 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp8.png" itemID="53811874-0000032e" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp8.png" sourceLastImported="1400248788" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp8.png" bitmapDataHRef="M 21 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp8.png" itemID="5387e8cb-000002d7" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp8.png" sourceLastImported="1401146867" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp8.png" bitmapDataHRef="M 50 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/en/cdisp9.png" itemID="53811874-00000330" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/EN/cdisp9.png" sourceLastImported="1400248743" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/en/cdisp9.png" bitmapDataHRef="M 10 1400968881.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/es/cdisp9.png" itemID="53811874-00000331" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/BACKGROUND/ES/cdisp9.png" sourceLastImported="1400248788" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/es/cdisp9.png" bitmapDataHRef="M 22 1400968948.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="card elements/img/pt/cdisp9.png" itemID="5387e8cb-000002d8" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/backGround/img/pt/cdisp9.png" sourceLastImported="1401146868" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card elements/img/pt/cdisp9.png" bitmapDataHRef="M 51 1401415647.dat" frameRight="6700" frameBottom="3100"/>
+          <DOMBitmapItem name="click zones/lines style reference.png" itemID="539e207e-000002ea" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/cards/LIBRARY/lines style reference.png" sourceLastImported="1402871758" externalFileSize="597344" originalCompressionType="lossless" quality="50" href="click zones/lines style reference.png" bitmapDataHRef="M 49 1402871793.dat" frameRight="32000" frameBottom="18000"/>
+          <DOMBitmapItem name="boxes/de muestra/redBox1.png" itemID="53813b94-000003ba" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/de muestra/redBox1.png" sourceLastImported="1400973456" externalFileSize="307" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/de muestra/redBox1.png" bitmapDataHRef="M 40 1400973434.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="boxes/de muestra/redBox90.png" itemID="53813b94-000003bb" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/de muestra/redBox90.png" sourceLastImported="1400973462" externalFileSize="619" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/de muestra/redBox90.png" bitmapDataHRef="M 41 1400973442.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="boxes/img/redBoxBackGround.png" itemID="5381375c-0000023c" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/img/redBoxBackGround.png" sourceLastImported="1400976692" externalFileSize="980" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/img/redBoxBackGround.png" bitmapDataHRef="M 47 1400977173.dat" frameRight="1220" frameBottom="760"/>
+          <DOMBitmapItem name="boxes/de muestra/whiteBox1.png" itemID="53813b94-000003bc" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/de muestra/whiteBox1.png" sourceLastImported="1400973560" externalFileSize="319" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/de muestra/whiteBox1.png" bitmapDataHRef="M 43 1400973541.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="boxes/de muestra/whiteBox90.png" itemID="53813b94-000003bd" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/de muestra/whiteBox90.png" sourceLastImported="1400973576" externalFileSize="4006" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/de muestra/whiteBox90.png" bitmapDataHRef="M 42 1400973541.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="boxes/img/whiteBoxBackGround.png" itemID="5381375c-0000023d" sourceExternalFilepath="../../../../../../FlashDevelop/Proyectos/Marlony/Games/ShowBall3/assets/fla/cards/LIBRARY/boxes/img/whiteBoxBackGround.png" sourceLastImported="1400977041" externalFileSize="963" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="boxes/img/whiteBoxBackGround.png" bitmapDataHRef="M 48 1400977173.dat" frameRight="1220" frameBottom="760"/>
+     </media>
+     <symbols>
+          <Include href="boxes/almost.xml" loadImmediate="false" itemID="5387be2e-0000022f" lastModified="1401405065"/>
+          <Include href="boxes/box.xml" loadImmediate="false" itemID="53813c09-000003bf" lastModified="1445279143"/>
+          <Include href="card.xml" itemID="5381173e-000002f1" lastModified="1404686605"/>
+          <Include href="card elements/lang/mc_backInnerEN.xml" loadImmediate="false" itemID="5387e900-000002d9" lastModified="1401415936"/>
+          <Include href="card elements/lang/mc_backInnerES.xml" loadImmediate="false" itemID="5387e908-000002da" lastModified="1401415944"/>
+          <Include href="card elements/lang/mc_backInnerPT.xml" loadImmediate="false" itemID="5387e910-000002db" lastModified="1401415952"/>
+          <Include href="card elements/mc_back.xml" loadImmediate="false" itemID="5387e85c-000002cc" lastModified="1401416022"/>
+          <Include href="card elements/mc_disable.xml" loadImmediate="false" itemID="53811bdd-00000468" lastModified="1401417897"/>
+          <Include href="click zones/betZone.xml" loadImmediate="false" itemID="53811e54-000004b7" lastModified="1400970837"/>
+          <Include href="click zones/closeZone.xml" loadImmediate="false" itemID="53811de4-000004b3" lastModified="1400970724"/>
+          <Include href="click zones/numberZone.xml" loadImmediate="false" itemID="53811eb8-000004bb" lastModified="1400970936"/>
+          <Include href="lineContainer.xml" loadImmediate="false" itemID="539e445e-00000772" lastModified="1403747876"/>
+          <Include href="prize.xml" loadImmediate="false" itemID="539e4408-00000770" lastModified="1402881032"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Escena 1">
+               <layers>
+                    <DOMLayer name="Capa 1" color="#4FFF4F" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements/>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <swatchLists>
+          <swatchList>
+               <swatches>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#003300" hue="80" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006600" hue="80" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009900" hue="80" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC00" hue="80" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330000" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333300" hue="40" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#336600" hue="60" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#339900" hue="67" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#33CC00" hue="70" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#33FF00" hue="72" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#660000" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663300" hue="20" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#666600" hue="40" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#669900" hue="53" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#66CC00" hue="60" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#66FF00" hue="64" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000033" hue="160" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#003333" hue="120" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006633" hue="100" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009933" hue="93" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC33" hue="90" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF33" hue="88" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330033" hue="200" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem color="#336633" hue="80" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339933" hue="80" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC33" hue="80" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF33" hue="80" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660033" hue="220" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663333" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666633" hue="40" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#669933" hue="60" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#66CC33" hue="67" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#66FF33" hue="70" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000066" hue="160" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#003366" hue="140" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#006666" hue="120" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009966" hue="107" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC66" hue="100" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF66" hue="96" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330066" hue="180" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#333366" hue="160" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#336666" hue="120" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339966" hue="100" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC66" hue="93" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF66" hue="90" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660066" hue="200" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663366" hue="200" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem color="#669966" hue="80" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC66" hue="80" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF66" hue="80" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000099" hue="160" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#003399" hue="147" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#006699" hue="133" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#009999" hue="120" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC99" hue="110" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF99" hue="104" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330099" hue="173" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#333399" hue="160" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#336699" hue="140" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#339999" hue="120" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC99" hue="107" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF99" hue="100" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660099" hue="187" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#663399" hue="180" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#666699" hue="160" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#669999" hue="120" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC99" hue="100" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF99" hue="93" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000CC" hue="160" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0033CC" hue="150" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0066CC" hue="140" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0099CC" hue="130" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00CCCC" hue="120" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FFCC" hue="112" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300CC" hue="170" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#3333CC" hue="160" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3366CC" hue="147" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3399CC" hue="133" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33CCCC" hue="120" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FFCC" hue="110" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600CC" hue="180" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#6633CC" hue="173" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#6666CC" hue="160" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#6699CC" hue="140" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66CCCC" hue="120" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FFCC" hue="107" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0033FF" hue="152" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0066FF" hue="144" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0099FF" hue="136" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00CCFF" hue="128" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300FF" hue="168" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3333FF" hue="160" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3366FF" hue="150" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3399FF" hue="140" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33CCFF" hue="130" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33FFFF" hue="120" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600FF" hue="176" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#6633FF" hue="170" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6666FF" hue="160" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#6699FF" hue="147" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66CCFF" hue="133" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66FFFF" hue="120" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990000" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993300" hue="13" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#996600" hue="27" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#999900" hue="40" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#99CC00" hue="50" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#99FF00" hue="56" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC0000" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3300" hue="10" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC6600" hue="20" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC9900" hue="30" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCCC00" hue="40" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCFF00" hue="48" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3300" hue="8" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF6600" hue="16" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF9900" hue="24" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFCC00" hue="32" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990033" hue="227" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993333" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996633" hue="20" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#999933" hue="40" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#99CC33" hue="53" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#99FF33" hue="60" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC0033" hue="230" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3333" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6633" hue="13" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC9933" hue="27" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCCC33" hue="40" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCFF33" hue="50" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF0033" hue="232" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3333" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6633" hue="10" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF9933" hue="20" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFCC33" hue="30" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFFF33" hue="40" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990066" hue="213" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993366" hue="220" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996666" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999966" hue="40" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#99CC66" hue="60" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#99FF66" hue="67" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC0066" hue="220" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3366" hue="227" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6666" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9966" hue="20" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCCC66" hue="40" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCFF66" hue="53" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF0066" hue="224" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3366" hue="230" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6666" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9966" hue="13" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFCC66" hue="27" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFFF66" hue="40" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990099" hue="200" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993399" hue="200" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996699" hue="200" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem color="#99CC99" hue="80" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FF99" hue="80" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC0099" hue="210" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3399" hue="213" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6699" hue="220" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9999" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCC99" hue="40" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCFF99" hue="60" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FF0099" hue="216" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3399" hue="220" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6699" hue="227" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9999" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCC99" hue="20" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFFF99" hue="40" saturation="239" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900CC" hue="190" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#9933CC" hue="187" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#9966CC" hue="180" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#9999CC" hue="160" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99CCCC" hue="120" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FFCC" hue="100" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00CC" hue="200" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC33CC" hue="200" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC66CC" hue="200" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC99CC" hue="200" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem color="#CCFFCC" hue="80" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00CC" hue="208" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33CC" hue="210" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66CC" hue="213" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99CC" hue="220" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCCC" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFCC" hue="40" saturation="239" brightness="216"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900FF" hue="184" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#9933FF" hue="180" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#9966FF" hue="173" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#9999FF" hue="160" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99CCFF" hue="140" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99FFFF" hue="120" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00FF" hue="192" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC33FF" hue="190" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC66FF" hue="187" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC99FF" hue="180" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CCCCFF" hue="160" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#CCFFFF" hue="120" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33FF" hue="200" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66FF" hue="200" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99FF" hue="200" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCFF" hue="200" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem color="#F50200" saturation="239" brightness="116"/>
+               </swatches>
+          </swatchList>
+     </swatchLists>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="249343" publishTime="1405995709"/>
+          <PublishItem publishSize="249343" publishTime="1405995692"/>
+          <PublishItem publishSize="249310" publishTime="1404686275"/>
+          <PublishItem publishSize="249310" publishTime="1404686263"/>
+          <PublishItem publishSize="261643" publishTime="1404686132"/>
+          <PublishItem publishSize="293387" publishTime="1404344184"/>
+          <PublishItem publishSize="293387" publishTime="1404344181"/>
+          <PublishItem publishSize="293373" publishTime="1404344172"/>
+          <PublishItem publishSize="293373" publishTime="1404340839"/>
+          <PublishItem publishSize="293370" publishTime="1402959148"/>
+          <PublishItem publishSize="293378" publishTime="1402882130"/>
+          <PublishItem publishSize="293204" publishTime="1402880671"/>
+          <PublishItem publishSize="291558" publishTime="1402242195"/>
+          <PublishItem publishSize="291563" publishTime="1402242021"/>
+          <PublishItem publishSize="291524" publishTime="1401417818"/>
+          <PublishItem publishSize="291523" publishTime="1401416925"/>
+          <PublishItem publishSize="271839" publishTime="1401405603"/>
+          <PublishItem publishSize="271833" publishTime="1401405587"/>
+          <PublishItem publishSize="271862" publishTime="1401405555"/>
+          <PublishItem publishSize="271858" publishTime="1401405525"/>
+     </publishHistory>
+</DOMDocument>

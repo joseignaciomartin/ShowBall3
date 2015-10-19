@@ -12,21 +12,28 @@
         var numOfBoxes = Game.gameConfig.cardsSize.x * Game.gameConfig.cardsSize.y;
         this.enabled;
 
+        var _cardLinePriezesView; //:CardLinePriezesView;
+        var _mapping_prizes_payCards = []; //:Dictionary;
+
         var  _applicationController = ApplicationController.getApplicationController();
        // var  _gameSoundController   = _applicationController.getController("GameSoundController");
        // var  _translatorController  = _applicationController.getController("TranslatorController");
         var  _countersController    = _applicationController.getController("CountersController");
+
+        var _showingPrizes  = [];
+        var _animatedPrizes = [];
+        for(var i = 0; i < Game.gameConfig.prizes.length; i++){
+            _showingPrizes[i]  = false;
+            _animatedPrizes[i] = false;
+        }
+
+        var _mapping_prizes_payCards = Game.gameConfig.mapping_prizes_payCards_Dictionary;
 
         //public functions
         
         //En el ShowBall3 es muchisimo mas largo, revisar si da problemas
         this.setNumbers = function(numbers){
             currentNumbers = numbers;
-            /*for(i = 0; i < 15; i++){
-                numbers[i] < 10?  num = "0" + numbers[i] : num = numbers[i]; 
-                numContainer[i].text = num;
-            }*/ 
-
             for(var i = 0; i < numOfBoxes; i++){
                _boxes[i].setNumber(numbers[i]); 
             }
@@ -56,23 +63,179 @@
         }
 
         this.mark = function(i, type){
-            
             _boxes[i].mark(type);
-             
-            //marksContainer[index].visible = true;
-            //numContainer[index].style.fill = '#FFF';
         }
 
         this.markAlmost = function(i, willPayValue, type){  //(i:int, willPayValue:int, type:String):void{
             _boxes[i].markAlmost(willPayValue, type);
         }
 
+        this.changeAlmostState = function(type){ //(type:String):void{
+            for(var i = 0; i < numOfBoxes; i++){
+                if(_boxes[i].almostMarked){
+                    _boxes[i].changeAlmostState(type);
+                }
+            }
+        }
+        this.pauseAlmost = function(value){ //(value:Boolean):void{
+            for(var i = 0; i < numOfBoxes; i++){
+                if(_boxes[i].almostMarked){
+                    _boxes[i].pauseAlmost(value);
+                }
+            }
+        }
+
+
+        this.markWin = function(onComplete, response, prizeIndex, showType){  //markWin(onComplete:Function, response:BaseResponse, prizeIndex:int, showType:String):void{
+            
+            if(_showingPrizes[prizeIndex] && showType != "ANIMATION"){
+                onComplete();
+                return;
+            }
+            
+            if(_animatedPrizes[prizeIndex] && showType == "ANIMATION"){
+                onComplete();
+                return;
+            }
+                    
+            _showingPrizes[prizeIndex] = true;
+            
+            if(showType == "ANIMATION") _animatedPrizes[prizeIndex] = true;
+            
+            //Sound
+            /*if(prizeIndex < 9 && showType == "ANIMATION" || prizeIndex > 8)
+                prizeSound(prizeIndex, onComplete, response);*/
+            
+            //Boxes
+            for(var i = 0; i < numOfBoxes; i++){
+                if(prizeIndex < 9 && showType == "ANIMATION"){
+                    if(Game.gameConfig.prizes[prizeIndex].definition[i] == 1){
+                        _boxes[i].mark("LOOP"); 
+                    }
+                }
+            }
+            
+            //Lines
+            if(prizeIndex < 9 && showType == "ANIMATION"){
+                _cardLinePriezesView.showLine(null, prizeIndex);
+                _applicationController.sendNotification(Notifications.WIN_BLINK_NOTIFICATION, true);
+            }else{
+                _cardLinePriezesView.showLine(onComplete, prizeIndex);
+            }
+
+        }
+
+        this.animationToDontShow = function(prize){ //(prize:int):void{
+            _animatedPrizes[prize] = true;
+        }
+
+        this.stopBoxesLoop = function(){
+            for(var i = 0;i < numOfBoxes; i++){
+                _boxes[i].isLooping = false;
+            }
+        }
+
+        function prizeSound(index, onComplete, response){ //(index:int, onComplete:Function, response:BaseResponse):void{
+            
+            function prizeSoundFinish(){
+                _applicationController.sendNotification(Notifications.WIN_BLINK_NOTIFICATION, false);
+                stopBoxesLoop();
+                if(onComplete != null) onComplete();
+                
+            }
+
+            //check last extra ball to remove
+            var totalBallsAmount = Game.gameConfig.numberOfBalls + Game.gameConfig.numberOfExtraBalls;
+            if(_countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1 && _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER) == totalBallsAmount)
+                _countersController.setCounterValue(OwnCounters.ALMOST_BINGO, 0);
+            
+            switch(index){
+                
+                case 0:
+                    //check almost bingo to remove
+                    var almostInOthercard = _applicationController.getController("CardController").checkFilar();
+                    if(_countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1 && !almostInOthercard) 
+                        _countersController.setCounterValue(OwnCounters.ALMOST_BINGO, 0); 
+                    
+                    var bet = _countersController.getCounterValue(CountersController.BET_COUNTER);
+                    var jackPotPayed = _countersController.getCounterValue(OwnCounters.JACKPOT_PAYED) == 1;
+
+                    if(response.getType == GameStates.PLAYING && bet > 2 && !jackPotPayed){   
+                        //jackpot
+                        _countersController.setCounterValue(OwnCounters.JACKPOT_PAYED, 1);
+                        //_gameSoundController.playSound(SoundNames.SND_JACKPOT, true);
+                        setTimeout(prizeSoundFinish, 14000);
+
+                    }else{
+                        //Bingo
+                        //_gameSoundController.playSound(SoundNames.SND_WIN_12, true);
+                        setTimeout(prizeSoundFinish, 10000);
+                    }
+                break;  
+                case 1:
+                    //perimetro
+                    //_gameSoundController.playSound(SoundNames.SND_WIN_11, true);
+                    setTimeout(prizeSoundFinish, 12000);
+                break;  
+                case 2:
+                     //doble triangulo
+                    //_gameSoundController.playSound(SoundNames.SND_WIN_10, true);
+                    setTimeout(prizeSoundFinish, 9000);
+                break;  
+                case 3:
+                    //MW
+                    //_gameSoundController.playSound(SoundNames.SND_WIN_9, true);
+                    setTimeout(prizeSoundFinish, 8000);
+                break;                                                              
+                case 4:                                                             
+                case 5:                                                             
+                case 6:                                                             
+                    //LINEA 2                                                       
+                    //_gameSoundController.playSound(SoundNames.SND_WIN_8, true);
+                    setTimeout(prizeSoundFinish, 8000);
+                break;                                                              
+                case 7:                                                             
+                    //W                                                             
+                    //_gameSoundController.playSound(SoundNames.SND_JPS_W, true);
+                    setTimeout(prizeSoundFinish, 5000);
+                break;
+                case 8:
+                    //M
+                    //_gameSoundController.playSound(SoundNames.SND_WIN_7, true);
+                    setTimeout(prizeSoundFinish, 5000);
+                break;  
+                case 9: 
+                    //cuadrado
+                    //_gameSoundController.playSound(SoundNames.SND_TADAA, true);
+                break;
+                default:
+                    //_gameSoundController.playSound(SoundNames.SND_BONK, true);
+                break;  
+            }
+        }
+
+        this.updateLanguage = function(){
+            setCardBet(_cardBet);
+        }
+
         this.reset = function(){
-            for(i = 0; i < numOfBoxes; i++){
-                //marksContainer[i].visible  = false;
-                //numContainer[i].style.fill = '#000';
+
+            //TODO:
+            //_cardLinePriezesView.reset();
+            //_card.win.text = "";
+
+            for(var i = 0; i < numOfBoxes; i++){
                 _boxes[i].reset();
             }
+
+            for(i = 0; i < Game.gameConfig.prizes.length; i++){
+                _showingPrizes[i]  = false;
+                _animatedPrizes[i] = false;
+            }
+        }
+
+        this.almostMarked = function(i){ 
+            return _boxes[i].almostMarcked;
         }
 
         this.createCards = function(container, x, y){
@@ -85,7 +248,7 @@
             var bg = cardViewContainer.create(0, 0, 'bg');
 
 
-/*
+            /*
             var Xpositions = [15, 70, 126, 182, 237, 15, 70, 126, 182, 237,  15,  70, 126, 182, 237];
             var Ypositions = [44, 44,  44,  44,  44, 88, 88,  88,  88,  88, 132, 132, 132, 132, 132];*/
 
@@ -101,6 +264,13 @@
 
 
             }
+
+            //TODO:
+            /*_card.win.text         = "";
+            _card.betZone.alpha    = 0;
+            _card.closeZone.alpha  = 0;
+            _card.numberZone.alpha = 0;
+            _card.disable.visible  = false;*/
 
             //TODO se borran no?, osea esta todo denro de boxes, en una clase
            // marksContainer

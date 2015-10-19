@@ -19,8 +19,16 @@
 
     //CARTONES
 
-    game.load.image('bg',    '../assets/img/cards/cartela3.png');
-    game.load.image('shoot', '../assets/img/cards/tiro_negro.png');
+    game.load.image('bg',          '../assets/img/cards/cartela3.png');
+    game.load.image('shoot',       '../assets/img/cards/tiro_negro.png');
+
+    game.load.atlasXML('box', '../assets/img/cards/box.png', '../assets/img/cards/box.xml');
+
+    /*game.load.image('whiteBox',    '../assets/img/cards/whiteBox.png');
+    game.load.image('redBox',      '../assets/img/cards/redBox.png');
+    game.load.image('blackBox',    '../assets/img/cards/blackBox.png');
+    game.load.image('alomostBox1', '../assets/img/cards/alomostBox1.png');
+    game.load.image('alomostBox2', '../assets/img/cards/alomostBox2.png');*/
 
     //BOTONERA
 
