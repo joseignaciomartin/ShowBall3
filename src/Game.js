@@ -10,7 +10,7 @@
 		var _gameConfig  = new BingoGameConfig();
 		Game.gameConfig  = _gameConfig;
 		var _roundConfig = new BingoRoundConfig();
-		Game.roundConfig = _roundConfig
+		Game.roundConfig = _roundConfig;
 		//var _externalConfig = ExternalLoadConfig();
 		//Game.externalConfig = _externalConfig
 

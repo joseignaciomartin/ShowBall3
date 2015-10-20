@@ -13,18 +13,18 @@
 
 		var numTxt; //phaser text 
 		var box;
+		
 		const WHITE     = 0;
 		const BLACK     = 1;
 		const RED       = 2;
 		const ALMOST1   = 3;
 		const ALMOST2   = 4;
 
-		//var shoot;  //phaser bg - van mas TODO
-		/*var redBox;    //phaser Sprite
-		var blackBox;    //phaser Sprite
+		//var shoot;        //phaser bg - van mas TODO
+		/*var redBox;       //phaser Sprite
+		var blackBox;       //phaser Sprite
 		var alomostBox1;    //phaser Sprite
 		var alomostBox2;    //phaser Sprite*/
-
 
 		this.almostMarked = function(){
 			return _almostMarked;
@@ -42,10 +42,9 @@
            // numTxt = new Phaser.Text(game, x + 12, y + 8, num, {fontSize: '30px', fill: '#000' });
            // view.add(numTxt);
             numTxt.text = num;
-
 			//numTxt.text = _number.toString();	
 		}
-		
+
 		this.mark = function(type){  //(type:String):void{
 
 			if(_almostMarked) resetAlmost();
@@ -123,7 +122,7 @@
 				case "DURINGPLAY":
 					
 					//_boxMovie.gotoAndStop("ALMOST");
-					box.frame = ALMOST1;
+					box.frame = RED;
 					_this.updateTextNumber();
 				break;
 				case "NORMAL":

@@ -12,7 +12,7 @@
         var numOfBoxes = Game.gameConfig.cardsSize.x * Game.gameConfig.cardsSize.y;
         this.enabled;
 
-        var _cardLinePriezesView; //:CardLinePriezesView;
+        var _cardLinePriezesView; //:CardLinePriezesView; 
         var _mapping_prizes_payCards = []; //:Dictionary;
 
         var  _applicationController = ApplicationController.getApplicationController();
@@ -67,6 +67,7 @@
         }
 
         this.markAlmost = function(i, willPayValue, type){  //(i:int, willPayValue:int, type:String):void{
+            //console.log("i " + i);
             _boxes[i].markAlmost(willPayValue, type);
         }
 

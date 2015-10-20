@@ -13,13 +13,13 @@ function BingoGameConfig(){
 	  routes:"",
 	  //hostName:"173.192.149.236",//
 	  hostName:"ws://localhost:2012/",
-	  //hostName:"ws://192.168.1.12:2012/", //maquina pablo
+	  //hostName:"ws://10.0.0.32:2012/", //maquina pablo
 	  swfUrl:"http://test.webstarsaffiliate.com/games/ShowBall3/",
 	  is_log:0,
 	  is_free:0,
 	  version:"_001"
  	};
- 	this.loadCardsStateDuringPlay =0;
+ 	this.loadCardsStateDuringPlay = 0;
  	this.printDuringPlayData = 0;
 	this.numberOfBalls = 30;
 	this.numberOfExtraBalls = 11;

@@ -12,6 +12,22 @@
 		_applicationController =  ApplicationController.getApplicationController();
 		_countersController    = _applicationController.getController("CountersController");
 
+		function checkStopOnPrize(stopOnPrizes){  //(stopOnPrizes:Vector.<StopOnPrize>):Vector.<WinPrizes>{
+			var ballIndex     = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
+			var tempWinPrizes = null;
+			if(stopOnPrizes.length > 0){
+				for(var i = 0; i < stopOnPrizes.length; i++){
+					if(ballIndex == stopOnPrizes[i].ballIndex){
+						if(!tempWinPrizes){ tempWinPrizes = []; }
+						var winprize = new WinPrizes(stopOnPrizes[i].cardNumber);
+						winprize.prizesIndexes.push(stopOnPrizes[i].prizeIndex);
+						tempWinPrizes.push(winprize);
+					}
+				}
+			}
+			return tempWinPrizes;
+		}
+
 		this.tryToMarkNumber = function(ball, onComplete, response, filar){  //(ball:int, onComplete:Function, response:BaseResponse, filar:Boolean): Object{ 
 			return _model.tryToMarkNumber(ball, null, response, filar); //_model as CardsModel
 		}
@@ -23,6 +39,15 @@
 					totalAlmostCounter += willPay[i].boxTotalWin;
 				}
 				_countersController.setCounterValue(OwnCounters.TOTAL_ALMOST_COUNTER, totalAlmostCounter);
+			}
+		}
+
+		this.markAlmostDuringPlay = function(onComplete, response, ball){ //(onComplete:Function, response:PlayResponse, ball:int):void{
+			var duringPlayingState = response.cardsStateDuringPlay[ball];
+			if(duringPlayingState != null && duringPlayingState.almostVec.length > 0){
+				_applicationController.sendNotification(Notifications.MARK_ALMOST_NOTIFICATION, {onComplete:onComplete, willPay:duringPlayingState.almostVec, type:"DURINGPLAY"});
+			}else{
+				onComplete();
 			}
 		}
 

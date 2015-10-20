@@ -41,10 +41,10 @@
 			if(response && response.type){
 				//switch(response.type){
 				switch(response.type){
-					case "LoginResponse":
+					case BingoResponseTypes.LOGIN: //"LoginResponse":
 						_this.server.gameType.initialization(); //BingoGameType
 					break;
-					case "InitResponse":
+					case BingoResponseTypes.INIT: //"InitResponse":
 						if( _initCompleteDelegate != null){
 							_initCompleteDelegate(response);
 						}

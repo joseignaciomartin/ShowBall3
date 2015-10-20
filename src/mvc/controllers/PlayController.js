@@ -90,8 +90,7 @@
 					//TEST
 					updatePayTable();
 
-					/*
-					_onComplete = updatePayTable;
+					/*_onComplete = updatePayTable;
 					if(_response.cardsStateDuringPlay[_ball]){
 						_cardsController.markAlmostDuringPlay(_onComplete, _response, _ball);
 					}else{
@@ -111,15 +110,20 @@
 				
 				function markWinsDuringPlay(){
 					//TEST
-					setTimeout(showNextBall,200);
-					//showNextBall();
+					setTimeout(nextStep,200);
+					//nextStep();
 
 					/*
 					_onComplete = showNextBall;
 					_cardsController.markWinsDuringPlay(_onComplete, _response, _ball);*/
 				}
 				
+				function nextStep(){ 
+					showNextBall();
+				}
+
 				_ball = _response.drawnBalls[_internalBallIndex];
+				console.log("BALLLLL " + _ball);
 			    _gameController.newBallDrawn();
 				_internalBallIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
 
