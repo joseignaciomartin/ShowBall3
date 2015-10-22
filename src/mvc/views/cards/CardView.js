@@ -5,10 +5,13 @@
         var view;
         var _cardNumber = n;
         var _cardBet;
-        var _boxes          = [];
-        var numContainer    = [];
-        var marksContainer  = [];
-        var currentNumbers  = [];
+        var _boxes = [];
+
+        var betTxt;
+        var betValue;
+        var winTxt;
+        var winValue;
+
         var numOfBoxes = Game.gameConfig.cardsSize.x * Game.gameConfig.cardsSize.y;
         this.enabled;
 
@@ -33,7 +36,6 @@
         
         //En el ShowBall3 es muchisimo mas largo, revisar si da problemas
         this.setNumbers = function(numbers){
-            currentNumbers = numbers;
             for(var i = 0; i < numOfBoxes; i++){
                _boxes[i].setNumber(numbers[i]); 
             }
@@ -246,25 +248,42 @@
             cardViewContainer.y = y;
             container.add(cardViewContainer);
 
-            var bg = cardViewContainer.create(0, 0, 'bg');
+            var cardBg = cardViewContainer.create(0, 0, 'card');
+            cardBg.frame = 0;
+           // cardBg.visible = false;//BORRARRRRRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrrrrrrrrrr
 
-
-            /*
-            var Xpositions = [15, 70, 126, 182, 237, 15, 70, 126, 182, 237,  15,  70, 126, 182, 237];
-            var Ypositions = [44, 44,  44,  44,  44, 88, 88,  88,  88,  88, 132, 132, 132, 132, 132];*/
-
-            var Xpositions = [8, 35, 62, 89, 118, 8, 35, 62, 89, 118, 8, 35, 62, 89, 118];
-            var Ypositions = [22, 22,  22,  22,  22, 44, 44,  44,  44,  44, 66, 66, 66, 66, 66];
-            
+            var Xpositions = [1.3, 18.5, 35, 52.5, 69.5,  1.3, 18.5, 35, 52.5, 69.5, 1.3, 18.5, 35, 52.5, 69.5];
+            var Ypositions = [14.5, 14.5,  14.5,  14.5,  14.5, 33, 33,  33,  33,  33, 51.5, 51.5, 51.5, 51.5, 51.5];
 
             for(i = 0; i < numOfBoxes; i++){
-              
-               //boxes
                _boxes.push(new CardBoxView(i)); 
                _boxes[i].createBoxes(cardViewContainer, Xpositions[i], Ypositions[i]);
-
-
             }
+            
+            betTxt = game.add.text(-37,   12, "APUESTA:", {boundsAlignH: 'right', font: 'futura', fontSize: '14px', fill: '#FFF' });
+            betTxt.stroke = '#000';
+            betTxt.strokeThickness = 2;
+            betTxt.setTextBounds(0, 0, 100, 20); 
+            cardViewContainer.add(betTxt);
+
+            betValue = game.add.text(63,   12, "1", {boundsAlignH: 'left', font: 'futura', fontSize: '14px', fill: '#FFF' });
+            betValue.setTextBounds(0, 0, 100, 20); 
+            betValue.stroke = '#000';
+            betValue.strokeThickness = 2;
+            cardViewContainer.add(betValue);
+           
+
+            winTxt = game.add.text(35,   12, "PREMIO:", {boundsAlignH: 'right', font: 'futura', fontSize: '14px', fill: '#FFFF00' });
+            winTxt.stroke = '#000';
+            winTxt.strokeThickness = 2;
+            winTxt.setTextBounds(0, 0, 100, 20); 
+            cardViewContainer.add(winTxt);
+
+            winValue = game.add.text(136,   12, "2000", {boundsAlignH: 'left', font: 'futura', fontSize: '14px', fill: '#FFFF00' });
+            winValue.stroke = '#000';
+            winValue.strokeThickness = 2;
+            winValue.setTextBounds(0, 0, 100, 20); 
+            cardViewContainer.add(winValue);
 
             //TODO:
             /*_card.win.text         = "";
@@ -273,9 +292,16 @@
             _card.numberZone.alpha = 0;
             _card.disable.visible  = false;*/
 
-            //TODO se borran no?, osea esta todo denro de boxes, en una clase
-           // marksContainer
-           // numContainer
+
+            //"ENTER_FRAME" - almost
+            function upDate(){
+                for(i = 0; i < numOfBoxes; i++){
+                    _boxes[i].upDate();
+                }
+                clearTimeout(id);
+                id = setTimeout(upDate, 500);
+            }
+            var id = setTimeout(upDate, 500);
 
 
 

@@ -1,0 +1,129 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="card /card" itemID="5627b0cc-0000027c" lastModified="1445442260">
+  <timeline>
+    <DOMTimeline name="card">
+      <layers>
+        <DOMLayer name="Capa 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_01.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="card /img/showball3_tarjeta_02.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_03.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_04.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_05.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_06.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_07.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_08.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_09.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_10.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_11.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/showball3_tarjeta_12.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="12" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="card /img/cardback.png">
+                  <matrix>
+                    <Matrix tx="-87.5" ty="-73.5"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

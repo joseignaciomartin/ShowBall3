@@ -1,38 +1,38 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 537" majorVersion="12" buildNumber="537" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true">
+     <folders>
+          <DOMFolderItem name="EXPORT spriteSheets  movies" itemID="5628dd5d-000002d1" isExpanded="true"/>
+          <DOMFolderItem name="img" itemID="5628d72f-0000028a" isExpanded="true"/>
+          <DOMFolderItem name="img/bet" itemID="5628d744-0000028e"/>
+          <DOMFolderItem name="img/cancel jugar" itemID="5628d7ba-0000029d" isExpanded="true"/>
+          <DOMFolderItem name="img/cards" itemID="5628d757-00000292"/>
+          <DOMFolderItem name="img/numbers" itemID="5628d766-00000296"/>
+          <DOMFolderItem name="img/turbo extra" itemID="5628d7c6-000002a1"/>
+     </folders>
      <media>
-          <DOMBitmapItem name="Button.png" itemID="55cb875b-00000216" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/BOTON-GRANDE-IDLE.png" sourceLastImported="1439401819" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Button.png" bitmapDataHRef="M 8 1439401767.dat" frameRight="2240" frameBottom="580"/>
-          <DOMBitmapItem name="Cards.png" itemID="55cb8760-00000217" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/CARDS.png" sourceLastImported="1439401824" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Cards.png" bitmapDataHRef="M 11 1439401797.dat" frameRight="1040" frameBottom="420"/>
-          <DOMBitmapItem name="Cartelas.png" itemID="55cb8768-00000218" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/CARTELAS.png" sourceLastImported="1439401832" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Cartelas.png" bitmapDataHRef="M 9 1439401797.dat" frameRight="1480" frameBottom="420"/>
-          <DOMBitmapItem name="Tarjetas.png" itemID="55cb876e-00000219" sourceExternalFilepath="C:/FlashDevelop/ShowBall3/assets/fla/buttons/LIBRARY/img/TARJETAS.png" sourceLastImported="1439401838" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="Tarjetas.png" bitmapDataHRef="M 10 1439401797.dat" frameRight="1480" frameBottom="420"/>
+          <DOMBitmapItem name="img/bet/showball3_main_apostas_pt.png" itemID="5628dc83-000002a2" sourceExternalFilepath="./LIBRARY/img/bet/showball3_main_apostas_pt.png" sourceLastImported="1445369438" externalFileSize="3176" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/bet/showball3_main_apostas_pt.png" bitmapDataHRef="M 5 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/bet/showball3_main_apuestas_esp.png" itemID="5628dc83-000002a3" sourceExternalFilepath="./LIBRARY/img/bet/showball3_main_apuestas_esp.png" sourceLastImported="1445369460" externalFileSize="3186" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/bet/showball3_main_apuestas_esp.png" bitmapDataHRef="M 6 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/bet/showball3_main_bets_eng.png" itemID="5628dc83-000002a4" sourceExternalFilepath="./LIBRARY/img/bet/showball3_main_bets_eng.png" sourceLastImported="1445369416" externalFileSize="2640" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/bet/showball3_main_bets_eng.png" bitmapDataHRef="M 7 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/cards/showball3_main_cards_eng.png" itemID="5628dc83-000002a5" sourceExternalFilepath="./LIBRARY/img/cards/showball3_main_cards_eng.png" sourceLastImported="1445369250" externalFileSize="2912" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/cards/showball3_main_cards_eng.png" bitmapDataHRef="M 8 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/cards/showball3_main_cartelas_pt.png" itemID="5628dc83-000002a6" sourceExternalFilepath="./LIBRARY/img/cards/showball3_main_cartelas_pt.png" sourceLastImported="1445369358" externalFileSize="3077" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/cards/showball3_main_cartelas_pt.png" bitmapDataHRef="M 9 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/cancel jugar/showball3_main_jogar_cancelar_pt.png" itemID="5628dc83-000002a7" sourceExternalFilepath="./LIBRARY/img/cancel jugar/showball3_main_jogar_cancelar_pt.png" sourceLastImported="1445370090" externalFileSize="14631" originalCompressionType="lossless" quality="50" href="img/cancel jugar/showball3_main_jogar_cancelar_pt.png" bitmapDataHRef="M 10 1445517088.dat" frameRight="1920" frameBottom="2460"/>
+          <DOMBitmapItem name="img/cancel jugar/showball3_main_jugar_cancelar_esp.png" itemID="5628dc83-000002a8" sourceExternalFilepath="./LIBRARY/img/cancel jugar/showball3_main_jugar_cancelar_esp.png" sourceLastImported="1445370032" externalFileCRC32="2835630395" externalFileSize="14611" originalCompressionType="lossless" quality="50" href="img/cancel jugar/showball3_main_jugar_cancelar_esp.png" bitmapDataHRef="M 11 1445517088.dat" frameRight="1920" frameBottom="2460"/>
+          <DOMBitmapItem name="img/numbers/showball3_main_numbers_eng.png" itemID="5628dc83-000002a9" sourceExternalFilepath="./LIBRARY/img/numbers/showball3_main_numbers_eng.png" sourceLastImported="1445369184" externalFileSize="3118" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/numbers/showball3_main_numbers_eng.png" bitmapDataHRef="M 12 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/numbers/showball3_main_numeros_esp.png" itemID="5628dc83-000002aa" sourceExternalFilepath="./LIBRARY/img/numbers/showball3_main_numeros_esp.png" sourceLastImported="1445369082" externalFileSize="3264" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/numbers/showball3_main_numeros_esp.png" bitmapDataHRef="M 13 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/numbers/showball3_main_numeros_pt.png" itemID="5628dc83-000002ab" sourceExternalFilepath="./LIBRARY/img/numbers/showball3_main_numeros_pt.png" sourceLastImported="1445369064" externalFileSize="3154" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/numbers/showball3_main_numeros_pt.png" bitmapDataHRef="M 14 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/cancel jugar/showball3_main_play_cancel_eng.png" itemID="5628dc83-000002ac" sourceExternalFilepath="./LIBRARY/img/cancel jugar/showball3_main_play_cancel_eng.png" sourceLastImported="1445370136" externalFileSize="14175" originalCompressionType="lossless" quality="50" href="img/cancel jugar/showball3_main_play_cancel_eng.png" bitmapDataHRef="M 15 1445517088.dat" frameRight="1920" frameBottom="2460"/>
+          <DOMBitmapItem name="img/cards/showball3_main_tarjetas_esp.png" itemID="5628dc83-000002ad" sourceExternalFilepath="./LIBRARY/img/cards/showball3_main_tarjetas_esp.png" sourceLastImported="1445369378" externalFileSize="3045" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img/cards/showball3_main_tarjetas_esp.png" bitmapDataHRef="M 16 1445517088.dat" frameRight="1880" frameBottom="780"/>
+          <DOMBitmapItem name="img/turbo extra/showball3_main_turbo_extra.png" itemID="5628dc83-000002ae" sourceExternalFilepath="./LIBRARY/img/turbo extra/showball3_main_turbo_extra.png" sourceLastImported="1445370004" externalFileSize="13726" originalCompressionType="lossless" quality="50" href="img/turbo extra/showball3_main_turbo_extra.png" bitmapDataHRef="M 17 1445517088.dat" frameRight="1920" frameBottom="2460"/>
      </media>
+     <symbols>
+          <Include href="EXPORT spriteSheets  movies/playBtn.xml" loadImmediate="false" itemID="5628dcba-000002b7" lastModified="1445518685"/>
+     </symbols>
      <timelines>
           <DOMTimeline name="Escena 1">
                <layers>
                     <DOMLayer name="Capa 1" color="#4FFF4F" current="true" isSelected="true">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
-                                   <elements>
-                                        <DOMBitmapInstance libraryItemName="Button.png">
-                                             <matrix>
-                                                  <Matrix tx="249.35" ty="204.45"/>
-                                             </matrix>
-                                        </DOMBitmapInstance>
-                                        <DOMBitmapInstance libraryItemName="Cards.png">
-                                             <matrix>
-                                                  <Matrix tx="367.35" ty="176.5"/>
-                                             </matrix>
-                                        </DOMBitmapInstance>
-                                        <DOMBitmapInstance libraryItemName="Cartelas.png">
-                                             <matrix>
-                                                  <Matrix tx="271.35" ty="176.5"/>
-                                             </matrix>
-                                        </DOMBitmapInstance>
-                                        <DOMBitmapInstance libraryItemName="Tarjetas.png">
-                                             <matrix>
-                                                  <Matrix tx="177.35" ty="176.5"/>
-                                             </matrix>
-                                        </DOMBitmapInstance>
-                                   </elements>
+                                   <elements/>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>

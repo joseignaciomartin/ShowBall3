@@ -1,0 +1,57 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="box/box" itemID="53813c09-000003bf" lastModified="1445441719" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="box" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;18&lt;/guideline&gt;&lt;guideline direction="h"&gt;-181&lt;/guideline&gt;&lt;guideline direction="h"&gt;-192&lt;/guideline&gt;&lt;guideline direction="h"&gt;7&lt;/guideline&gt;&lt;/guidelines&gt;'>
+      <layers>
+        <DOMLayer name="bg boxes" color="#FF800A" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="box/img/whiteBoxBackGround.png">
+                  <matrix>
+                    <Matrix tx="-30.5" ty="-19"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="box/img/blackBoxBackGround.png">
+                  <matrix>
+                    <Matrix tx="-30.5" ty="-19"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="box/img/redBoxBackGround.png">
+                  <matrix>
+                    <Matrix tx="-30.5" ty="-19"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="box/almost" centerPoint3DX="-14" centerPoint3DY="-1">
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="box/img/alomostTrace2.png">
+                  <matrix>
+                    <Matrix tx="-30.5" ty="-19"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

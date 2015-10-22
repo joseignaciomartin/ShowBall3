@@ -123,7 +123,10 @@
 				}
 
 				_ball = _response.drawnBalls[_internalBallIndex];
-				console.log("BALLLLL " + _ball);
+				//console.log("BALLLLL " + _ball);
+				if(_ball == 6){
+					console.log("BALLLLL " + _ball);
+				}
 			    _gameController.newBallDrawn();
 				_internalBallIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
 

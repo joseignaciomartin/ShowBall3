@@ -2,7 +2,8 @@
 
 	function ButtonView(x, y, key, clickCallBack){
 		var _this = this;
-		var _view = game.make.button(x, y, key, onclick, this, 1, 0, 0);
+		//var _view = game.make.button(x, y, key, onclick, this, 1, 0, 0);
+		var _view = game.add.button(x, y, key, onclick, this);
 
 
 		this.getView = function(){
@@ -13,7 +14,7 @@
 			clickCallBack(key);
 		}
 
-		function setEnabled(){
+		this.setEnabled = function(){
 
 			_view.inputEnabled  = true;
 
@@ -33,7 +34,7 @@
 			*/
 		}
 
-		function setDisabled(){
+		this.setDisabled = function(){
 
 			//_view.inputEnabled  = false;
 

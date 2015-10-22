@@ -19,8 +19,8 @@
 		var betValue; 
 		var winValue;
 
-		var pressPlay_y;
-		var pressPlay_b;
+		var pressPlay
+		var pressPlayText = "PRESIONE JUGAR";
 
 		var _applicationController = ApplicationController.getApplicationController();
 		var _gameController        = _applicationController.getController("GameController");
@@ -42,45 +42,19 @@
 
 		changeMessagePanel(DataPanelView.STATE_PRESSPLAY);
 
-
 		function createDataPanel(){
 			
 			_dataPanelContainer   = game.add.group();
 
+			creditsText = game.add.text(340,   8, "CREDITS", {boundsAlignH: 'center', fontSize: '14px', fill: '#FFF' }); creditsText.setTextBounds(0, 0, 200, 30);  _dataPanelContainer.add(creditsText);
+			betText     = game.add.text(576, 209, "BET",     {boundsAlignH: 'center', fontSize: '16px', fill: '#FFF' }); betText.setTextBounds(0, 0, 200, 30);      _dataPanelContainer.add(betText);
+			winText     = game.add.text(695, 209, "WIN",     {boundsAlignH: 'center', fontSize: '16px', fill: '#FFF' }); winText.setTextBounds(0, 0, 200, 30);      _dataPanelContainer.add(winText);
+
+			creditsValue = game.add.text(356, 6,   "000", {boundsAlignH: 'right',  fontSize: '16px', fill: '#FFFF00' }); creditsValue.setTextBounds(0, 0, 200, 30); _dataPanelContainer.add(creditsValue);
+			betValue     = game.add.text(578, 228, "000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' }); betValue.setTextBounds(0, 0, 200, 30);     _dataPanelContainer.add(betValue);
+			winValue     = game.add.text(697, 228, "000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' }); winValue.setTextBounds(0, 0, 200, 30);     _dataPanelContainer.add(winValue);
 			
-			creditsText = new Phaser.Text(game ,70,20,"CREDITS", {boundsAlignH: 'center', fontSize: '14px', fill: '#FFF' });
-			betText     = new Phaser.Text(game ,70,50,"BET",     {boundsAlignH: 'center', fontSize: '14px', fill: '#FFF' });
-			winText     = new Phaser.Text(game ,70,80,"WIN",     {boundsAlignH: 'center', fontSize: '14px', fill: '#FFF' });
-			
-			_dataPanelContainer.add(creditsText);
-			_dataPanelContainer.add(betText);
-			_dataPanelContainer.add(winText);
-
-			creditsValue = new Phaser.Text(game ,70,30,"000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' });
-			betValue     = new Phaser.Text(game ,70,60,"000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' });
-			winValue     = new Phaser.Text(game ,70,90,"000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' });
-
-			_dataPanelContainer.add(creditsValue);
-			_dataPanelContainer.add(betValue);
-			_dataPanelContainer.add(winValue);
-
-			pressPlay_y = _dataPanelContainer.create(55, 165, 'presione jugar a');
-			pressPlay_b = _dataPanelContainer.create(55, 165, 'presione jugar b');
-			pressPlay_b.visible = false;
-
-			//var numTxt = new Phaser.Text(game, Xpositions[i] + 12, Ypositions[i] + 8, num, {fontSize: '30px', fill: '#000' });
-           // view.add(numTxt);
-/*
-		    var btn      = game.add.sprite(349, 622, 'Button');
-		    var Cards    = game.add.sprite(467, 622, 'Cards');
-		    var Cartelas = game.add.sprite(371, 622, 'Cartelas');
-		    var Tarjetas = game.add.sprite(277, 622, 'Tarjetas');
-	 	
-	 		_dataPanelContainer.add(btn);
-	 		_dataPanelContainer.add(Cards);
-	 		_dataPanelContainer.add(Cartelas);
-	 		_dataPanelContainer.add(Tarjetas);
-	 		*/
+			pressPlay = game.add.text(638, 272, pressPlayText, {font: 'futura', fontSize: '20px', fill: '#FFFF00', boundsAlignH: "center" }); pressPlay.setTextBounds(0, 0, 200, 30); _dataPanelContainer.add(pressPlay);
 		}
 
 		function setupSubscriptions(){
@@ -204,18 +178,18 @@
 					
 					
 					function changeToBlack(){
-						pressPlay_y.visible = false;
-		 				pressPlay_b.visible = true;
-						TweenMax.to(pressPlay_y, .2, {delay:.2, onComplete:changeToYellow});
+		 				pressPlay.style.fill = '#000';
+		 				pressPlay.setText(pressPlayText);
+						TweenMax.to(pressPlay, .2, {delay:.2, onComplete:changeToYellow});
 					}
 
 					function changeToYellow(){
-						pressPlay_y.visible = true;
-		 				pressPlay_b.visible = false;
-		 				TweenMax.to(pressPlay_y, .2, {delay:.2, onComplete:changeToBlack});
+		 				pressPlay.style.fill = '#FFFF00';
+		 				pressPlay.setText(pressPlayText);
+		 				TweenMax.to(pressPlay, .2, {delay:.2, onComplete:changeToBlack});
 					}
 					
-					TweenMax.to(pressPlay_y, .2, {delay:.2, onComplete:changeToBlack});
+					TweenMax.to(pressPlay, .2, {delay:.2, onComplete:changeToBlack});
 
 				break; 
 				case DataPanelView.STATE_DRAWINGBALLS:

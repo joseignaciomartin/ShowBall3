@@ -12,8 +12,8 @@
 		var _cardBet = 0;
 		
 		var _cardsContainer = game.add.group();
-		var Xpositions      = [103, 495, 103, 495];
-        var Ypositions      = [263, 263, 435, 435];
+		var Xpositions      = [122, 303, 483, 663];
+        var Ypositions      = [366, 366, 366, 366];  
 
         init();
 

@@ -18,7 +18,7 @@
 		this.onShow = function(event){
 
 			var bg;
-			Game.gameConfig.gameName == "Show Ball 3"? bg = game.add.sprite(-151, 0, 'conn_SB3') : bg = game.add.sprite(-151, 0, 'conn_SBL');
+			Game.gameConfig.gameName == "Show Ball 3"? bg = game.add.sprite(0, 0, 'conn_SB3') : bg = game.add.sprite(0, 0, 'conn_SBL');
 			_connectingViewContainer.add(bg);
 			
 

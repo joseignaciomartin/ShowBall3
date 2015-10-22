@@ -4,7 +4,9 @@
 		<title>ShowBall3</title>
 	</head>
 	<body>
+		<link href='assets/cssFonts.css' rel='stylesheet' type='text/css'>
 
+		<!-- ENGINE -->
 		<script src="../../Engine1.1/src/engine/communications/ServerCommunicationManager.js"></script>
 		<script src="../../Engine1.1/src/engine/communications/server/SocketServer.js"></script>
 
@@ -55,7 +57,7 @@
 
 		<!-- ....................................................................................................................... -->
 
-		<!-- Game -->
+		<!-- GAME -->
 		<script src="Game.js"></script>
 		<script src="phaser/phaser.min.js"></script>
 
@@ -98,7 +100,8 @@
 
 		<script>
 
-			var game = new Phaser.Game(892, 669, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});
+			//var game = new Phaser.Game(892, 669, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});
+		var game = new Phaser.Game(960, 540, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});
 
 
 		</script>
