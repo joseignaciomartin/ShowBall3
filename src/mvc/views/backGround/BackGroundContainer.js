@@ -15,8 +15,6 @@
 			barra = game.add.sprite(0, 0, 'barra');
 			_backGroundContainer.add(barra);
 
-
-
 			//referencia
 			/*bg_referencia = game.add.sprite(0, 0, 'ref');
 			_backGroundContainer.add(bg_referencia);*/

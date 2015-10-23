@@ -1,6 +1,6 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="prize" itemID="539e4408-00000770" lastModified="1445441594">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="A EXPORT spriteSheets  movies/prizes" itemID="5628f36c-000002fa" lastModified="1445628810">
   <timeline>
-    <DOMTimeline name="prize" guides='&lt;guidelines&gt;&lt;guideline direction="v"&gt;-125&lt;/guideline&gt;&lt;guideline direction="h"&gt;1&lt;/guideline&gt;&lt;guideline direction="h"&gt;-1&lt;/guideline&gt;&lt;guideline direction="h"&gt;34&lt;/guideline&gt;&lt;guideline direction="h"&gt;38&lt;/guideline&gt;&lt;guideline direction="h"&gt;-41&lt;/guideline&gt;&lt;guideline direction="h"&gt;-37&lt;/guideline&gt;&lt;guideline direction="v"&gt;124&lt;/guideline&gt;&lt;guideline direction="v"&gt;-11&lt;/guideline&gt;&lt;guideline direction="v"&gt;136&lt;/guideline&gt;&lt;guideline direction="v"&gt;-65&lt;/guideline&gt;&lt;guideline direction="v"&gt;-61&lt;/guideline&gt;&lt;guideline direction="v"&gt;64&lt;/guideline&gt;&lt;guideline direction="v"&gt;60&lt;/guideline&gt;&lt;/guidelines&gt;'>
+    <DOMTimeline name="prizes" guides='&lt;guidelines&gt;&lt;guideline direction="v"&gt;-125&lt;/guideline&gt;&lt;guideline direction="h"&gt;34&lt;/guideline&gt;&lt;guideline direction="h"&gt;38&lt;/guideline&gt;&lt;guideline direction="h"&gt;-41&lt;/guideline&gt;&lt;guideline direction="h"&gt;-37&lt;/guideline&gt;&lt;guideline direction="v"&gt;124&lt;/guideline&gt;&lt;guideline direction="v"&gt;-11&lt;/guideline&gt;&lt;guideline direction="v"&gt;136&lt;/guideline&gt;&lt;guideline direction="v"&gt;-65&lt;/guideline&gt;&lt;guideline direction="v"&gt;-61&lt;/guideline&gt;&lt;guideline direction="v"&gt;64&lt;/guideline&gt;&lt;guideline direction="v"&gt;60&lt;/guideline&gt;&lt;/guidelines&gt;'>
       <layers>
         <DOMLayer name="prizes" color="#4FFF4F" locked="true" autoNamed="false">
           <frames>
@@ -145,7 +145,7 @@
                     <Edge fillStyle0="1" strokeStyle="1" edges="
 !-1232.5 12.5|-123 700"/>
                     <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
-!-2491 698.5|-2491 700!-2491 700|-2491 701!-2491 701|-2493 732!-2491.5 700|-2491 700!-2366 700|-2436 700!-2436 700|-2436 732!-2458.5 755|-2456.5 755"/>
+!-2491.5 700|-2491 700!-2491 700|-2491 698.5!-2491 700|-2491 701!-2491 701|-2493 732!-2366 700|-2436 700!-2436 700|-2436 732!-2458.5 755|-2456.5 755"/>
                     <Edge fillStyle0="1" strokeStyle="1" edges="
 !-2366 700|-1232.5 12.5"/>
                     <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
@@ -512,14 +512,14 @@
                     </StrokeStyle>
                   </strokes>
                   <edges>
-                    <Edge fillStyle0="1" fillStyle1="1" edges="
-!0 -532S1|55 -532"/>
-                    <Edge fillStyle0="1" strokeStyle="1" edges="
-!55 -532S5|55 -811"/>
                     <Edge fillStyle0="1" edges="
 !55 -811S1|0 -811"/>
                     <Edge fillStyle0="1" strokeStyle="1" edges="
 !0 -811S5|0 -532"/>
+                    <Edge fillStyle0="1" fillStyle1="1" edges="
+!0 -532S1|55 -532"/>
+                    <Edge fillStyle0="1" strokeStyle="1" edges="
+!55 -532S5|55 -811"/>
                     <Edge fillStyle1="1" edges="
 !55 755|0 755"/>
                     <Edge fillStyle1="1" strokeStyle="1" edges="
@@ -761,7 +761,7 @@
                     <Edge fillStyle1="1" strokeStyle="1" edges="
 !1162 -35.5|35.5 -735!35.5 -735|-1170.5 -7.5!-1170.5 -7.5|-44 692"/>
                     <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
-!-1170.5 -7.5|-1239.5 -50!1301.5 -34.5|1231.5 7.5!35.5 -735|-13 -765!-13 -765|3.5 -792!-1309 -8|-1240.5 34.5"/>
+!1301.5 -34.5|1231.5 7.5!-1170.5 -7.5|-1239.5 -50!-1309 -8|-1240.5 34.5!35.5 -735|-13 -765!-13 -765|3.5 -792"/>
                   </edges>
                 </DOMShape>
               </elements>
@@ -860,7 +860,7 @@
                     <Edge fillStyle1="1" strokeStyle="1" edges="
 !1160.5 -37|35.5 -735!35.5 -735|-1147.5 -21!-1147.5 -21|-23 677"/>
                     <Edge fillStyle0="1" fillStyle1="1" strokeStyle="1" edges="
-!-1147.5 -21|-1216.5 -64!1299 -36|1229.5 6!35.5 -735|-13 -765!-13 -765|3.5 -792!-1286.5 -22|-1217 21"/>
+!1299 -36|1229.5 6!-1147.5 -21|-1216.5 -64!-1286.5 -22|-1217 21!35.5 -735|-13 -765!-13 -765|3.5 -792"/>
                   </edges>
                 </DOMShape>
               </elements>

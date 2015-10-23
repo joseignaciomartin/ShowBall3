@@ -7,12 +7,11 @@
 		var _gameController        = _applicationController.getController("GameController");
 		var _countersController    = _applicationController.getController("CountersController");
 		var _internalBallIndex = 0; 
-		var _response; //PlayResponse
+		var _response;   //:PlayResponse
 		var _isTurbo;
 		var _onComplete; //:Function;
-		var _ball;// :int; 
+		var _ball;       //:int; 
 		var _peek = false;
-
 
 		this.play = function(isTurbo, playData){   //(isTurbo:Boolean, playData:PlayResponse):void{
 			
@@ -51,10 +50,8 @@
 				} 
 				
 				function drawBigBall(){                                                           
-					
 					//TEST
 					boxMatch();
-					
 					/*
 					(_peek) ? _onComplete = peekState : _onComplete = boxMatch;                           
 					_applicationController.sendNotification(Notifications.DRAW_BIG_BALL_NOTIFICATION,  {ball:_ball, onComplete:_onComplete, response:_response, filar:_peek});*/
@@ -78,7 +75,6 @@
 				function drawSmallBall(){
 					//TEST
 					markAlmostDuringPlay()
-
 					/*
 					(Game.gameConfig.loadCardsStateDuringPlay)? _onComplete = markAlmostDuringPlay: _onComplete = nextStep;
 					_applicationController.sendNotification(Notifications.DRAW_SMALL_BALL_NOTIFICATION,{ball:_ball, onComplete:_onComplete, response:_response, filar:_peek, isTurbo:_isTurbo});
@@ -86,11 +82,10 @@
 				}
 				
 				function markAlmostDuringPlay(){
-
 					//TEST
 					updatePayTable();
-
-					/*_onComplete = updatePayTable;
+					/*
+					_onComplete = updatePayTable;
 					if(_response.cardsStateDuringPlay[_ball]){
 						_cardsController.markAlmostDuringPlay(_onComplete, _response, _ball);
 					}else{
@@ -175,19 +170,17 @@
 					var finalCredit = _response.credits + _response.win;
 					var finalCreditInCash = _response.credits_in_cash + _response.win_in_cash;
 					_applicationController.sendNotification(Notifications.START_PAID, {onComplete:_onComplete, win:_response.win, winInCash:_response.win_in_cash , finalCredit:finalCredit, finalCreditInCash:finalCreditInCash});
-					
 				}
 				
 				function final(){
 					if(_response.hasExtra){
-						var idTimeOut = setTimeout(beginExtras, 300);
-						
 						function beginExtras(){
 							 clearTimeout(idTimeOut);
 							 _applicationController.sendNotification(Notifications.NORMAL_DRAW_END_NOTIFICATION, {hasExtra:_response.hasExtra, freeExtraPos:_response.freeExtraPos});
 							 _gameController.gameState.beginExtras();
 							_applicationController.sendNotification(Notifications.EXTRA_SIGN_NOTIFICATION);
 						}
+						var idTimeOut = setTimeout(beginExtras, 300);
 					}else{
 						_gameController.gameState.playEnded();
 					}

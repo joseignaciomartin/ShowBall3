@@ -4,6 +4,7 @@
 		var _this = this;
 		//var _view = game.make.button(x, y, key, onclick, this, 1, 0, 0);
 		var _view = game.add.button(x, y, key, onclick, this);
+		_view.frame = 1;
 
 
 		this.getView = function(){

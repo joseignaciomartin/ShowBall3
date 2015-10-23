@@ -1,6 +1,6 @@
-<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true">
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#333333" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" rulerVisible="true" objectsSnapTo="false" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true">
      <folders>
-          <DOMFolderItem name="EXPORT spriteSheets  movies" itemID="5628dd5d-000002d1" isExpanded="true"/>
+          <DOMFolderItem name="A EXPORT spriteSheets  movies" itemID="5628f336-000002f9" isExpanded="true"/>
           <DOMFolderItem name="img" itemID="5628d72f-0000028a" isExpanded="true"/>
           <DOMFolderItem name="img/bet" itemID="5628d744-0000028e"/>
           <DOMFolderItem name="img/cancel jugar" itemID="5628d7ba-0000029d" isExpanded="true"/>
@@ -24,7 +24,7 @@
           <DOMBitmapItem name="img/turbo extra/showball3_main_turbo_extra.png" itemID="5628dc83-000002ae" sourceExternalFilepath="./LIBRARY/img/turbo extra/showball3_main_turbo_extra.png" sourceLastImported="1445370004" externalFileSize="13726" originalCompressionType="lossless" quality="50" href="img/turbo extra/showball3_main_turbo_extra.png" bitmapDataHRef="M 17 1445517088.dat" frameRight="1920" frameBottom="2460"/>
      </media>
      <symbols>
-          <Include href="EXPORT spriteSheets  movies/playBtn.xml" loadImmediate="false" itemID="5628dcba-000002b7" lastModified="1445518685"/>
+          <Include href="A EXPORT spriteSheets  movies/playBtn.xml" loadImmediate="false" itemID="5628dcba-000002b7" lastModified="1445535978"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Escena 1">

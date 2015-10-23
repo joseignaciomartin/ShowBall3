@@ -1,17 +1,19 @@
 <DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="800" height="600" frameRate="30" currentTimeline="1" xflVersion="2.2" creatorInfo="Adobe Flash Professional CS6" platform="Windows" versionInfo="Saved by Adobe Flash Windows 12.0 build 481" majorVersion="12" buildNumber="481" rulerVisible="true" viewAngle3D="74.2651684569298" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true">
      <folders>
-          <DOMFolderItem name="box" itemID="5627b05f-00000235"/>
-          <DOMFolderItem name="box/img" itemID="5381372d-00000230"/>
+          <DOMFolderItem name="A EXPORT spriteSheets  movies" itemID="5628f32d-000002f8" isExpanded="true"/>
+          <DOMFolderItem name="box" itemID="5627b05f-00000235" isExpanded="true"/>
+          <DOMFolderItem name="box/img" itemID="5381372d-00000230" isExpanded="true"/>
           <DOMFolderItem name="card " itemID="5627b05b-00000234"/>
-          <DOMFolderItem name="card /img" itemID="53811b64-00000459" isExpanded="true"/>
+          <DOMFolderItem name="card /img" itemID="53811b64-00000459"/>
+          <DOMFolderItem name="lines prizes" itemID="5628f381-000002ff" isExpanded="true"/>
      </folders>
-     <fonts/>
      <media>
           <DOMBitmapItem name="box/img/alomostTrace.png" itemID="5627b01f-0000022d" sourceExternalFilepath="./LIBRARY/boxes/img/alomostTrace.png" sourceLastImported="1445371478" externalFileSize="1115" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="box/img/alomostTrace.png" bitmapDataHRef="M 44 1400977173.dat" frameRight="660" frameBottom="720"/>
           <DOMBitmapItem name="box/img/alomostTrace2.png" itemID="5627b01f-0000022e" sourceExternalFilepath="./LIBRARY/boxes/img/alomostTrace2.png" sourceLastImported="1445371490" externalFileSize="1134" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="box/img/alomostTrace2.png" bitmapDataHRef="M 45 1400977173.dat" frameRight="660" frameBottom="720"/>
           <DOMBitmapItem name="box/img/blackBoxBackGround.png" itemID="5627b01f-0000022f" sourceExternalFilepath="./LIBRARY/boxes/img/blackBoxBackGround.png" sourceLastImported="1445371528" externalFileSize="1059" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="box/img/blackBoxBackGround.png" bitmapDataHRef="M 46 1400977173.dat" frameRight="660" frameBottom="720"/>
           <DOMBitmapItem name="card /img/cardback.png" itemID="5627b01f-00000230" sourceExternalFilepath="./LIBRARY/card elements/img/cardback.png" sourceLastImported="1445370568" originalCompressionType="lossless" quality="50" href="card /img/cardback.png" bitmapDataHRef="M 1 1400968860.dat" frameRight="3500" frameBottom="2940"/>
           <DOMBitmapItem name="box/img/redBoxBackGround.png" itemID="5627b01f-00000231" sourceExternalFilepath="./LIBRARY/boxes/img/redBoxBackGround.png" sourceLastImported="1445371512" externalFileSize="1080" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="box/img/redBoxBackGround.png" bitmapDataHRef="M 47 1400977173.dat" frameRight="660" frameBottom="720"/>
+          <DOMBitmapItem name="showball3_premios_03.png" itemID="562a7928-0000029b" sourceExternalFilepath="./LIBRARY/showball3_premios_03.png" sourceLastImported="1445370684" externalFileSize="4655" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="showball3_premios_03.png" bitmapDataHRef="M 24 1445624022.dat" frameRight="2780" frameBottom="1940"/>
           <DOMBitmapItem name="card /img/showball3_tarjeta_01.png" itemID="5627b1e0-000002d6" sourceExternalFilepath="./LIBRARY/card /img/showball3_tarjeta_01.png" sourceLastImported="1445370928" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card /img/showball3_tarjeta_01.png" bitmapDataHRef="M 50 1445441659.dat" frameRight="3500" frameBottom="2940"/>
           <DOMBitmapItem name="card /img/showball3_tarjeta_02.png" itemID="5627b1e0-000002d7" sourceExternalFilepath="./LIBRARY/card /img/showball3_tarjeta_02.png" sourceLastImported="1445371012" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card /img/showball3_tarjeta_02.png" bitmapDataHRef="M 51 1445441659.dat" frameRight="3500" frameBottom="2940"/>
           <DOMBitmapItem name="card /img/showball3_tarjeta_03.png" itemID="5627b1e0-000002d8" sourceExternalFilepath="./LIBRARY/card /img/showball3_tarjeta_03.png" sourceLastImported="1445371132" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="card /img/showball3_tarjeta_03.png" bitmapDataHRef="M 52 1445441659.dat" frameRight="3500" frameBottom="2940"/>
@@ -27,11 +29,11 @@
           <DOMBitmapItem name="box/img/whiteBoxBackGround.png" itemID="5627b01f-00000232" sourceExternalFilepath="./LIBRARY/boxes/img/whiteBoxBackGround.png" sourceLastImported="1445441162" externalFileSize="306" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="box/img/whiteBoxBackGround.png" bitmapDataHRef="M 48 1400977173.dat" frameRight="660" frameBottom="720"/>
      </media>
      <symbols>
+          <Include href="A EXPORT spriteSheets  movies/box.xml" loadImmediate="false" itemID="53813c09-000003bf" lastModified="1445612714"/>
+          <Include href="A EXPORT spriteSheets  movies/card.xml" loadImmediate="false" itemID="5627b0cc-0000027c" lastModified="1445612724"/>
+          <Include href="A EXPORT spriteSheets  movies/prizes.xml" loadImmediate="false" itemID="5628f36c-000002fa" lastModified="1445628810"/>
           <Include href="box/almost.xml" loadImmediate="false" itemID="5387be2e-0000022f" lastModified="1401405065"/>
-          <Include href="box/box.xml" loadImmediate="false" itemID="53813c09-000003bf" lastModified="1445441719"/>
-          <Include href="card /card.xml" loadImmediate="false" itemID="5627b0cc-0000027c" lastModified="1445442260"/>
-          <Include href="lineContainer.xml" loadImmediate="false" itemID="539e445e-00000772" lastModified="1445441692"/>
-          <Include href="prize.xml" loadImmediate="false" itemID="539e4408-00000770" lastModified="1445441594"/>
+          <Include href="lines prizes/lineContainer.xml" loadImmediate="false" itemID="539e445e-00000772" lastModified="1445628845"/>
      </symbols>
      <timelines>
           <DOMTimeline name="Escena 1">

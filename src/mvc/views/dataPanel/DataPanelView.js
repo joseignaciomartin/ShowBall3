@@ -170,7 +170,6 @@
 					/*
 					if(_asset.freeBall.visible == true) showFreeBallSign(false);
 					
-					
 					_asset.extraCost.visible = false;
 					_asset.pay.visible       = false;
 					*/

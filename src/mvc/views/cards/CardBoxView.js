@@ -12,11 +12,13 @@
 		var numTxt; //phaser text 
 		var box;
 		
-		const WHITE     = 0;
-		const BLACK     = 1;
+		const ALMOST1   = 0;
+		const ALMOST2   = 1;
 		const RED       = 2;
-		const ALMOST1   = 3;
-		const ALMOST2   = 4;
+		const WHITE     = 3;
+		const BLACK     = 4;
+		
+
 
 		this.almostMarked = function(){
 			return _almostMarked;
@@ -185,8 +187,8 @@
 		this.createBoxes = function(container, x, y){
 			
 			view   = game.add.group();  //view 'podria ser algo como _boxMovie
-            view.x = x; 
-            view.y = y;
+            view.x = x ; 
+            view.y = y +5;
             container.add(view);
 
 			box = game.add.sprite(x, y, 'box');
@@ -196,7 +198,7 @@
 
             //create numbers
             _number < 9?  num = "0" + (_number + 1) : num = (_number + 1); 
-            numTxt = game.add.text(x + 7 , y + 10, num, {fontSize: '22px', fill: '#000', boundsAlignH: "center", font: 'futura' });
+            numTxt = game.add.text(x + 12 , y + 11, num, {fontSize: '22px', fill: '#000', boundsAlignH: "center", font: 'futura' });
            // numTxt.setTextBounds(0, 0, 80, 30);
 			view.add(numTxt);
 			

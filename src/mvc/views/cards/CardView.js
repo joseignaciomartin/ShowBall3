@@ -15,8 +15,7 @@
         var numOfBoxes = Game.gameConfig.cardsSize.x * Game.gameConfig.cardsSize.y;
         this.enabled;
 
-        var _cardLinePriezesView; //:CardLinePriezesView; 
-        var _mapping_prizes_payCards = []; //:Dictionary;
+        var _cardLinePriezesView;
 
         var  _applicationController = ApplicationController.getApplicationController();
        // var  _gameSoundController   = _applicationController.getController("GameSoundController");
@@ -224,8 +223,8 @@
         this.reset = function(){
 
             //TODO:
-            //_cardLinePriezesView.reset();
-            //_card.win.text = "";
+            _cardLinePriezesView.reset();
+            //_card.win.setText("");
 
             for(var i = 0; i < numOfBoxes; i++){
                 _boxes[i].reset();
@@ -248,18 +247,23 @@
             cardViewContainer.y = y;
             container.add(cardViewContainer);
 
+            //CARD BACKGROUND
             var cardBg = cardViewContainer.create(0, 0, 'card');
-            cardBg.frame = 0;
-           // cardBg.visible = false;//BORRARRRRRRRRRRRRRRRRRRRRRRRRrrrrrrrrrrrrrrrrrrrrrrrrrrrr
+            cardBg.frame = 1;
 
+            //BOXES
             var Xpositions = [1.3, 18.5, 35, 52.5, 69.5,  1.3, 18.5, 35, 52.5, 69.5, 1.3, 18.5, 35, 52.5, 69.5];
             var Ypositions = [14.5, 14.5,  14.5,  14.5,  14.5, 33, 33,  33,  33,  33, 51.5, 51.5, 51.5, 51.5, 51.5];
-
             for(i = 0; i < numOfBoxes; i++){
                _boxes.push(new CardBoxView(i)); 
                _boxes[i].createBoxes(cardViewContainer, Xpositions[i], Ypositions[i]);
             }
+
+            //LINES
+            _cardLinePriezesView = new CardLinePriezesView();
+            _cardLinePriezesView.createLines(cardViewContainer);
             
+            //CARD TEXT -  BET && WIN
             betTxt = game.add.text(-37,   12, "APUESTA:", {boundsAlignH: 'right', font: 'futura', fontSize: '14px', fill: '#FFF' });
             betTxt.stroke = '#000';
             betTxt.strokeThickness = 2;
@@ -291,7 +295,7 @@
             _card.closeZone.alpha  = 0;
             _card.numberZone.alpha = 0;
             _card.disable.visible  = false;*/
-
+            
 
             //"ENTER_FRAME" - almost
             function upDate(){
@@ -302,7 +306,6 @@
                 id = setTimeout(upDate, 500);
             }
             var id = setTimeout(upDate, 500);
-
 
 
         }

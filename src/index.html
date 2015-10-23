@@ -5,6 +5,7 @@
 	</head>
 	<body>
 		<link href='assets/cssFonts.css' rel='stylesheet' type='text/css'>
+		<!--<link href='https://fonts.googleapis.com/css?family=Roboto|Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>-->
 
 		<!-- ENGINE -->
 		<script src="../../Engine1.1/src/engine/communications/ServerCommunicationManager.js"></script>
@@ -60,21 +61,29 @@
 		<!-- GAME -->
 		<script src="Game.js"></script>
 		<script src="phaser/phaser.min.js"></script>
-
-		<!-- mvc-->
+		<script src="phaserMovieClip.js"></script>
+		<!-- connecting-->
 		<script src="mvc/views/connectingView/ConnectingView.js"></script>
+		
+		<!-- mvc-->
+
 		<script src="mvc/views/GameView.js"></script>
+		<!-- bg-->
+		<script src="mvc/views/backGround/BackGroundContainer.js"></script>
+		<!-- cards-->
 		<script src="mvc/views/cards/CardView.js"></script>
 		<script src="mvc/views/cards/CardsContainer.js"></script>
 		<script src="mvc/views/cards/CardBoxView.js"></script>
+		<script src="mvc/views/cards/CardLinePriezesView.js"></script>
+		<!-- buttons-->
 		<script src="mvc/views/buttons/ButtonsContainer.js"></script>
 		<script src="mvc/views/buttons/ButtonView.js"></script>
-		<script src="mvc/views/backGround/BackGroundContainer.js"></script>
+		<!-- datapanel-->
 		<script src="mvc/views/dataPanel/DataPanelView.js"></script>
-
+		<!-- models-->
 		<script src="mvc/models/ServerCommunicationsModel.js"></script>
 		<script src="mvc/models/CardsModel.js"></script>
-
+		<!-- controllers-->
 		<script src="mvc/controllers/ConnectionController.js"></script>
 		<script src="mvc/controllers/GameController.js"></script>
 		<script src="mvc/controllers/CardController.js"></script>
@@ -99,13 +108,13 @@
 		<script src="config/BingoRoundConfig.js"></script>  <!--  va para el juego luego  -->
 
 		<script>
-
-			//var game = new Phaser.Game(892, 669, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});
-		var game = new Phaser.Game(960, 540, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});
-
-
+			var game = new Phaser.Game(960, 540, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/});   //mobile
+			//var game = new Phaser.Game(892, 669, Phaser.AUTO, '', {preload:preload, create:create/*, update:update*/}); //web
 		</script>
 
-		
+		<!--hidden   font-size: 1px; -->
+		<p style="visibility:hidden; font-family:futura; font-size: 1px;"></p>
+		<!--<p style="visibility:hidden; font-family:Yanone Kaffeesatz; font-size: 50px;"></p>-->
+
 	</body>
 </html>

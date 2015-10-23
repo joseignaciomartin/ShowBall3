@@ -21,22 +21,20 @@
 
     //CARTONES
 
-   // game.load.image('bg',          '../assets/img/cards/cartela3.png');
-    game.load.atlasXML('card', '../assets/img/cards/card.png','../assets/img/cards/card.xml');
-    game.load.atlasXML('box',  '../assets/img/cards/box.png', '../assets/img/cards/box.xml');
+    game.load.spritesheet('box', '../assets/img/cards/box.png',   33 + 10,  36 + 10);
+    game.load.spritesheet('card','../assets/img/cards/card.png', 175 + 10, 147 + 10);
+    game.load.spritesheet('line','../assets/img/cards/line.png', 139 + 10,  97 + 10);
 
     //BOTONERA
 
-    /*game.load.spritesheet('turboBtn',  '../assets/img/buttons/turbo.png', 110.7, 30.1);
-    game.load.spritesheet('numbersBtn','../assets/img/buttons/numbers.png',  82, 29);
-    game.load.spritesheet('autoBtn',   '../assets/img/buttons/auto.png',     82, 29);
-    game.load.spritesheet('betBtn',    '../assets/img/buttons/bet.png',      82, 29);
-    game.load.spritesheet('playBtn',   '../assets/img/buttons/jugar.png',    82, 29);
-    game.load.spritesheet('cardsBtn',  '../assets/img/buttons/cards.png', 110.7, 28.7);*/
-
-    
     game.load.image(  'turboBtn', '../assets/img/buttons/turboBtn.png');
-    game.load.atlasXML('playBtn', '../assets/img/buttons/playBtn.png', '../assets/img/buttons/playBtn.xml');
+    //game.load.atlasXML('playBtn', '../assets/img/buttons/playBtn.png', '../assets/img/buttons/playBtn.xml');
+    game.load.spritesheet('playBtn',  '../assets/img/buttons/playBtn.png', 96, 123);
+
+   /* for(var i = 0; i<3; i++){
+       game.load.image(  'playBtn_' + (i+1).toString(), '../assets/img/buttons/turboBtn.png'); 
+    }*/
+    
 
     //DATAPANEL
     //ES
