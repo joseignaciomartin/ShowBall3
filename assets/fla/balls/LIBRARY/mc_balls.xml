@@ -1,0 +1,357 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mc_balls" itemID="538244e8-00000d33" linkageExportForAS="true" linkageClassName="mc_ballsReference" lastModified="1445874546" lastUniqueIdentifier="41">
+  <timeline>
+    <DOMTimeline name="mc_balls" guides='&lt;guidelines&gt;&lt;guideline direction="h"&gt;-84&lt;/guideline&gt;&lt;guideline direction="h"&gt;-136&lt;/guideline&gt;&lt;guideline direction="h"&gt;-187&lt;/guideline&gt;&lt;guideline direction="h"&gt;-195&lt;/guideline&gt;&lt;guideline direction="h"&gt;-247&lt;/guideline&gt;&lt;guideline direction="v"&gt;194&lt;/guideline&gt;&lt;guideline direction="v"&gt;147&lt;/guideline&gt;&lt;guideline direction="v"&gt;100&lt;/guideline&gt;&lt;guideline direction="v"&gt;53&lt;/guideline&gt;&lt;guideline direction="v"&gt;5&lt;/guideline&gt;&lt;guideline direction="v"&gt;-41&lt;/guideline&gt;&lt;guideline direction="v"&gt;-88&lt;/guideline&gt;&lt;guideline direction="v"&gt;-135&lt;/guideline&gt;&lt;guideline direction="v"&gt;-182&lt;/guideline&gt;&lt;guideline direction="v"&gt;-229&lt;/guideline&gt;&lt;/guidelines&gt;'>
+      <layers>
+        <DOMLayer name="balls" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball1" centerPoint3DX="216.2" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="216.2" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball2" centerPoint3DX="169.15" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="169.15" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball3" centerPoint3DX="122" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="122" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball4" centerPoint3DX="75.05" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="75.05" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name=" bolas" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball5" centerPoint3DX="27.9" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="27.9" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball6" centerPoint3DX="-19.25" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="-19.25" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball7" centerPoint3DX="-66.1" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="-66.1" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball8" centerPoint3DX="-113" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="-113" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball9" centerPoint3DX="-160" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="-160" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball10" centerPoint3DX="-206.95" centerPoint3DY="-62">
+                  <matrix>
+                    <Matrix tx="-206.95" ty="-62"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball12" centerPoint3DX="169.15" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="169.15" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball13" centerPoint3DX="122" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="122" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball14" centerPoint3DX="75.05" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="75.05" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball15" centerPoint3DX="27.9" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="27.9" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball16" centerPoint3DX="-19.25" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="-19.25" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball17" centerPoint3DX="-66.1" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="-66.1" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball18" centerPoint3DX="-113" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="-113" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball19" centerPoint3DX="-160" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="-160" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball20" centerPoint3DX="-206.95" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="-206.95" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball21" centerPoint3DX="216.2" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="216.2" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball22" centerPoint3DX="169.15" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="169.15" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball23" centerPoint3DX="122" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="122" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball24" centerPoint3DX="75.05" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="75.05" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball25" centerPoint3DX="27.9" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="27.9" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball26" centerPoint3DX="-19.25" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="-19.25" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball27" centerPoint3DX="-66.1" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="-66.1" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball28" centerPoint3DX="-113" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="-113" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball29" centerPoint3DX="-160" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="-160" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball30" centerPoint3DX="-206.95" centerPoint3DY="-165.8">
+                  <matrix>
+                    <Matrix tx="-206.95" ty="-165.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball31" centerPoint3DX="-19.25" centerPoint3DY="-217.35">
+                  <matrix>
+                    <Matrix tx="-19.25" ty="-217.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball32" centerPoint3DX="-66.1" centerPoint3DY="-217.35">
+                  <matrix>
+                    <Matrix tx="-66.1" ty="-217.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball33" centerPoint3DX="-113" centerPoint3DY="-217.35">
+                  <matrix>
+                    <Matrix tx="-113" ty="-217.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball34" centerPoint3DX="-160" centerPoint3DY="-217.35">
+                  <matrix>
+                    <Matrix tx="-160" ty="-217.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball35" centerPoint3DX="-206.95" centerPoint3DY="-217.35">
+                  <matrix>
+                    <Matrix tx="-206.95" ty="-217.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball40" centerPoint3DX="-19.25" centerPoint3DY="-269">
+                  <matrix>
+                    <Matrix tx="-19.25" ty="-269"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball39" centerPoint3DX="-66.1" centerPoint3DY="-269">
+                  <matrix>
+                    <Matrix tx="-66.1" ty="-269"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball38" centerPoint3DX="-113" centerPoint3DY="-269">
+                  <matrix>
+                    <Matrix tx="-113" ty="-269"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball37" centerPoint3DX="-160" centerPoint3DY="-269">
+                  <matrix>
+                    <Matrix tx="-160" ty="-269"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball36" centerPoint3DX="-206.95" centerPoint3DY="-269">
+                  <matrix>
+                    <Matrix tx="-206.95" ty="-269"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="mc_ball" name="ball11" centerPoint3DX="216.2" centerPoint3DY="-114">
+                  <matrix>
+                    <Matrix tx="216.2" ty="-114"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Capa 3" color="#FF800A" current="true" isSelected="true" autoNamed="false" layerType="guide">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="referencia bolas.jpg">
+                  <matrix>
+                    <Matrix tx="-400" ty="-300"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

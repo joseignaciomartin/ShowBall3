@@ -198,7 +198,7 @@
 
             //create numbers
             _number < 9?  num = "0" + (_number + 1) : num = (_number + 1); 
-            numTxt = game.add.text(x + 12 , y + 11, num, {fontSize: '22px', fill: '#000', boundsAlignH: "center", font: 'futura' });
+            numTxt = game.add.text(x + 12 , y + 11, num, {fontSize: '22px', fill: '#000', boundsAlignH: "center"/*, font: 'futura'*/ });
            // numTxt.setTextBounds(0, 0, 80, 30);
 			view.add(numTxt);
 			

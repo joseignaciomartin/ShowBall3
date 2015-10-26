@@ -32,7 +32,6 @@
 			 
 			_buttonContainer = game.add.group();
 
-
 			/*
 			_cardsBtn   	  = new ButtonView(-384.45 + xPlus, 622,"cardsBtn",   _this.onButtonClicked);   _buttonsVec.push(_cardsBtn);
 			_numbersBtn   	  = new ButtonView(-204.6 + xPlus,  622,"numbersBtn", _this.onButtonClicked);   _buttonsVec.push(_numbersBtn);

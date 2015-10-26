@@ -30,7 +30,7 @@
 		function createViewElements(){
 
 			setupBackgroundContainer();
-			//setupBallAndMixerContainer();
+			setupBallAndMixerContainer();
 			setupDataPanel();
 			setupButtonsContainer();
 			//setupJackpotContainer();
@@ -49,7 +49,8 @@
 		}
 
 		function setupBallAndMixerContainer(){
-			//TODO
+			var ballsAndMixerContainer = new BallsAndMixerContainer();
+			_gameContainer.add(ballsAndMixerContainer.getView());
 		}
 		
 		function setupDataPanel(){

@@ -248,7 +248,7 @@
             container.add(cardViewContainer);
 
             //CARD BACKGROUND
-            var cardBg = cardViewContainer.create(0, 0, 'card');
+            var cardBg   = cardViewContainer.create(0, 0, 'card');
             cardBg.frame = 1;
 
             //BOXES
@@ -264,26 +264,25 @@
             _cardLinePriezesView.createLines(cardViewContainer);
             
             //CARD TEXT -  BET && WIN
-            betTxt = game.add.text(-37,   12, "APUESTA:", {boundsAlignH: 'right', font: 'futura', fontSize: '14px', fill: '#FFF' });
-            betTxt.stroke = '#000';
+            betTxt = game.add.text(-37,   12, "APUESTA:", {boundsAlignH: 'right'/*, font: 'futura'*/, fontSize: '14px', fill: '#FFF' });
+            betTxt.stroke = '#000'; //color borde
             betTxt.strokeThickness = 2;
             betTxt.setTextBounds(0, 0, 100, 20); 
             cardViewContainer.add(betTxt);
 
-            betValue = game.add.text(63,   12, "1", {boundsAlignH: 'left', font: 'futura', fontSize: '14px', fill: '#FFF' });
+            betValue = game.add.text(63,   12, "1", {boundsAlignH: 'left'/*, font: 'futura'*/, fontSize: '14px', fill: '#FFF' });
             betValue.setTextBounds(0, 0, 100, 20); 
             betValue.stroke = '#000';
             betValue.strokeThickness = 2;
             cardViewContainer.add(betValue);
            
-
-            winTxt = game.add.text(35,   12, "PREMIO:", {boundsAlignH: 'right', font: 'futura', fontSize: '14px', fill: '#FFFF00' });
+            winTxt = game.add.text(35,   12, "PREMIO:", {boundsAlignH: 'right'/*, font: 'futura'*/, fontSize: '14px', fill: '#FFFF00' });
             winTxt.stroke = '#000';
             winTxt.strokeThickness = 2;
             winTxt.setTextBounds(0, 0, 100, 20); 
             cardViewContainer.add(winTxt);
 
-            winValue = game.add.text(136,   12, "2000", {boundsAlignH: 'left', font: 'futura', fontSize: '14px', fill: '#FFFF00' });
+            winValue = game.add.text(136,   12, "2000", {boundsAlignH: 'left'/*, font: 'futura'*/, fontSize: '14px', fill: '#FFFF00' });
             winValue.stroke = '#000';
             winValue.strokeThickness = 2;
             winValue.setTextBounds(0, 0, 100, 20); 

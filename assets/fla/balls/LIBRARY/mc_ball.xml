@@ -1,0 +1,838 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="mc_ball" itemID="53822da7-000001eb" linkageExportForAS="true" linkageClassName="mc_ball" lastModified="1445880022">
+  <timeline>
+    <DOMTimeline name="mc_ball">
+      <layers>
+        <DOMLayer name="cancel" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="90" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="cancel" name="cancel" centerPoint3DX="-0.6" centerPoint3DY="0.55">
+                  <matrix>
+                    <Matrix a="0.707122802734375" b="0.70709228515625" c="-0.70709228515625" d="0.707122802734375" tx="-1" ty="0.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="balls" color="#4FFF4F" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball1.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball2.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball3.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball4.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball5.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball6.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="6" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball7.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="7" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball8.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="8" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball9.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="9" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball10.png">
+                  <matrix>
+                    <Matrix tx="-22.5" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="10" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball11.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="11" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball12.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="12" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball13.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="13" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball14.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="14" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball15.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball16.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="16" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball17.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="17" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball18.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="18" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball19.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="19" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball20.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball21.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="21" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball22.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="22" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball23.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="23" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball24.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="24" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball25.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="25" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball26.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="26" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball27.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="27" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball28.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="28" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball29.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="29" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball30.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="30" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball31.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="31" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball32.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="32" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball33.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="33" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball34.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="34" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball35.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="35" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball36.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="36" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball37.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="37" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball38.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="38" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball39.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="39" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball40.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="40" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball41.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="41" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball42.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="42" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball43.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="43" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball44.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="44" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball45.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="45" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball46.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="46" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball47.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="47" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball48.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="48" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball49.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="49" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball50.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="50" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball51.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="51" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball52.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="52" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball53.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="53" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball54.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="54" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball55.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="55" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball56.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="56" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball57.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="57" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball58.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="58" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball59.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="59" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball60.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="60" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball61.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="61" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball62.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="62" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball63.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="63" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball64.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="64" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball65.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="65" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball66.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="66" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball67.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="67" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball68.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="68" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball69.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="69" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball70.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="70" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball71.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="71" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball72.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="72" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball73.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="73" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball74.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="74" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball75.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="75" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball76.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="76" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball77.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="77" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball78.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="78" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball79.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="79" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball80.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="80" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball81.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="81" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball82.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="82" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball83.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="83" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball84.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="84" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball85.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="85" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball86.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="86" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball87.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="87" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball88.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="88" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball89.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="89" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="img/ball90.png">
+                  <matrix>
+                    <Matrix tx="-22" ty="-22"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
