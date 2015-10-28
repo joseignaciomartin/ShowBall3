@@ -1,5 +1,11 @@
-@font-face {
+/*@font-face {
     font-family: futura;
     src: url(fonts/futura.TTF);
 
+}*/
+
+@font-face {
+    font-family: digital;
+    src: url(fonts/digital.TTF);
 }
+

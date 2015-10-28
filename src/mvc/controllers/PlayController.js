@@ -51,10 +51,10 @@
 				
 				function drawBigBall(){                                                           
 					//TEST
-					boxMatch();
-					/*
+					//boxMatch();
+					
 					(_peek) ? _onComplete = peekState : _onComplete = boxMatch;                           
-					_applicationController.sendNotification(Notifications.DRAW_BIG_BALL_NOTIFICATION,  {ball:_ball, onComplete:_onComplete, response:_response, filar:_peek});*/
+					_applicationController.sendNotification(Notifications.DRAW_BIG_BALL_NOTIFICATION,  {ball:_ball, onComplete:_onComplete, response:_response, filar:_peek});
 				}   
 				
 				function peekState(){  
@@ -74,11 +74,11 @@
 				
 				function drawSmallBall(){
 					//TEST
-					markAlmostDuringPlay()
-					/*
+					//markAlmostDuringPlay()
+					
 					(Game.gameConfig.loadCardsStateDuringPlay)? _onComplete = markAlmostDuringPlay: _onComplete = nextStep;
 					_applicationController.sendNotification(Notifications.DRAW_SMALL_BALL_NOTIFICATION,{ball:_ball, onComplete:_onComplete, response:_response, filar:_peek, isTurbo:_isTurbo});
-					*/
+					
 				}
 				
 				function markAlmostDuringPlay(){
@@ -105,8 +105,8 @@
 				
 				function markWinsDuringPlay(){
 					//TEST
-					setTimeout(nextStep,200);
-					//nextStep();
+					//setTimeout(nextStep, 50);
+					nextStep();
 
 					/*
 					_onComplete = showNextBall;
@@ -115,15 +115,13 @@
 				
 				function nextStep(){ 
 					showNextBall();
+					//setTimeout(showNextBall, 500);
 				}
 
 				_ball = _response.drawnBalls[_internalBallIndex];
-				//console.log("BALLLLL " + _ball);
-				if(_ball == 6){
-					console.log("BALLLLL " + _ball);
-				}
 			    _gameController.newBallDrawn();
 				_internalBallIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
+				_countersController.setCounterValue(OwnCounters.TOSHOW_DRAWNBALLS_COUNTER, _internalBallIndex); //este no se actualizaba en cancel, por eso 2 contadores
 
 				_peek = _countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1;
 				(_peek) ? filarSetUp() : drawBigBall();

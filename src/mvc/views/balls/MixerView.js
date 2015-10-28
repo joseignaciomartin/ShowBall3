@@ -1,12 +1,11 @@
 
 (function(window){
 
-	function MixerView(Balls){
+	function MixerView(){
 		
 
 		var _this = this;
 		var _mixerContainer;
-		var _balls = Balls;
 
 		var _mixer; //:MovieClip;
 		var _extraCost; //:int;
@@ -17,6 +16,8 @@
 		var _automaticFrame; //:int;
 		var _lastPeekFrame;  //:int;
 		var _peekSoundCount;  //:int = 0; 
+
+		var _extraSignBlink;
 		
 		var _applicationController =  ApplicationController.getApplicationController();
 		var _gameController        = _applicationController.getController("GameController");
@@ -44,40 +45,67 @@
         //big balls
 		var bigBall = _mixerContainer.create(404, 49, 'bigBall');
 
-		//big ball tapa
-		var bigBallCover   = _mixerContainer.create(404, 49, 'bigBallCover');
-		bigBallCover.frame = 3;
-
 		//ball number
-		var ballNum = game.add.text(408, 68, "10", {boundsAlignH: 'center', font: 'Roboto', fontSize: '60px', fill: '#000' });
-		_mixerContainer.add(ballNum);
+		var bigBallNum = game.add.text(396, 73, "70", {boundsAlignH: 'center', font: 'Roboto', fontSize: '55px', fill: '#000' });
+		_mixerContainer.add(bigBallNum);
+		bigBallNum.setTextBounds(0, 0, 100, 100);
+
+		//big ball tapa
+		var bigBallCover     = _mixerContainer.create(399, 44, 'bigBallCover');  
+		bigBallCover.frame   = 3;
+		bigBallCover.visible = false;
+
+		//extra cost number
+		var extraCostNum = game.add.text(402, 85, "50", {boundsAlignH: 'center', font: 'Roboto', fontSize: '25px', fill: '#000' });
+		_mixerContainer.add(extraCostNum);
+		extraCostNum.setTextBounds(0, 0, 100, 50);		
+		extraCostNum.visible = false;
+
+		//ball index
+		var ballIndex = game.add.text(479, 105, "01", {boundsAlignH: 'center', font: 'digital', fontSize: '30px', fill: '#40FF00' });
+		_mixerContainer.add(ballIndex);
+		ballIndex.setTextBounds(0, 0, 100, 50);		
+		ballIndex.visible = true;
+
 
         //vel
 
+        //auto
+
+
+        //TEST
+        /*function prueba(){
+        	ballIndex.setText("20");
+        }
+		setTimeout(prueba, 1000);*/
 
 		///////////////////////////////////////////////////////////////////
 
 
-		this.getView = function(){
-			return _mixerContainer;
-		}
-
 		
-		this.showBigBall = function(ball, onComplete, response, filar){   //(ball:int, onComplete:Function, response:BaseResponse, filar:Boolean):void{
+		this.showBigBall = function(ball, frame, numColor, onComplete, response, filar){   //(ball:int, onComplete:Function, response:BaseResponse, filar:Boolean):void{
 
-			//_mixer.gotoAndStop("BALLS");
-			//_mixer.extraSign.visible = false;
+			//color big ball
+			bigBall.frame = frame; //getFrameBigBall(ball);
+			//num big ball
+			bigBallNum.style.fill = numColor; //getNumColor(ball);
+			bigBallNum.setText(ball);
+
+			onComplete(); 
+			
+			/*
+			_mixer.gotoAndStop("BALLS");
+			_mixer.extraSign.visible = false;
 			_currentBallNumber       = ball;
 			
 			if(!filar)
 				_mixer.peekDoor.visible = false;
 			
-			//_mixer.bigBalls.gotoAndStop(ball);
+			_mixer.bigBalls.gotoAndStop(ball);
 			_mixer.bigBalls.alpha   = 1;
 			_mixer.bigBalls.visible = true;
 			_mixer.cancel.visible   = false;
-			
-			onComplete();                                                          
+			onComplete();  */ 
 		}
 		
 		this.goIdle = function(){
@@ -110,28 +138,48 @@
 		}
 		
 		this.showExtraCostSign = function(){
-			/*
+			
+			//TODO LENGUAJES...
+
 			_extraCost = _countersController.getCounterValue(OwnCounters.EXTRA_COST_COUNTER);
-			
-			_mixer.extraSign.visible = true;
-			_mixer.gotoAndStop("EXTRASIGN");
-			
-			(_mixer.extraSign as MovieClip).gotoAndStop(_translatorController.currentLanguage);
-			
-			_mixer.extraSign.inner.cost.text = _extraCost.toString();
-			(_mixer.extraSign.inner as MovieClip).addFrameScript(0,  upDateExtraCostText);
-			(_mixer.extraSign.inner as MovieClip).addFrameScript(15, upDateExtraCostText);
-			
-			function upDateExtraCostText(cost:int = -1){  //(cost:int = -1){
+
+			bigBallCover.frame   = 4;
+			bigBallCover.visible = true;
+
+			extraCostNum.visible    = true;
+			extraCostNum.style.fill = '#FF0000';
+			extraCostNum.setText(_extraCost);
+
+			_extraSignBlink = true;
+
+			function goBlack(){
+				bigBallCover.frame = 4;
+				extraCostNum.style.fill = '#000';
 				
-				if(cost == -1) cost = _extraCost;
-				if(_mixer.extraSign != null){
-					_mixer.extraSign.inner.cost.text = cost.toString();
-				}
-			}*/
+				extraCostNum.setText(_extraCost);
+				if(_extraSignBlink) TweenMax.to(extraCostNum, .5, {onComplete:goRed});
+			}
+
+			function goRed(){
+				bigBallCover.frame = 5;
+				extraCostNum.style.fill = '#FF0000';
+				extraCostNum.setText(_extraCost);
+				if(_extraSignBlink) TweenMax.to(extraCostNum, .5, {onComplete:goBlack});
+			}
+
+			goRed();
 		}
 		
 		this.hideExtraCostSign = function(onComplete){
+
+			_extraSignBlink      = false; //stop blink extra sign
+			bigBallCover.visible = false;
+			extraCostNum.visible = false;
+
+			function complete(){
+				if(onComplete != null) onComplete();
+			}
+
 			/*
 			if(_mixer.extraSign){
 				(_mixer.extraSign.inner as MovieClip).addFrameScript(0,  null);
@@ -305,14 +353,14 @@
 		}
 		
 		this.setColorBallIndex = function(index){
-			/*if(index > 30){
+			if(index > 30){
 				//EXTRA  -> RED;
-				(_mixer.ballIndex as MovieClip).gotoAndStop("RED");
+				ballIndex.style.fill = '#FF0000';
 			}else{
 				//NORMAL  -> GREEN
-				(_mixer.ballIndex as MovieClip).gotoAndStop("GREEN");
+				ballIndex.style.fill = '#40FF00';
 			}
-			_mixer.ballIndex.index.text = index.toString();*/
+			ballIndex.setText(index);
 		}	
 		
 		this.reset = function(){ 
@@ -329,6 +377,10 @@
 			/*if(_mixer.currentFrame == 3){
 				showExtraCostSign();
 			}*/
+		}
+
+		this.getView = function(){
+			return _mixerContainer;
 		}
 	}
 

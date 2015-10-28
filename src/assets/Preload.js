@@ -22,10 +22,11 @@
     //BALLS
     
     game.load.image('tope',               '../assets/img/balls/tope.png');
+    game.load.image('cancelCross',        '../assets/img/balls/cancelCross.png');
     game.load.spritesheet('mixer',        '../assets/img/balls/mixer.png',       223 + 10, 109 + 10);
     game.load.spritesheet('ball',         '../assets/img/balls/ball.png',         45 + 10,  45 + 10);
     game.load.spritesheet('bigBall',      '../assets/img/balls/bigBall.png',      90 + 10,  89 + 10);
-    game.load.spritesheet('bigBallCover', '../assets/img/balls/bigBallCover.png', 90 + 10,  89 + 10);
+    game.load.spritesheet('bigBallCover', '../assets/img/balls/bigBallCover.png', 99 + 10, 100 + 10);
     game.load.spritesheet('vel',          '../assets/img/balls/vel.png',          23 + 10,  82 + 10);
 
     //CARTONES

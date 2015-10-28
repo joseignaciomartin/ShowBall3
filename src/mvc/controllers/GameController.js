@@ -28,28 +28,28 @@
 		this.serverResponse = function(response){
 			
 			switch(response.type){
-				case "ChangeConfigCards":
+				case BingoResponseTypes.CHANGE_CONFIG_CARDS:
 					_this.gameState.changeConfigCardsResponse(response);
 				break;
-				case "PlayResponse":
+				case BingoResponseTypes.PLAY :
 					_this.gameState.playResponse(response);
 				break;
-				case "ChangeCardNumbersResponse":
+				case BingoResponseTypes.CHANGE_CARD_NUMBERS:
 					_this.gameState.changeNumberResponse(response);
 					_cardController.setCardsData(response.cards);
 					//todo
 					//ApplicationController.getApplicationController().getCurrentApplicationView().reset();
 				break;
-				case "CancelExtraBallResponse":
+				case BingoResponseTypes.GET_EXTRA_BALL :
 					_this.gameState.getExtraBallResponse(response);
 				break;
-				case "CancelExtraBallResponse":
+				case BingoResponseTypes.CANCEL_EXTRA_BALL:
 					_this.gameState.cancelExtraBallResponse(response);
 				break;
-				case "ChangeBetResponse":
+				case BingoResponseTypes.CHANGE_BET_RESPONSE:
 					_this.gameState.changeBetResponse(response);
 				break;
-				case "ChangeCoinResponse":
+				case BingoResponseTypes.CHANGE_COIN_RESPONSE:
 					_this.gameState.changeCoinResponse(response);
 				break;	
 			}

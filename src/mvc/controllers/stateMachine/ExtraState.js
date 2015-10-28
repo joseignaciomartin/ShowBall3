@@ -23,7 +23,7 @@
 		}
 		
 		this.turboBtn = function(){
-			var creditOk = _model.server.getExtraBall();
+			var creditOk = _model.server.gameType.getExtraBall();
 			var state;
 			
 			if(creditOk){
@@ -41,7 +41,7 @@
 		
 		this.playBtn = function(){
 			_gameStateChangeCallback(new WaitServerState(_gameStateChangeCallback, _controller, this));
-			_model.server.cancelExtraBall();
+			_model.server.gameType.cancelExtraBall();				
 		}
 		
 		this.showHelp = function(){
@@ -55,32 +55,30 @@
 			return _prevGameType; 
 		}
 		
-
 		this.enableNextCard = function(){}//ver ejemplo en WaitServerState
-		this.enableCard = function(cardIndex, enabled){}
-		this.changeNumbers = function(){}
-		this.betUp = function(){}
-		this.betDown = function(){}
-		this.coinUp = function(){}
-		this.coinDown = function(){}
-		this.changeStage = function(){}
+		this.enableCard     = function(cardIndex, enabled){}
+		this.changeNumbers  = function(){}
+		this.betUp          = function(){}
+		this.betDown        = function(){}
+		this.coinUp         = function(){}
+		this.coinDown       = function(){}
+		this.changeStage    = function(){}
 		
 		/**IGameState RECEIVED**/
 		
 		this.changeConfigCardsResponse = function(response){}
-		this.playResponse = function(response){}
-		this.changeNumberResponse = function(response){}
-		this.getExtraBallResponse = function(response){}
-		this.cancelExtraBallResponse = function(response){}
-		this.changeBetResponse = function(response){}
-		this.changeCoinResponse = function(response){}
-		this.changeToPeekState = function(){}
-		this.backToPrevState = function(){}
-		this.beginExtras = function(){}
-		this.playEnded = function(){}
-		this.multipleUse = function(_function){}
-		this.hideHelp = function(){}
-
+		this.playResponse              = function(response){}
+		this.changeNumberResponse      = function(response){}
+		this.getExtraBallResponse      = function(response){}
+		this.cancelExtraBallResponse   = function(response){}
+		this.changeBetResponse         = function(response){}
+		this.changeCoinResponse        = function(response){}
+		this.changeToPeekState         = function(){}
+		this.backToPrevState           = function(){}
+		this.beginExtras               = function(){}
+		this.playEnded                 = function(){}
+		this.multipleUse               = function(_function){}
+		this.hideHelp                  = function(){}
 	}
 	window.ExtraState = ExtraState;
 

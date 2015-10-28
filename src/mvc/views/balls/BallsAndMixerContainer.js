@@ -8,18 +8,20 @@
 		var _gameController        = _applicationController.getController("GameController"); 
 		//var _gameSoundController   = _applicationController.getController("GameSoundController");
 		
-		var _mixer; //:MixerView;
+		var _mixer;                        //:MixerView;
 		var _smallBallsContainer;          //:Sprite;
 		var _ballIndex               = [];
 		var _balls                   = []; //:Dictionary;
 		var _ballsView               = []; //:Vector.<BallView> = new Vector.<BallView>();
-		var _bigBalls                = []; //:Dictionary;
-		var _smallBallsFinalPosition = []; //:Dictionary = new Dictionary();
+		//var _smallBallsFinalPosition = []; //:Dictionary = new Dictionary();
 		var _canceledToReset         = []; //:Vector.<BallView> = new Vector.<BallView>();
 		
-		var _ballSoundCounter                 = 0;
-		var _resetFinished                    = true;
-		BallsAndMixerContainer.LASTBALL_INDEX = 41;
+		var smallBallAssetsVec       = [];
+		var smallBallNumVec          = [];
+
+		var _ballSoundCounter        = 0;
+		var _resetFinished           = true;
+		var  LASTBALL_INDEX          = 41;
 		
 		function setupSubscriptions(){
 			var notifications = [];
@@ -44,40 +46,6 @@
 			);
 			ApplicationController.getApplicationController().addSubscriber(notifications, _this);
 		}
-
-		function init(){
-			
-			//contenedor
-			_ballsAndMixerContainer = game.add.group();
-			
-			//mixer
-
-			//bolas grande
-
-			//bolas chicas
-
-			function createMixer(){
-				_mixer   = new MixerView(_bigBalls);
-				//_mixer.x = 524;
-				//_mixer.y =  55;
-				_ballsAndMixerContainer.add(_mixer.getView());
-			}
-
-			function createBalls(){	
-				/*_smallBallsContainer.x = ShowBall3.STAGE_WIDTH/2  - 47;
-				_smallBallsContainer.y = ShowBall3.STAGE_HEIGHT/2 - 35;
-				addChild(_smallBallsContainer);*/
-				//BallsSetUp.createBalls(_ballsView);
-			}
-			
-			createMixer();
-			createBalls();
-			setupSubscriptions();
-		}
-		
-
-
-		init();
 		
 		this.notificationReceived = function(type, data){
 			
@@ -178,7 +146,7 @@
 		function drawBigBall(data){
 			
 			//EXTRA BALLS
-			if(_ballIndex > ShowBall3._gameConfig.numberOfBalls){
+			if(_ballIndex > Game.gameConfig.numberOfBalls){
 
 				if(_ballIndex == LASTBALL_INDEX){
 					_mixer.showBigBall(data.ball, data.onComplete, data.response, data.filar);
@@ -201,7 +169,7 @@
 				}
 			}else{
 				//NORMAL BALLS
-				_mixer.showBigBall(data.ball, data.onComplete, data.response, data.filar);
+				_mixer.showBigBall(data.ball, getFrameBigBall(data.ball), getNumColor(data.ball), data.onComplete, data.response, data.filar);
 			}
 		}
 		
@@ -217,6 +185,11 @@
 				/*_ballsView[_ballIndex -1].ballAsset.gotoAndStop(data.ball);
 				_smallBallsContainer.addChild(_ballsView[_ballIndex-1]);
 				(_ballSoundCounter == 3)? _ballSoundCounter = 0 : _ballSoundCounter++; */
+				
+				smallBallAssetsVec[_ballIndex-1].frame   = getFrameSmallBall(data.ball);
+				smallBallNumVec[_ballIndex-1].style.fill = getNumColor(data.ball);
+				smallBallNumVec[_ballIndex-1].setText(getNum(data.ball));
+
 				_ballsView[_ballIndex-1].throwMe(data.ball, data.onComplete, data.response, data.isTurbo, _ballSoundCounter);
 			}
 		}
@@ -238,15 +211,20 @@
 					_win       = data.response.remainingBalls[i].win;
 					
 					if(i != _lastBall){
-						/*_ballsView[_ballIndex -1].ballAsset.gotoAndStop(_ball);
-						_smallBallsContainer.addChild(_ballsView[_ballIndex-1]);*/
+
+						smallBallAssetsVec[_ballIndex-1].frame   = getFrameSmallBall(_ball);
+						smallBallNumVec[_ballIndex-1].style.fill = getNumColor(_ball);
+						smallBallNumVec[_ballIndex-1].setText(getNum(_ball));
+						smallBallNumVec[_ballIndex-1].visible = true;
+						
 						_ballsView[_ballIndex-1].simpleShowMe(_win, null);
+
 					}else{
 						_mixer.showCancelBigBall(_ball, data.onComplete, _win);
 					}
 				}
 
-				TweenMax.to(this, duration, {delay:duration * i,onCompleteParams:[i], onComplete:show });
+				TweenMax.to(this, duration, {delay:duration * i , onCompleteParams:[i], onComplete:show });
 			}
 		}
 		
@@ -257,7 +235,6 @@
 		this.reset = function(){
 
 			function onComplete(){
-				//_smallBallsContainer.removeChildren();
 				_smallBallsContainer.alpha = 1;
 				_countersController.setCounterValue(OwnCounters.RESET_FINISHED, 1);
 			}
@@ -275,6 +252,171 @@
 			return _ballsAndMixerContainer;
 		}
 
+		function getNumColor(ball){
+			var color;
+			if((ball<20 && ball>9) || (ball<40 && ball>29) || (ball<60 && ball>49) || (ball<80 && ball>69)){
+				color = '#FFF';
+			}else{
+				color = '#000';
+			}
+			return color;
+		}
+
+		function getFrameBigBall(ball){
+			var frame;
+			if(ball<10){
+				frame = 0;
+			}else if(ball<20 && ball>9){
+				frame = 1;
+			}else if(ball<30 && ball>19){
+				frame = 3;
+			}else if(ball<40 && ball>29){
+				frame = 4;
+			}else if(ball<50 && ball>39){
+				frame = 6;
+			}else if(ball<60 && ball>49){
+				frame = 7;
+			}else if(ball<70 && ball>59){
+				frame = 2;
+			}else if(ball<80 && ball>69){
+				frame = 5;
+			}else if(ball>79){
+				frame = 8;
+			}
+			return frame;
+		}
+
+		function getFrameSmallBall(ball){
+			var frame;
+			if(ball<10){
+				frame = 0;
+			}else if(ball<20 && ball>9){
+				frame = 1;
+			}else if(ball<30 && ball>19){
+				frame = 2;
+			}else if(ball<40 && ball>29){
+				frame = 3;
+			}else if(ball<50 && ball>39){
+				frame = 4;
+			}else if(ball<60 && ball>49){
+				frame = 5;
+			}else if(ball<70 && ball>59){
+				frame = 6;
+			}else if(ball<80 && ball>69){
+				frame = 7;
+			}else if(ball>79){
+				frame = 8;
+			}
+			return frame;
+		}
+
+		function getNum(num){
+			return num < 10? ("0" + num) : num;
+		}
+
+		function init(){
+			
+			//contenedor
+			_ballsAndMixerContainer = game.add.group();
+			
+			//mixer
+			function createMixer(){
+				_mixer   = new MixerView();
+				_ballsAndMixerContainer.add(_mixer.getView());
+			}
+
+			//bolas chicas
+			function createSmallBalls(){	
+				_smallBallsContainer   = game.add.group();
+				_smallBallsContainer.x = 21; _smallBallsContainer.y = 22;
+				_ballsAndMixerContainer.add(_smallBallsContainer);
+
+				var ballsPoints     = [];
+				var finalXPositions = [556.3, 508.6, 460.9, 413.2, 365.5, 317.8, 270.1, 222.4, 174.7, 127, 556.3, 508.6, 460.9, 413.2, 365.5, 317.8, 270.1, 222.4, 174.7, 127, 556.3, 508.6, 460.9, 413.2, 365.5, 317.8, 270.1, 222.4, 174.7, 127 , 317.8, 270.1, 222.4, 174.7, 127 , 127, 174.7, 222.4, 270.1, 317.8 ];
+				var finalYPositions = [266,   266 ,  266 ,  266 ,  266 ,  266 ,  266 ,  266 ,  266 ,  266, 214,   214,   214,   214,   214,   214,   214,   214,   214,   214, 161.75, 161.75 , 161.75, 161.75, 161.75, 161.75, 161.75, 161.75, 161.75, 161.75, 110.5, 110.5, 110.5, 110.5, 110.5, 58.25, 58.25, 58.25, 58.25, 58.25];
+
+				var ballView;      //tipo BallView -> ballContainer (ballAsset + ballNum) + funciones de movimiento;
+				var ballContainer; //(ballAsset + ballNum)
+				var ballAsset;
+				var ballNum;
+
+				var oneRowNormalBallInitRotation = [0,0,0,0,90,90,180,180,180,360];
+				var initRotation;
+
+				for(var i = 0; i < 40; i++){
+					
+					ballContainer   = game.add.group();
+					ballContainer.x = finalXPositions[i];
+					ballContainer.y = finalYPositions[i];
+					
+					ballAsset = game.add.sprite(0, 0, 'ball'); 
+					ballAsset.anchor.setTo(.5, .5); 
+					ballNum   = game.add.text(-3, 16, (i+1), {boundsAlignH: 'center', font: 'Roboto', fontSize: '24px', fill: '#000' }); 
+					ballNum.anchor.setTo(1.0, .8);
+					ballNum.setTextBounds(0, 0, 50, 50);
+
+
+					smallBallAssetsVec.push(ballAsset);
+					smallBallNumVec.push(ballNum);
+
+					ballContainer.add(ballAsset);
+					ballContainer.add(ballNum);
+					
+					if(i > 29){
+						cancelCross       = game.add.sprite(0, 0, 'cancelCross'); 
+						cancelCross.angle = 45;
+						cancelCross.alpha = .6;
+						cancelCross.scale.setTo(.7,.7);
+						cancelCross.anchor.setTo(.5, .5); 
+						ballContainer.add(cancelCross);
+					}
+					
+					function Point(x, y) {
+ 						this.x = x;
+  						this.y = y;
+					}
+					
+					var point      = new Point(finalXPositions[i], finalYPositions[i]);
+					ballsPoints[i] = point;
+					initRotation   = 0;
+
+					//normal lower row
+					if(i+1 < 11){
+						initRotation = oneRowNormalBallInitRotation[i];
+					}
+					//normal middle row
+					else if(i+1 > 10 && i+1 < 21){
+						initRotation = oneRowNormalBallInitRotation[i -10];
+					}
+					//normal top row
+					else if(i+1 > 20 && i+1 < 31){
+						initRotation = oneRowNormalBallInitRotation[i -20];
+					}
+					
+					ballView = new BallView(ballContainer, point, i +1, initRotation);
+					_ballsView.push(ballView);
+
+					ballAsset.frame    = getFrameSmallBall(i+1);
+					ballNum.style.fill = getNumColor(i+1);
+					ballNum.setText(getNum(i+1));
+					
+
+					ballContainer.visible = false;
+					_smallBallsContainer.add(ballContainer);
+				}
+
+				for(i = 0; i < 40; i++){
+					_ballsView[i].ballsFinalPoints(ballsPoints);
+				}
+				
+			}
+			
+			createSmallBalls();
+			createMixer();
+			setupSubscriptions();
+		}
+		
+		init();
 	}
 
 	window.BallsAndMixerContainer = BallsAndMixerContainer;
