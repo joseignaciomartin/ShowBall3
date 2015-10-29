@@ -13,7 +13,7 @@ function BingoGameConfig(){
 	  routes:"",
 	  //hostName:"173.192.149.236",//
 	  hostName:"ws://localhost:2012/",
-	  //hostName:"ws://10.0.0.22:2012/", //maquina pablo
+	  //hostName:"ws://10.0.0.20:2012/", //maquina pablo
 	  swfUrl:"http://test.webstarsaffiliate.com/games/ShowBall3/",
 	  is_log:0,
 	  is_free:0,

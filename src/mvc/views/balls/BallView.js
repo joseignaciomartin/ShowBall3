@@ -44,8 +44,6 @@
 
 				var rot = 0;
 				
-				extraFirstStep();
-				
 				function extraFirstStep(){
 					if(index > 35){
 						//extra fila arriba (36 -> 40)
@@ -82,6 +80,8 @@
 					rot = rot  - 90 - 180 +  45;
 					TweenMax.to(asset, speed, {angle: rot, onComplete:onComplete,ease:Linear.easeNone});
 				}
+
+				extraFirstStep();
 				
 			}
 			//NORMAL
@@ -100,7 +100,7 @@
 					asset.rotation = _initRotation;
 					rot            = _initRotation - 360;
 					
-					firstSegment();
+					
 					
 					function firstSegment(){
 
@@ -141,7 +141,7 @@
 						
 					}
 
-		
+					firstSegment();
 				}
 				else{
 
@@ -261,7 +261,7 @@
 		this.simpleShowMe = function(win, onComplete) {  //(win:int = 0, onComplete:Function = null):void {
 
 			_ballAsset.visible = true;
-			_ballAsset.alpha   = .7;
+			//_ballAsset.alpha   = .7;
 			_ballAsset.x       = _finPosition.x;
 			_ballAsset.y       = _finPosition.y;
 			_ballAsset.angle   = -45;

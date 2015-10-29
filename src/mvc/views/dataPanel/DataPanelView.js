@@ -42,6 +42,7 @@
 
 		changeMessagePanel(DataPanelView.STATE_PRESSPLAY);
 
+
 		function createDataPanel(){
 			
 			_dataPanelContainer   = game.add.group();
@@ -54,6 +55,7 @@
 			betValue     = game.add.text(578, 228, "000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' }); betValue.setTextBounds(0, 0, 200, 30);     _dataPanelContainer.add(betValue);
 			winValue     = game.add.text(697, 228, "000", {boundsAlignH: 'center', fontSize: '24px', fill: '#FFFF00' }); winValue.setTextBounds(0, 0, 200, 30);     _dataPanelContainer.add(winValue);
 			
+			//cambiar nombre a: message
 			pressPlay = game.add.text(638, 272, pressPlayText, {font: 'futura', fontSize: '20px', fill: '#FFFF00', boundsAlignH: "center" }); pressPlay.setTextBounds(0, 0, 200, 30); _dataPanelContainer.add(pressPlay);
 		}
 
@@ -92,7 +94,7 @@
 					//changeMessagePanel(STATE_DRAWINGBALLS);
 				break;
 				case Notifications.START_PAID:
-					//startPaid(data);
+					_this.startPaid(data);
 				break
 				case EngineNotificationsEnum.NO_MORE_CREDITS_NOTIFICATION:
 					//changeMessagePanel(STATE_NOCREDIT);
@@ -148,14 +150,14 @@
 				/*(_asset.mc_credits as MovieClip).gotoAndStop("RED");
 				_asset.mc_credits.credits.text = credit.toString();
 				TextUtils.scaleTextToFitAligned(_asset.mc_credits.credits, true);*/
-				creditsValue.text = credit;
+				creditsValue.setText(credit);
 				alert("hacer numero rojo, en panelView");
 					
 			}else{
 				
 				//yellow number
 				//(_asset.mc_credits as MovieClip).gotoAndStop("YELLOW");
-				creditsValue.text = credit;
+				creditsValue.setText(credit);
 				//TweenMax.to(creditsValue,2,{x:500});
 				//_asset.mc_credits.credits.text = credit.toString();
 				//TextUtils.scaleTextToFitAligned(_asset.mc_credits.credits, true); //hacer
@@ -258,6 +260,171 @@
 				break; 
 			} 
 			
+		}
+
+		/*private function set currentMessageLabel(newValue:String):void{
+			
+			_currentMessageLabel = newValue;
+			(_asset.messagePanel.lang as MovieClip).gotoAndStop(_currentMessageLabel);
+			
+		}*/
+		
+
+
+		function showFreeBallSign(value){
+			/*value? _asset.freeBall.visible = true : _asset.freeBall.visible = false;
+			if(value) _gameSoundController.playSound(SoundNames.SND_EXTRA_SETUP, true);*/
+		}
+		
+		function winBlink(value){
+			/*
+			if(value){
+				_isBlinking = true;
+				tweenTo0();
+				function tweenTo0():void{
+					if(_isBlinking)
+						TweenMax.to((_asset.win as TextField), .2, {alpha:0, onComplete:tweenTo1});
+				}
+				function tweenTo1():void{
+					TweenMax.to((_asset.win as TextField), .2, {alpha:1, onComplete:tweenTo0});
+				}
+			}else{
+
+				_isBlinking = false
+				setTimeout(on,300);
+				function on():void{
+					(_asset.win as TextField).alpha = 1;
+				}
+			}*/
+		}
+
+		this.startPaid = function(data){  //(data:Object):void{
+			
+			if(data.win > 0){
+				
+				//_applicationController.gameType.gcActive = false;
+				//_gameSoundController.playSound(SoundNames.SND_CASH, true);
+				
+				changeMessagePanel(DataPanelView.STATE_WINNER);
+				//_asset.pay.text= "0";
+				var idTimeOut = setTimeout(waitSoundCashFinish, 800);
+				
+				function waitSoundCashFinish(){
+					clearTimeout(idTimeOut);
+					doValuesTransitions(data.onComplete, data.winInCash, data.finalCreditInCash, data.finalCredit);
+				}
+				
+			}else{
+				
+				//_asset.totalAlmost.text = "";
+				changeMessagePanel(DataPanelView.STATE_PRESSPLAY); 
+				data.onComplete();
+				_applicationController.sendNotification(Notifications.END_PAID); //to LOG VISUAL patch
+			}
+			
+		}
+		
+		function doValuesTransitions(onComplete, winInCash, finalCreditInCash, finalCredit){  //(onComplete:Function, winInCash:Number, finalCreditInCash:Number, finalCredit:int):void{
+			
+			//var _this:Sprite = this;
+			var coin     = _countersController.getCounterValue(CountersController.COIN_COUNTER);
+			var credits  = parseInt(creditsValue.text); //int(_asset.mc_credits.credits.text); 
+			//var win      = parseInt(_asset.win.text);
+			//var pay      = parseInt(_asset.pay.text);
+			var dec      = 0;
+			
+			//_this.stage.addEventListener(MouseEvent.CLICK, forceTransition);
+			
+			/*_keyboardController.registerKeyCommand(Keyboard.ENTER,    forceTransition, [null]);
+			_keyboardController.registerKeyCommand(Keyboard.SPACE,    forceTransition, [null]);
+			_keyboardController.registerKeyCommand(Keyboard.NUMBER_0, forceTransition, [null]);
+			_keyboardController.registerKeyCommand(Keyboard.NUMPAD_0, forceTransition, [null]);*/
+			
+			
+			//addEventListener(Event.ENTER_FRAME, upDate);
+			var stopEnterFrame = false;
+			var id = setTimeout(enterFrame,1000/30);
+			function enterFrame(){
+				clearTimeout(id);
+				if(!stopEnterFrame){
+					upDate();
+					id = setTimeout(enterFrame,1000/30);
+				}
+			}
+			
+			function upDate(){
+				if(win == 0){
+					
+					removeListeners();
+					updateCounters(true);
+					return;
+				}
+				
+				dec = parseInt(win/20);
+				if(dec == 0) dec = 1;
+				
+				credits += dec;
+				win     -= dec;
+				pay     += dec;
+				
+				updateTexts();
+				updateCounters();
+				
+				(_paySoundCount == 3)? _paySoundCount = 0 : _paySoundCount++;
+				_gameSoundController.playSound(SoundNames.SND_PAY_COUNT_ + _paySoundCount.toString(), true);
+			}
+			
+			function forceTransition(e){
+				removeListeners();
+				
+				credits += win;
+				pay     += win;
+				win     = 0;
+				
+				updateTexts();
+				updateCounters(true);
+			}
+			
+			function updateTexts(){
+				/*credits < 0 ? (_asset.mc_credits as MovieClip).gotoAndStop("RED") : (_asset.mc_credits as MovieClip).gotoAndStop("YELLOW");
+				_asset.mc_credits.credits.text = credits.toString();
+				TextUtils.scaleTextToFitAligned(_asset.mc_credits.credits, true);
+				_asset.win.text                = win.toString();
+				_asset.pay.text                = pay.toString();*/
+
+				setCredit(credit);
+			}
+			
+			function updateCounters(fin){
+				if(fin){
+					//_asset.totalAlmost.text = "";
+					_applicationController.gameType.gcActive = true;
+					_countersController.setCounterValue(CountersController.CREDITS_IN_CASH_COUNTER, finalCreditInCash);
+					_countersController.setCounterValue(CountersController.PAID_IN_CASH_STANDARDBAR_COUNTER, winInCash);
+					_countersController.setCounterValue(CountersController.CREDITS_COUNTER, finalCredit);
+					
+					onComplete();
+					
+					_applicationController.sendNotification(Notifications.END_PAID); //to LOG VISUAL patch
+				}else{
+					_countersController.setCounterValue(CountersController.CREDITS_IN_CASH_COUNTER, credits * (coin/100));
+					_countersController.setCounterValue(CountersController.PAID_IN_CASH_STANDARDBAR_COUNTER, pay * (coin /100));
+				}
+			}
+			
+			function removeListeners(){
+				stopEnterFrame = true;
+				/*removeEventListener(Event.ENTER_FRAME, upDate);
+				_this.stage.removeEventListener(MouseEvent.CLICK, forceTransition);
+				_keyboardController.deregisterKeyCommand(Keyboard.ENTER);
+				_keyboardController.deregisterKeyCommand(Keyboard.SPACE);
+				_keyboardController.deregisterKeyCommand(Keyboard.NUMBER_0);
+				_keyboardController.deregisterKeyCommand(Keyboard.NUMPAD_0);*/
+			}
+		}
+
+		function setPayText(pay){
+			//_asset.pay.text = pay.toString();
 		}
 
 	}

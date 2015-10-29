@@ -35,37 +35,57 @@
 		//reset();
 
 
+
 		//SET UP
 		///////////////////////////////////////////////////////////////////
 		_mixerContainer = game.add.group();
+
 		//mixer
         var mixer   = _mixerContainer.create(382, 42, 'mixer');
         mixer.frame =   1;
+        _mixerContainer.add(mixer);
         
         //big balls
-		var bigBall = _mixerContainer.create(404, 49, 'bigBall');
+		var bigBall = _mixerContainer.create(403, 49, 'bigBall');
+		_mixerContainer.add(bigBall);
 
 		//ball number
 		var bigBallNum = game.add.text(396, 73, "70", {boundsAlignH: 'center', font: 'Roboto', fontSize: '55px', fill: '#000' });
-		_mixerContainer.add(bigBallNum);
 		bigBallNum.setTextBounds(0, 0, 100, 100);
+		_mixerContainer.add(bigBallNum);
+
+		//cancel cross
+		var bigCancelCross     = game.add.sprite(408, 55, 'cancelCross'); 
+		bigCancelCross.alpha   = .6;
+		bigCancelCross.visible = false;
+		bigCancelCross.scale.setTo(1.2, 1.2);
+		_mixerContainer.add(bigCancelCross);
+
+		//cancel win value
+		var cancelNum             = game.add.text(426, 118, "00", {boundsAlignH: 'center', font: 'Roboto', fontSize: '30px', fill: '#113EEE' });
+		cancelNum.setTextBounds(0, 0, 50, 50);
+		cancelNum.stroke          = '#FFF';
+        cancelNum.strokeThickness = 2;
+        cancelNum.visible         = false;
+        _mixerContainer.add(cancelNum);
 
 		//big ball tapa
 		var bigBallCover     = _mixerContainer.create(399, 44, 'bigBallCover');  
 		bigBallCover.frame   = 3;
 		bigBallCover.visible = false;
+		_mixerContainer.add(bigBallCover);
 
 		//extra cost number
 		var extraCostNum = game.add.text(402, 85, "50", {boundsAlignH: 'center', font: 'Roboto', fontSize: '25px', fill: '#000' });
-		_mixerContainer.add(extraCostNum);
 		extraCostNum.setTextBounds(0, 0, 100, 50);		
 		extraCostNum.visible = false;
+		_mixerContainer.add(extraCostNum);
 
 		//ball index
 		var ballIndex = game.add.text(479, 105, "01", {boundsAlignH: 'center', font: 'digital', fontSize: '30px', fill: '#40FF00' });
-		_mixerContainer.add(ballIndex);
 		ballIndex.setTextBounds(0, 0, 100, 50);		
 		ballIndex.visible = true;
+		_mixerContainer.add(ballIndex);
 
 
         //vel
@@ -86,12 +106,15 @@
 		this.showBigBall = function(ball, frame, numColor, onComplete, response, filar){   //(ball:int, onComplete:Function, response:BaseResponse, filar:Boolean):void{
 
 			//color big ball
-			bigBall.frame = frame; //getFrameBigBall(ball);
+			bigBall.frame = frame;            //getFrameBigBall(ball);
 			//num big ball
 			bigBallNum.style.fill = numColor; //getNumColor(ball);
 			bigBallNum.setText(ball);
 
-			onComplete(); 
+			bigBall.alpha    = 1;
+			bigBallNum.alpha = 1;
+
+			if(onComplete) onComplete(); 
 			
 			/*
 			_mixer.gotoAndStop("BALLS");
@@ -111,6 +134,9 @@
 		this.goIdle = function(){
 			//_mixer.gotoAndStop("IDLE");
 			_mixer.extraSign.visible = false;
+
+			bigCancelCross.visible   = false;
+			cancelNum.visible        = false;
 		}
 		
 		this.goToBigBall = function(){
@@ -122,19 +148,23 @@
 			
 			_mixer.cancel.visible   = false;
 			_mixer.bigBalls.gotoAndStop(_currentBallNumber);
-			(_mixer.bigBalls as MovieClip).alpha = 1;*/
+			(_mixer.bigBalls as MovieClip).  = 1;*/
 		}
 		
 		this.alphaHideBigBall = function(onComplete){
-			/*
-			_mixer.gotoAndStop("BALLS");
-			TweenMax.to(_mixer.bigBalls, .4, {alpha:0, onComplete: complete});
-			_mixer.cancel.visible = false;
 			
-			function complete():void{
+			//_mixer.gotoAndStop("BALLS");
+			//TweenMax.to(_mixer.bigBalls, .4, {alpha:0, onComplete: complete});
+			TweenMax.to(bigBallNum, .3, {alpha:0});	
+			TweenMax.to(bigBall,    .4, {alpha:0, onComplete: complete});
+			
+
+			bigCancelCross.visible   = false;
+			cancelNum.visible        = false;
+			
+			function complete(){
 				if(onComplete != null) onComplete();
 			}
-			*/
 		}
 		
 		this.showExtraCostSign = function(){
@@ -142,6 +172,9 @@
 			//TODO LENGUAJES...
 
 			_extraCost = _countersController.getCounterValue(OwnCounters.EXTRA_COST_COUNTER);
+
+			bigCancelCross.visible  = false;
+			cancelNum.visible       = false;
 
 			bigBallCover.frame   = 4;
 			bigBallCover.visible = true;
@@ -285,11 +318,21 @@
 			}*/
 		}
 		
-		this.showCancelBigBall = function(ball, onComplete, win){  //(ball:int, onComplete:Function, win:int):void{
-			/*
-			_currentBallNumber = ball;
-			_mixer.gotoAndStop("BALLS");
+		this.showCancelBigBall = function(ball, frame, numColor, onComplete, win){  //(ball:int, onComplete:Function, win:int):void{
 			
+			_currentBallNumber = ball;
+			_this.hideExtraCostSign(null);
+			_this.showBigBall(ball, frame, numColor);
+
+			bigCancelCross.visible = true;
+			if(win > 0){
+				cancelNum.visible  = true;
+				cancelNum.setText(win);
+			}
+			
+			
+			/*
+			_mixer.gotoAndStop("BALLS");
 			_mixer.extraSign.visible = false;
 			_mixer.peekDoor.visible = false;
 			
@@ -298,13 +341,14 @@
 			(_mixer.bigBalls as MovieClip).visible = true;
 			
 			_mixer.cancel.visible = true;
+
 			if(win != 0){
 				_mixer.cancel.win.text = win;
 			}else{
 				_mixer.cancel.win.text = "";
-			}
+			}*/
 				
-			onComplete();*/
+			onComplete();
 		}
 	
 		this.changeSpeed = function(frame){
@@ -364,8 +408,10 @@
 		}	
 		
 		this.reset = function(){ 
-			/*goIdle();
-			(_mixer.ballIndex as MovieClip).gotoAndStop("GREEN");
+			goIdle();
+			ballIndex.style.fill('#40FF00');
+			ballIndex.setText("0");
+			/*(_mixer.ballIndex as MovieClip).gotoAndStop("GREEN");
 			_mixer.ballIndex.index.text = "0";*/
 		}
 

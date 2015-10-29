@@ -18,6 +18,8 @@
 		
 		var smallBallAssetsVec       = [];
 		var smallBallNumVec          = [];
+		var cancelCrossVec           = [];
+		var cancelNumVec             = [];
 
 		var _ballSoundCounter        = 0;
 		var _resetFinished           = true;
@@ -149,7 +151,7 @@
 			if(_ballIndex > Game.gameConfig.numberOfBalls){
 
 				if(_ballIndex == LASTBALL_INDEX){
-					_mixer.showBigBall(data.ball, data.onComplete, data.response, data.filar);
+					_mixer.showBigBall(data.ball, getFrameBigBall(data.ball), getNumColor(data.ball), data.onComplete, data.response, data.filar);
 				}else{
 					if(!data.filar){
 
@@ -157,10 +159,10 @@
 							function waitShowExtraSign(){
 								data.onComplete();
 							}
-							_mixer.showBigBall(data.ball, waitShowExtraSign, data.response, data.filar);
+							_mixer.showBigBall(data.ball, getFrameBigBall(data.ball), getNumColor(data.ball), waitShowExtraSign, data.response, data.filar);
 						}
 						_mixer.hideExtraCostSign();
-						_mixer.goToBigBall();
+						//_mixer.goToBigBall();
 						_mixer.alphaHideBigBall(showNewBall);
 
 					}else{
@@ -199,7 +201,7 @@
 			var _win;
 			var _lastBall = data.response.remainingBalls.length - 1;
 			var duration  = .06;
-			
+
 			for(var i = 0; i < data.response.remainingBalls.length; i++){
 
 				function show(i){
@@ -209,18 +211,22 @@
 					_ballIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
 					_ball      = data.response.remainingBalls[i].ballNumber;
 					_win       = data.response.remainingBalls[i].win;
-					
+
 					if(i != _lastBall){
 
 						smallBallAssetsVec[_ballIndex-1].frame   = getFrameSmallBall(_ball);
 						smallBallNumVec[_ballIndex-1].style.fill = getNumColor(_ball);
 						smallBallNumVec[_ballIndex-1].setText(getNum(_ball));
-						smallBallNumVec[_ballIndex-1].visible = true;
-						
+						smallBallNumVec[_ballIndex-1].visible    = true;
+						cancelCrossVec[_ballIndex-1].visible     = true;
+						if(_win > 0){
+							cancelNumVec[_ballIndex-1].visible   = true;
+							cancelNumVec[_ballIndex-1].setText(_win);
+						}
 						_ballsView[_ballIndex-1].simpleShowMe(_win, null);
 
 					}else{
-						_mixer.showCancelBigBall(_ball, data.onComplete, _win);
+						_mixer.showCancelBigBall(_ball, getFrameBigBall(_ball), getNumColor(_ball), data.onComplete, _win);
 					}
 				}
 
@@ -328,7 +334,7 @@
 			//bolas chicas
 			function createSmallBalls(){	
 				_smallBallsContainer   = game.add.group();
-				_smallBallsContainer.x = 21; _smallBallsContainer.y = 22;
+				_smallBallsContainer.x = 23; _smallBallsContainer.y = 22;
 				_ballsAndMixerContainer.add(_smallBallsContainer);
 
 				var ballsPoints     = [];
@@ -355,20 +361,33 @@
 					ballNum.anchor.setTo(1.0, .8);
 					ballNum.setTextBounds(0, 0, 50, 50);
 
-
 					smallBallAssetsVec.push(ballAsset);
 					smallBallNumVec.push(ballNum);
 
 					ballContainer.add(ballAsset);
 					ballContainer.add(ballNum);
 					
+					//extras - cruz de cancel
 					if(i > 29){
-						cancelCross       = game.add.sprite(0, 0, 'cancelCross'); 
-						cancelCross.angle = 45;
-						cancelCross.alpha = .6;
+						var cancelCross    = game.add.sprite(0, 0, 'cancelCross'); 
+						cancelCross.angle  = 45;
+						cancelCross.alpha  = .6;
 						cancelCross.scale.setTo(.7,.7);
 						cancelCross.anchor.setTo(.5, .5); 
+						cancelCross.visible = false;
 						ballContainer.add(cancelCross);
+
+						cancelCrossVec[i] = cancelCross;
+
+						var cancelNum             = game.add.text(-30, -10, (i-25), {boundsAlignH: 'center', font: 'Roboto', fontSize: '17px', fill: '#113EEE' });
+						cancelNum.setTextBounds(0, 0, 50, 50);
+						cancelNum.stroke          = '#FFF';
+				        cancelNum.strokeThickness = 2;
+				        cancelNum.angle           = 45;
+				        cancelNum.visible         = false;
+				        ballContainer.add(cancelNum);
+
+				        cancelNumVec[i] = cancelNum;
 					}
 					
 					function Point(x, y) {

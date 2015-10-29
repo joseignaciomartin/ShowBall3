@@ -49,7 +49,8 @@
 					
 					function goBlack(){
 						if(c < 5 ) {
-							TweenMax.to(_boxMovie, .1, {onComplete:goWhite});
+							TweenMax.to(box, .1, {onComplete:goWhite});
+							numTxt.style.fill = '#FFF';
 							box.frame = BLACK;
 							_this.updateTextNumber();
 						}
@@ -58,8 +59,9 @@
 					function goWhite(){
 						c++;
 						if(c < 5 ) {
-							TweenMax.to(_boxMovie,.1, {onComplete:goBlack});
+							TweenMax.to(box,.1, {onComplete:goBlack});
 							box.frame = WHITE;
+							numTxt.style.fill = '#000';
 							_this.updateTextNumber();
 						}
 					}
@@ -74,16 +76,16 @@
 
 					function goBig(){
 						if(_loopingBox) {
-							_boxMovie.scaleX = 1.05;
-							_boxMovie.scaleY = 1.05;
-							TweenMax.to(_boxMovie, .1, {onComplete:goSmall});
+							box.scaleX = 1.05;
+							box.scaleY = 1.05;
+							TweenMax.to(box, .1, {onComplete:goSmall});
 						}
 					}
 					
 					function goSmall(){
-						_boxMovie.scaleX = 1;
-						_boxMovie.scaleY = 1;
-						TweenMax.to(_boxMovie,.1, {onComplete:goBig});
+						box.scaleX = 1;
+						box.scaleY = 1;
+						TweenMax.to(box,.1, {onComplete:goBig});
 					}
 
 					_loopingBox = true;
@@ -162,6 +164,7 @@
 			resetAlmost();
 			box.frame = WHITE;
 			numTxt.style.fill = '#000';
+			this.updateTextNumber()
 		}
 		
 		function resetAlmost(){

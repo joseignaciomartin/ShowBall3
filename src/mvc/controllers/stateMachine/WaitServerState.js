@@ -14,7 +14,7 @@
 		var _countersController      = _applicationController.getController("CountersController");
 		var _cardsController         = _applicationController.getController("CardController");
 		
-		//_extraController             = new ExtraController(gameState); //buscar orto modo
+		
 		var _prevGameType            = prevGameType;
 		var _model                   = gameController.model;
 
@@ -47,6 +47,7 @@
 		}
 		
 		this.getExtraBallResponse = function(data){
+			var _extraController         = new ExtraController(_gameStateChangeCallback); 
 			_extraController.play(data); 
 		}
 		
@@ -55,6 +56,11 @@
 			_applicationController.sendNotification(Notifications.CANCEL_EXTRA_BALL_NOTIFICATION, {response:response, onComplete:pay});
 			
 			function pay(){ 
+
+				//TO TEST - descomentar lo de abajo
+				changeAlmostStates();
+
+				/*
 				//almost bingo control to remove
 				if(_countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1)
 					_countersController.setCounterValue(OwnCounters.ALMOST_BINGO, 0);
@@ -62,10 +68,14 @@
 				var finalCredit       = response.credits + response.win;
 				var finalCreditInCash = response.credits_in_cashEnd;
 				_applicationController.sendNotification(Notifications.START_PAID, { onComplete:changeAlmostStates, win:response.win, winInCash:response.win_in_cash, finalCredit:finalCredit, finalCreditInCash:finalCreditInCash});
+				*/
 			}
 			
 			function changeAlmostStates(){
-				_applicationController.sendNotification(Notifications.CHANGE_ALMOST_NOTIFICATION, {type: "DURINGPLAY", onComplete:final}); 
+				//TO TEST - descopmentar abajo
+				final();
+
+				//_applicationController.sendNotification(Notifications.CHANGE_ALMOST_NOTIFICATION, {type: "DURINGPLAY", onComplete:final}); 
 			}
 			
 			function final(){ 

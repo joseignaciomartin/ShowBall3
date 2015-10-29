@@ -60,10 +60,9 @@
 					_gameController.gameState.playBtn();
 				break;
 				case "turboBtn": // turbo - extra - peek
-					/*
 					_gameController.gameState.turboBtn();
 					if(_gameController.gameState.getType() == GameStates.PEEK || _gameController.gameState.getType() == GameStates.AUTO) _turboBtn.setEnabled();
-					*/
+					
 				break;
 				case "cardsBtn":
 					/*
