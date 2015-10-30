@@ -28,6 +28,7 @@
 	Notifications.UPDATE_PAY_TABLE_NOTIFICATION         = "UPDATE_PAY_TABLE_NOTIFICATION";
 	                                                                 
 	Notifications.PEEK_SETUP_NOTIFICATION               = "PEEK_SETUP_NOTIFICATION";
+	Notifications.PEEK_NOTIFICATION                     = "PEEK_NOTIFICATION";
 	Notifications.AUTOMATIC_PEEK_NOTIFICATION           = "AUTOMATIC_PEEK_NOTIFICATION";
 	Notifications.PEEK_END_NOTIFICATION                 = "PEEK_END_NOTIFICATION";
 	

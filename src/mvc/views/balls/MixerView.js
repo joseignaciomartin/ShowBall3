@@ -38,6 +38,10 @@
 
 		//SET UP
 		///////////////////////////////////////////////////////////////////
+ 		
+ 		var MASK_INI = 0;
+ 		var MASK_FIN = 100;
+
 		_mixerContainer = game.add.group();
 
 		//mixer
@@ -46,13 +50,16 @@
         _mixerContainer.add(mixer);
         
         //big balls
-		var bigBall = _mixerContainer.create(403, 49, 'bigBall');
+		var bigBall     = _mixerContainer.create(403, 49, 'bigBall');
+		bigBall.visible = false;
 		_mixerContainer.add(bigBall);
 
 		//ball number
 		var bigBallNum = game.add.text(396, 73, "70", {boundsAlignH: 'center', font: 'Roboto', fontSize: '55px', fill: '#000' });
 		bigBallNum.setTextBounds(0, 0, 100, 100);
+		bigBallNum.visible = false;
 		_mixerContainer.add(bigBallNum);
+
 
 		//cancel cross
 		var bigCancelCross     = game.add.sprite(408, 55, 'cancelCross'); 
@@ -76,21 +83,43 @@
 		_mixerContainer.add(bigBallCover);
 
 		//extra cost number
-		var extraCostNum = game.add.text(402, 85, "50", {boundsAlignH: 'center', font: 'Roboto', fontSize: '25px', fill: '#000' });
+		var extraCostNum     = game.add.text(402, 85, "50", {boundsAlignH: 'center', font: 'Roboto', fontSize: '25px', fill: '#000' });
 		extraCostNum.setTextBounds(0, 0, 100, 50);		
 		extraCostNum.visible = false;
 		_mixerContainer.add(extraCostNum);
 
+		//mask coverball
+		var coverMask     = game.add.graphics(0, 0);
+	    coverMask.beginFill(0xFFFFF);
+	    coverMask.drawRect(400, 50, 110, 110);
+	   	bigBallCover.mask = coverMask;
+
+	   	//ballGif
+	   	//  And this starts the animation playing by using its key ("walk")
+    	//  30 is the frame rate (30fps)
+   		//  true means it will loop when it finishes
+	   	var ballGif = game.add.sprite(399, 44, 'ballGif');
+	   	var moving  = ballGif.animations.add('moving');
+	   	ballGif.animations.play('moving', 30, true);
+	   	_mixerContainer.add(ballGif);
+
+
 		//ball index
-		var ballIndex = game.add.text(479, 105, "01", {boundsAlignH: 'center', font: 'digital', fontSize: '30px', fill: '#40FF00' });
+		var ballIndex     = game.add.text(479, 105, "01", {boundsAlignH: 'center', font: 'digital', fontSize: '30px', fill: '#40FF00' });
 		ballIndex.setTextBounds(0, 0, 100, 50);		
 		ballIndex.visible = true;
 		_mixerContainer.add(ballIndex);
 
+		//auto text
+		var auto     = _mixerContainer.create(510, 52, 'auto');
+		_mixerContainer.add(auto);
+		auto.visible = false;
+		
+		//manual text
+		var manual = _mixerContainer.create(504, 52, 'manual');
+		_mixerContainer.add(manual);
 
         //vel
-
-        //auto
 
 
         //TEST
@@ -212,25 +241,34 @@
 			function complete(){
 				if(onComplete != null) onComplete();
 			}
-
-			/*
-			if(_mixer.extraSign){
-				(_mixer.extraSign.inner as MovieClip).addFrameScript(0,  null);
-				(_mixer.extraSign.inner as MovieClip).addFrameScript(15, null);
-			}
-
-			function complete():void{
-				if(onComplete != null) onComplete();
-			}*/
 		}
 		
 		this.showPeekSign = function(onComplete){
+			
+			_this.hideExtraCostSign();
+ 
+			function setupPeek(){
+				
+				bigBallCover.frame   = 0;    //muestra bola con signo amarillo "?".
+				bigBallCover.visible = true; //porque hideExtraCostSign lo pasa a false..
+				bigBall.alpha    = 1;
+				bigBallNum.alpha = 1;
+				coverMask.y      = MASK_INI;
+
+				onComplete(); 
+			}
+
+			TweenMax.to(bigBallNum, .3, {alpha:0});	
+			TweenMax.to(bigBall,    .4, {alpha:0, onComplete: setupPeek});
+
+
+
 			/*
 			function callBack(){
 				_mixer.peekDoor.addFrameScript(28, null);
 				_mixer.peekDoor.gotoAndStop(29);
-				_automaticFrame = 50; //UtilsView.getFrameByLabel(_mixer.peekDoor, "AUTOMATIC_PEEK_FRAME"); 
-				_lastPeekFrame  = 70; //UtilsView.getFrameByLabel(_mixer.peekDoor, "LAST_PEEK_FRAME"); 
+				_automaticFrame = 50; 
+				_lastPeekFrame  = 70; 
 				
 				//lang
 				_mixer.peekDoor.door1.gotoAndStop(lang);
@@ -239,7 +277,7 @@
 				(_mixer.bigBalls as MovieClip).alpha = 1;
 				_lastPeekNotificacionSended = false;
 				
-				onComplete(); // execute -> drawBigBall() from ExtraController
+				onComplete(); 
 			}
 
 
@@ -262,10 +300,22 @@
 			_mixer.cancel.visible = false;
 			
 			_mixer.peekDoor.addFrameScript(28, callBack);
-			*/
+			*/	
 		}
 		
 		this.peek = function(){
+			
+			var newY = coverMask.y + 10;
+			
+
+			console.log("newY //////////////////////" + newY);
+			
+			if(newY < 50){
+				TweenMax.to(coverMask, .5, {y:newY}); 
+			}else{
+				this.automaticPeek();
+			}
+
 			/*
 			(_mixer.bigBalls as MovieClip).alpha = 1;
 			var currentFrame:int = (_mixer.peekDoor as MovieClip).currentFrame;
@@ -288,6 +338,15 @@
 		}
 
 		this.automaticPeek = function(){
+
+
+			TweenMax.to(coverMask, 1.3, {y:MASK_FIN, onComplete:peekEnd});
+
+
+			function peekEnd(){
+				_applicationController.sendNotification(Notifications.PEEK_END_NOTIFICATION);
+			}
+
 			/*
 			if(!(_mixer.peekDoor as MovieClip).hasEventListener(Event.ENTER_FRAME))
 				(_mixer.peekDoor as MovieClip).addEventListener(Event.ENTER_FRAME, update);

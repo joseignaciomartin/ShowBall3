@@ -96,14 +96,19 @@
           <DOMBitmapItem name="img web/ball89.png" itemID="538230ec-00000ceb" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/balls/LIBRARY/ball89.png" sourceLastImported="1404656489" externalFileSize="6891" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="img web/ball89.png" bitmapDataHRef="M 360 1401041085.dat" frameRight="880" frameBottom="880"/>
           <DOMBitmapItem name="img web/ball9.png" itemID="538230ec-00000cec" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/balls/LIBRARY/ball9.png" sourceLastImported="1404656489" externalFileSize="4947" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img web/ball9.png" bitmapDataHRef="M 280 1401041085.dat" frameRight="880" frameBottom="880"/>
           <DOMBitmapItem name="img web/ball90.png" itemID="538230ec-00000ced" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/balls/LIBRARY/ball90.png" sourceLastImported="1404656489" externalFileSize="6814" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="img web/ball90.png" bitmapDataHRef="M 361 1401041085.dat" frameRight="880" frameBottom="880"/>
-          <DOMBitmapItem name="img mobile/bg_SB3.png" itemID="562fd481-00000391" sourceExternalFilepath="../balls/LIBRARY/img mobile/bg_SB3.png" sourceLastImported="1445370458" externalFileSize="230655" originalCompressionType="lossless" quality="50" href="img mobile/bg_SB3.png" bitmapDataHRef="M 98 1445973751.dat" frameRight="19200" frameBottom="10800"/>
+          <DOMBitmapItem name="img mobile/bg_SB3.png" itemID="562fd481-00000391" sourceExternalFilepath="../balls/LIBRARY/img mobile/bg_SB3.png" sourceLastImported="1445370458" externalFileSize="230655" originalCompressionType="lossless" quality="50" href="img mobile/bg_SB3.png" bitmapDataHRef="M 98 1445973751.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
           <DOMBitmapItem name="img mobile/bigBall_8.png" itemID="562e60dd-0000023a" sourceExternalFilepath="../balls/LIBRARY/bigBall_8.png" sourceLastImported="1445366042" externalFileSize="11492" originalCompressionType="lossless" quality="50" href="img mobile/bigBall_8.png" bitmapDataHRef="M 93 1445880029.dat" frameRight="1800" frameBottom="1780"/>
           <DOMBitmapItem name="img web/cross.png" itemID="53948af4-000005d2" sourceExternalFilepath="../../../../../../FlashDevelop/ShowBall3/assets/fla/balls/LIBRARY/cross.png" sourceLastImported="1401022456" externalFileCRC32="2514723043" externalFileSize="32700" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img web/cross.png" bitmapDataHRef="M 92 1402243686.dat" frameRight="840" frameBottom="860"/>
+          <DOMBitmapItem name="showball_bolillero0000.png" itemID="5633d273-00000328" sourceExternalFilepath="./LIBRARY/showball_bolillero0000.png" sourceLastImported="1446229348" externalFileSize="7666" originalCompressionType="lossless" quality="50" href="showball_bolillero0000.png" bitmapDataHRef="M 101 1446232443.dat" frameRight="1900" frameBottom="1920"/>
+          <DOMBitmapItem name="showball_bolillero0001.png" itemID="5633d273-00000329" sourceExternalFilepath="./LIBRARY/showball_bolillero0001.png" sourceLastImported="1446233834" externalFileSize="8141" originalCompressionType="lossless" quality="50" href="showball_bolillero0001.png" bitmapDataHRef="M 104 1446234000.dat" frameRight="1980" frameBottom="2000"/>
+          <DOMBitmapItem name="showball_bolillero0002.png" itemID="5633d273-0000032a" sourceExternalFilepath="./LIBRARY/showball_bolillero0002.png" sourceLastImported="1446228764" externalFileSize="8267" originalCompressionType="lossless" quality="50" href="showball_bolillero0002.png" bitmapDataHRef="M 100 1446229131.dat" frameRight="2360" frameBottom="2380"/>
           <DOMBitmapItem name="img mobile/showball3_bola_extra_01.png" itemID="562fd481-00000392" sourceExternalFilepath="../balls/LIBRARY/img mobile/showball3_bola_extra_01.png" sourceLastImported="1445950564" externalFileSize="13295" originalCompressionType="lossless" quality="50" href="img mobile/showball3_bola_extra_01.png" bitmapDataHRef="M 97 1445953648.dat" frameRight="1980" frameBottom="2000"/>
+          <DOMBitmapItem name="showball3_bolillero_auto.png" itemID="5633d273-0000032b" sourceExternalFilepath="./LIBRARY/showball3_bolillero_auto.png" sourceLastImported="1445454836" externalFileSize="2312" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="showball3_bolillero_auto.png" bitmapDataHRef="M 103 1446232632.dat" frameRight="760" frameBottom="380"/>
+          <DOMBitmapItem name="showball3_bolillero_manual.png" itemID="5633d273-0000032c" sourceExternalFilepath="./LIBRARY/showball3_bolillero_manual.png" sourceLastImported="1445454810" externalFileSize="2698" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="showball3_bolillero_manual.png" bitmapDataHRef="M 102 1446232623.dat" frameRight="1060" frameBottom="380"/>
           <DOMBitmapItem name="img mobile/showball3_main_bolillero_eng.png" itemID="562e627b-0000024d" sourceExternalFilepath="../balls/LIBRARY/showball3_main_bolillero_eng.png" sourceLastImported="1445455182" externalFileSize="11019" originalCompressionType="lossless" quality="50" href="img mobile/showball3_main_bolillero_eng.png" bitmapDataHRef="M 96 1445880443.dat" frameRight="4460" frameBottom="2180"/>
           <DOMBitmapItem name="img mobile/showball3_main_tope.png" itemID="562e6273-00000249" sourceExternalFilepath="../balls/LIBRARY/showball3_main_tope.png" sourceLastImported="1445368502" externalFileSize="4506" originalCompressionType="lossless" quality="50" href="img mobile/showball3_main_tope.png" bitmapDataHRef="M 95 1445880435.dat" frameRight="1020" frameBottom="820"/>
           <DOMBitmapItem name="img mobile/showball3_main_velocidad_01.png" itemID="562e61eb-00000242" sourceExternalFilepath="../balls/LIBRARY/showball3_main_velocidad_01.png" sourceLastImported="1445368082" externalFileSize="1346" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="img mobile/showball3_main_velocidad_01.png" bitmapDataHRef="M 94 1445880299.dat" frameRight="460" frameBottom="1640"/>
-          <DOMBitmapItem name="img mobile/smallBall_1.png" itemID="562fe2c0-00000398" sourceExternalFilepath="./LIBRARY/img mobile/smallBall_1.png" sourceLastImported="1445365736" externalFileSize="5671" originalCompressionType="lossless" quality="50" href="img mobile/smallBall_1.png" bitmapDataHRef="M 97 1445881226.dat" frameRight="900" frameBottom="900"/>
+          <DOMBitmapItem name="img mobile/smallBall_1.png" itemID="562fe2c0-00000398" sourceExternalFilepath="../balls/LIBRARY/img mobile/smallBall_1.png" sourceLastImported="1445365736" externalFileSize="5671" originalCompressionType="lossless" quality="50" href="img mobile/smallBall_1.png" bitmapDataHRef="M 97 1445881226.dat" frameRight="900" frameBottom="900"/>
      </media>
      <symbols>
           <Include href="movies web/cancel.xml" loadImmediate="false" itemID="53948aa8-000005cc" lastModified="1404657126"/>
@@ -323,11 +328,26 @@
                                                   <Matrix tx="391" ty="58.25"/>
                                              </matrix>
                                         </DOMBitmapInstance>
+                                        <DOMBitmapInstance libraryItemName="showball3_bolillero_manual.png">
+                                             <matrix>
+                                                  <Matrix tx="839.95" ty="-127.55"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                        <DOMBitmapInstance libraryItemName="showball3_bolillero_auto.png">
+                                             <matrix>
+                                                  <Matrix tx="842.45" ty="-108.55"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
+                                        <DOMBitmapInstance selected="true" libraryItemName="showball_bolillero0001.png">
+                                             <matrix>
+                                                  <Matrix tx="566.7" ty="-106"/>
+                                             </matrix>
+                                        </DOMBitmapInstance>
                                    </elements>
                               </DOMFrame>
                          </frames>
                     </DOMLayer>
-                    <DOMLayer name="fondo" color="#4FFF4F" locked="true" autoNamed="false">
+                    <DOMLayer name="fondo" color="#4FFF4F" autoNamed="false">
                          <frames>
                               <DOMFrame index="0" keyMode="9728">
                                    <elements>
@@ -358,7 +378,7 @@
                                         </DOMBitmapInstance>
                                         <DOMBitmapInstance libraryItemName="img mobile/showball3_bola_extra_01.png">
                                              <matrix>
-                                                  <Matrix tx="311.95" ty="-113.55"/>
+                                                  <Matrix tx="666.45" ty="-106"/>
                                              </matrix>
                                         </DOMBitmapInstance>
                                         <DOMBitmapInstance libraryItemName="img mobile/^57783E8353B3CF8089DF06B0E06787E7FDC6CD62D1EBEA6D80^pimgpsh_fullsize_distr.jpg"/>

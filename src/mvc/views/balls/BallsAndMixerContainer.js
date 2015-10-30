@@ -37,6 +37,7 @@
 				Notifications.EXTRA_SIGN_NOTIFICATION,
 				Notifications.CANCEL_EXTRA_BALL_NOTIFICATION,
 				Notifications.PEEK_SETUP_NOTIFICATION,
+				Notifications.PEEK_NOTIFICATION,
 				Notifications.AUTOMATIC_PEEK_NOTIFICATION,
 				Notifications.PEEK_END_NOTIFICATION,
 				Notifications.DRAW_SMALL_BALL_NOTIFICATION,
@@ -83,6 +84,9 @@
 				break;
 				case Notifications.PEEK_SETUP_NOTIFICATION:
 					_mixer.showPeekSign(data.onComplete);
+				break;
+				case Notifications.PEEK_NOTIFICATION:
+					_mixer.peek();
 				break;
 				case  Notifications.AUTOMATIC_PEEK_NOTIFICATION:
 					_mixer.automaticPeek();
@@ -149,12 +153,10 @@
 			
 			//EXTRA BALLS
 			if(_ballIndex > Game.gameConfig.numberOfBalls){
-
 				if(_ballIndex == LASTBALL_INDEX){
 					_mixer.showBigBall(data.ball, getFrameBigBall(data.ball), getNumColor(data.ball), data.onComplete, data.response, data.filar);
 				}else{
 					if(!data.filar){
-
 						function showNewBall(){
 							function waitShowExtraSign(){
 								data.onComplete();
@@ -162,9 +164,7 @@
 							_mixer.showBigBall(data.ball, getFrameBigBall(data.ball), getNumColor(data.ball), waitShowExtraSign, data.response, data.filar);
 						}
 						_mixer.hideExtraCostSign();
-						//_mixer.goToBigBall();
 						_mixer.alphaHideBigBall(showNewBall);
-
 					}else{
 						_mixer.showBigBall(data.ball, data.onComplete, data.response, data.filar);
 					}
@@ -180,7 +180,6 @@
 		}
 		
 		function drawSmallBall(data){
-			
 			if(_ballIndex == LASTBALL_INDEX){
 				data.onComplete();
 			}else{
@@ -205,7 +204,6 @@
 			for(var i = 0; i < data.response.remainingBalls.length; i++){
 
 				function show(i){
-
 					_canceledToReset.push(_balls[data.response.remainingBalls[i].ballNumber.toString()]);
 					_gameController.newBallDrawn();
 					_ballIndex = _countersController.getCounterValue(OwnCounters.INTERNAL_DRAWNBALLS_COUNTER);
@@ -229,7 +227,6 @@
 						_mixer.showCancelBigBall(_ball, getFrameBigBall(_ball), getNumColor(_ball), data.onComplete, _win);
 					}
 				}
-
 				TweenMax.to(this, duration, {delay:duration * i , onCompleteParams:[i], onComplete:show });
 			}
 		}
@@ -239,14 +236,12 @@
 		}
  
 		this.reset = function(){
-
 			function onComplete(){
 				_smallBallsContainer.alpha = 1;
 				_countersController.setCounterValue(OwnCounters.RESET_FINISHED, 1);
 			}
 			_countersController.setCounterValue(OwnCounters.RESET_FINISHED, 0);
 			TweenMax.to(_smallBallsContainer, .6,{alpha:0, onComplete:onComplete});
-
 			_mixer.reset();
 		}
 
@@ -334,7 +329,8 @@
 			//bolas chicas
 			function createSmallBalls(){	
 				_smallBallsContainer   = game.add.group();
-				_smallBallsContainer.x = 23; _smallBallsContainer.y = 22;
+				_smallBallsContainer.x = 23; 
+				_smallBallsContainer.y = 22;
 				_ballsAndMixerContainer.add(_smallBallsContainer);
 
 				var ballsPoints     = [];
@@ -418,7 +414,6 @@
 					ballAsset.frame    = getFrameSmallBall(i+1);
 					ballNum.style.fill = getNumColor(i+1);
 					ballNum.setText(getNum(i+1));
-					
 
 					ballContainer.visible = false;
 					_smallBallsContainer.add(ballContainer);
@@ -427,7 +422,6 @@
 				for(i = 0; i < 40; i++){
 					_ballsView[i].ballsFinalPoints(ballsPoints);
 				}
-				
 			}
 			
 			createSmallBalls();

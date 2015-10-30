@@ -15,8 +15,8 @@
 		//var _keyboardController    = _applicationController.getController("KeyboardController");
 
 		this.model = model;
+		this.view  = view;
 		setupSubscriptions();
-
 
 		function setGameState(value){
 			console.log("new state: " + GameStates.getNameState(value.getType()));

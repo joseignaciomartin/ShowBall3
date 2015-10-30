@@ -128,7 +128,11 @@
 			}
 			
 			function pay(){
-				
+
+				//TEST
+				final();
+
+				/*
 				//almost bingo control to remove
 				if(_countersController.getCounterValue(OwnCounters.ALMOST_BINGO) == 1) 
 					_countersController.setCounterValue(OwnCounters.ALMOST_BINGO, 0); 
@@ -137,7 +141,7 @@
 				var finalCredit       = response.credits + response.win;
 				var finalCreditInCash = response.credits_in_cash + response.win_in_cash;
 				_applicationController.sendNotification(Notifications.START_PAID, { onComplete:onComplete, win:response.win, winInCash:response.win_in_cash, finalCredit:finalCredit, finalCreditInCash:finalCreditInCash});
-				
+				*/
 			}
 			
 			function final(){
